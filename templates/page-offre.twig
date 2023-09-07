@@ -149,22 +149,24 @@ $latMon = $('#latMon').val();
 $lonMon = $('#lonMon').val();
 $latLil = $('#latLil').val();
 $lonLil = $('#lonLil').val();
-setTimeout(function(){
-    if ($latMon && $latMon !== null) {
-        latMon = $latMon;
-    }
-    if ($lonMon && $lonMon !== null) {
-        lonMon = $lonMon;
-    }
-    if ($latLil && $latLil !== null) {
-        latLil = $latLil;
-    }
-    if ($lonLil && $lonLil !== null) {
-        lonLil = $lonLil;
-    }
-    window.addEventListener("load", function() {
+
+if ($latMon && $latMon !== null) {
+    latMon = $latMon;
+}
+if ($lonMon && $lonMon !== null) {
+    lonMon = $lonMon;
+}
+if ($latLil && $latLil !== null) {
+    latLil = $latLil;
+}
+if ($lonLil && $lonLil !== null) {
+    lonLil = $lonLil;
+}
+var mapReady = false;
+function runMap(){
+    setTimeout(function(){
         var greenIcon = L.icon({
-            iconUrl: '{{site.theme.link}}/images/_map/localization_offre.svg',
+            iconUrl: 'https://www.certasenergyretail.fr/wp-content/themes/certas/images/_map/localization_offre.svg',
             iconSize: [35, 90],
         });
         if ($('#mapidv1') && $('#mapidv1').length > 0) {
@@ -184,7 +186,22 @@ setTimeout(function(){
             ;
             L.marker([latLil, lonLil], { icon: greenIcon }).bindTooltip("Esso", { permanent: false, direction: 'right' }).addTo(mapidv2);
         }
-    });
-}, 300);
+    }, 300);
+}
+window.addEventListener("load", function() {
+    if(mapReady){
+        return true
+    }
+    mapReady = true;
+    runMap();
+});
+
+setTimeout(function(){
+    if(mapReady){
+        return true
+    }
+    mapReady = true;
+    runMap();
+}, 1000);
 </script>
 {% endblock %}
