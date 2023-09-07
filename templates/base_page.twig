@@ -1,0 +1,69 @@
+{% block html_head_container %}
+{% include 'html-header-page.twig' %}
+{% block head %}
+{% endblock %}
+</head>
+{% endblock %}
+
+<body class="{{body_class}}" data-template="base_page.twig">
+    {# <a class="skip-link screen-reader-text" href="#content">{{ _e( 'Skip to content') }}</a> #}
+    <header class="header">
+        {% block header %}
+        <div class="wrapper">
+            <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">Certas Energy</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#_nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="oi oi-menu"></span> Menu
+                    </button>
+                    <div class="collapse navbar-collapse" id="ftco-nav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active"><a href="a-propos" class="nav-link text-uppercase">A Propord</a></li>
+                            <li class="nav-item"><a href="/services-en-stations" class="nav-link text-uppercase">Nos Stations</a></li>
+                            <li class="nav-item"><a href="agent.html" class="nav-link text-uppercase">Nos carburants</a></li>
+                            <li class="nav-item"><a href="services.html" class="nav-link text-uppercase">Nos Promos</a></li>
+                            <li class="nav-item"><a href="properties.html" class="nav-link text-uppercase">Club certas Anergy</a></li>
+                            <li class="nav-item"><a href="blog.html" class="nav-link text-uppercase">Actualités</a></li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link  text-uppercase">Nous contacter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="hero-wrap ftco-degree-bg header-bg propos-header" data-stellar-background-ratio="0.5">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row no-gutters slider-text justify-content-center align-items-center">
+                        <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
+                            <div class="text text-center">
+                                <h1 class="mb-4">{{post.post_title}}</h1>
+                                <p style="font-size: 18px;">{{post.post_content}}<a href="#" class="a-prs"></a> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </header>
+    <section role="main" class="content-wrapper">
+        {% if title %}<h1>{{title}}</h1>{% endif %}
+        <div class="wrapper {{sidebar_class}}">
+            {% block content %}
+            Sorry, no content
+            {% endblock %}
+        </div>
+        {% if sidebar %}
+        <aside class="layout-sidebar">
+            {{sidebar}}
+        </aside>
+        {% endif %}
+    </section>
+    {% block footer %}
+    <footer id="footer">
+        {% include 'footer.twig' %}
+    </footer>
+    {{ function('wp_footer') }}
+    {% endblock %}
+</body>
+
+</html>

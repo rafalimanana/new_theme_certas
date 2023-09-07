@@ -1,0 +1,5395 @@
+{
+  "type": "FeatureCollection",
+  "features": 
+  [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "name": "Esso Alouette",
+        "address": "3/5 Av General Leclerc",
+        "city": "Pessac",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         -0.66354,
+         44.7986
+       ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "name": "Esso Arcades",
+        "address": "Route Des Alpes",
+        "city": "Aix En Provence",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         5.45486,
+         43.5427
+       ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3,
+      "properties": {
+        "name": "Esso Balma",
+        "address": "23 Avenue Des Aerostiers",
+        "city": "Balma",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         1.48884,
+         43.609
+       ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 4,
+      "properties": {
+        "name": "Esso Blagnac",
+        "address": "9 Av Du General Compans",
+        "city": "Blagnac",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         1.398581,
+         43.625563
+       ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 5,
+      "properties": {
+        "name": "Esso Californie",
+        "address": "106 Av Du Marechal Juin",
+        "city": "Cannes",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         7.045745,
+         43.547024
+       ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 6,
+      "properties": {
+        "name": "Esso Celleneuve",
+        "address": "57 Rte De Lodeve R.N. 109",
+        "city": "Montpellier",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         3.82384,
+         43.615
+       ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 7,
+      "properties": {
+        "name": "Esso Colomiers",
+        "address": "2 Rue Edouard Serres",
+        "city": "Colomiers",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         1.352669,
+         43.609714
+       ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 8,
+      "properties": {
+        "name": "Esso Corne D'Or",
+        "address": "1 Bd De La Corne D'Or",
+        "city": "Villefranche Sur Mer",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         7.301188,
+         43.706202
+       ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 9,
+      "properties": {
+        "name": "Esso Croisière",
+        "address": "18 Route De Lyon",
+        "city": "Avignon",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         4.82521,
+         43.9504
+       ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 10,
+      "properties": {
+        "name": "Esso Croix Daurade",
+        "address": "231 Faubourg Bonnefoy",
+        "city": "Toulouse",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         1.458797,
+         43.62592
+       ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 11,
+      "properties": {
+        "name": "Esso Croix Sainte",
+        "address": "Rn 568",
+        "city": "Martigues",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         5.024736,
+         43.4128
+       ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 12,
+      "properties": {
+        "name": "Esso Croix Sud Est",
+        "address": "Zi Croix Sud Route De Nautique Grand Quartouze Ouest",
+        "city": "Narbonne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+         2.97926,
+         43.1708
+       ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 13,
+      "properties": {
+        "name": "Esso Croix Sud Ouest",
+        "address": "Zi Croix Sud Avenue Croix Sud",
+        "city": "Narbonne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.98926,
+          43.1608
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 14,
+      "properties": {
+        "name": "Esso De Clairfont",
+        "address": "50 Route D'Espagne Rn 20",
+        "city": "Portet Sur Garonne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.41559,
+          43.5426
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 15,
+      "properties": {
+        "name": "Esso De La Cite",
+        "address": "13 Allée D'Iéna",
+        "city": "Carcassonne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.34487,
+          43.2114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 16,
+      "properties": {
+        "name": "Esso De Pia",
+        "address": "Km 6 Rn9",
+        "city": "Pia",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.89839,
+          42.759869
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 17,
+      "properties": {
+        "name": "Esso Debussy",
+        "address": "Bd De Lattre De Tassigny",
+        "city": "Tarbes",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.05808,
+          43.2225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 18,
+      "properties": {
+        "name": "Esso Des Arts",
+        "address": "15 Avenue Des Poetes",
+        "city": "Nimes",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.33679,
+          43.8212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 19,
+      "properties": {
+        "name": "Esso Des Cimes",
+        "address": "39 Av De Verdun",
+        "city": "Digne Les Bains",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.22131,
+          44.0879
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 20,
+      "properties": {
+        "name": "Esso Donzere",
+        "address": "Rn 7 - Les Peyrauds",
+        "city": "Donzere",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.71146,
+          44.4184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 21,
+      "properties": {
+        "name": "Esso Du Cap",
+        "address": "20 Boulevard Marechal Leclerc",
+        "city": "Antibes",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.12391,
+          43.5744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 22,
+      "properties": {
+        "name": "Esso Du Caramy",
+        "address": "Av De La Liberation",
+        "city": "Brignoles",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.074463,
+          43.405963
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 23,
+      "properties": {
+        "name": "Esso Du Marchè",
+        "address": "168 Av Des Etats Unis",
+        "city": "Toulouse",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.42945,
+          43.6397
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 24,
+      "properties": {
+        "name": "Esso Du Moulin",
+        "address": "157 Avenue Ganzin",
+        "city": "Le Pradet",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.02737,
+          43.1073
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 25,
+      "properties": {
+        "name": "Esso Du Stade Albi",
+        "address": "246 Ave Du Colonel Teyssier",
+        "city": "Albi",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.16635,
+          43.9213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 26,
+      "properties": {
+        "name": "Esso Dugommier",
+        "address": "29 Bd General Vautrin",
+        "city": "Antibes",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.118455,
+          43.585635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 27,
+      "properties": {
+        "name": "Esso Font Reyne",
+        "address": "23 Avenue De Provence",
+        "city": "Gap",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.04798096522408,
+          44.5301969354635
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 28,
+      "properties": {
+        "name": "Esso Fos Ouest",
+        "address": "Deviation Rn 568 Ouest",
+        "city": "Fos Sur Mer",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.939341,
+          43.442154
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 29,
+      "properties": {
+        "name": "Esso Gambetta 12",
+        "address": "32 Bis Avenue Gambetta",
+        "city": "Decazeville",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.250306,
+          44.560219
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 30,
+      "properties": {
+        "name": "Esso Hippodrome Pau",
+        "address": "34 Av Des Martyrs Du Pont Long",
+        "city": "Pau",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.37949,
+          43.3389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 31,
+      "properties": {
+        "name": "Esso Jolimont",
+        "address": "Avenue Yves Brunaud",
+        "city": "Toulouse",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.468966,
+          43.619308
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 32,
+      "properties": {
+        "name": "Esso La Demande",
+        "address": "550 Avenue Antide Boyer",
+        "city": "Aubagne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.55934,
+          43.2944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 33,
+      "properties": {
+        "name": "Esso La Manda",
+        "address": "906 Route De Grenoble",
+        "city": "Nice",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.199381,
+          43.757867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 34,
+      "properties": {
+        "name": "Esso La Rocade",
+        "address": "59 Ave Etienne Soulie",
+        "city": "Villefranche De Rouergue",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.03958,
+          44.36
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 35,
+      "properties": {
+        "name": "Esso La Timone",
+        "address": "Boulevard Jean Moulin",
+        "city": "Marseille 10",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.39951,
+          43.2868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 36,
+      "properties": {
+        "name": "Esso Lauragais",
+        "address": "170 Rue De La Republique",
+        "city": "Villefranche De Lauragai",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.713871,
+          43.40173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 37,
+      "properties": {
+        "name": "Esso Le Muy",
+        "address": "1068 Route D'Aix",
+        "city": "Le Muy",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.566312,
+          43.478425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 38,
+      "properties": {
+        "name": "Esso Le Pharo",
+        "address": "13 Av Pasteur",
+        "city": "Marseille  7",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.35903,
+          43.2913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 39,
+      "properties": {
+        "name": "Esso Les Madets",
+        "address": "89 Avenue De La Liberation",
+        "city": "Plan De Cuques",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.45924,
+          43.3441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 40,
+      "properties": {
+        "name": "Esso Les Parfums",
+        "address": "35 Avenue De La Liberation",
+        "city": "Grasse",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.91747,
+          43.6487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 41,
+      "properties": {
+        "name": "Esso Les Sabliers",
+        "address": "1/3 Boulevard Du Sablier",
+        "city": "Marseille  8",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.38215,
+          43.254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 42,
+      "properties": {
+        "name": "Esso Les Tourelles",
+        "address": "Av Malacrida",
+        "city": "Aix En Provence",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.46446,
+          43.5176
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 43,
+      "properties": {
+        "name": "Esso Limoux",
+        "address": "23 Avenue Camille Bouche",
+        "city": "Limoux",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.21462,
+          43.0608
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 44,
+      "properties": {
+        "name": "Esso Littoral",
+        "address": "132 Av De Palavas",
+        "city": "Montpellier",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.88819,
+          43.5949
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 45,
+      "properties": {
+        "name": "Esso Lourdes",
+        "address": "4 Avenue François Abadie",
+        "city": "Lourdes",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.03897,
+          43.1076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 46,
+      "properties": {
+        "name": "Esso L'Ouvèze",
+        "address": "Route Nationale 7",
+        "city": "Sorgues",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.871469,
+          44.022084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 47,
+      "properties": {
+        "name": "Esso Lunelloise",
+        "address": "287 Av Delattre De Tassigny",
+        "city": "Lunel",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.12839,
+          43.6759
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 48,
+      "properties": {
+        "name": "Esso Magagnosc",
+        "address": "194 Av Auguste Renoir Cd 2085",
+        "city": "Magagnosc",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.95638,
+          43.6813
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 49,
+      "properties": {
+        "name": "Esso Du Polygone",
+        "address": "427 Av Des Etats Du Languedoc",
+        "city": "Montpellier",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.88592,
+          43.6071
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 50,
+      "properties": {
+        "name": "Esso Mille Colonnes",
+        "address": "47 Boulevard Talabot",
+        "city": "Nimes",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.3722,
+          43.8384
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 51,
+      "properties": {
+        "name": "Esso Miredames",
+        "address": "Boulevard Carnot",
+        "city": "Castres",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.24552,
+          43.607
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 52,
+      "properties": {
+        "name": "Esso Mistral",
+        "address": "40 Bd Frederic Mistral",
+        "city": "Narbonne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.0035,
+          43.1871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 53,
+      "properties": {
+        "name": "Esso Mont Ramus",
+        "address": "Monts Ramus C.D. 13",
+        "city": "Bessan",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.418789,
+          43.379911
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 54,
+      "properties": {
+        "name": "Esso Montaudran",
+        "address": "90 Route De Revel",
+        "city": "Toulouse",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.488181,
+          43.575846
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 55,
+      "properties": {
+        "name": "Esso Moulieres",
+        "address": "150 Avenue Du Campon",
+        "city": "Le Cannet",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.01311,
+          43.5722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 56,
+      "properties": {
+        "name": "Esso Notre Dame Limite",
+        "address": "437 Route De St Antoine",
+        "city": "Marseille 15",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.35849,
+          43.385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 57,
+      "properties": {
+        "name": "Esso Perpinya",
+        "address": "43 Avenue Du General Guillaut",
+        "city": "Perpignan",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.8947,
+          42.6895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 58,
+      "properties": {
+        "name": "Esso Quatre Chemins",
+        "address": "Rn 96 Les 4 Chemins La Barque",
+        "city": "Fuveau",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.53763,
+          43.4784
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 59,
+      "properties": {
+        "name": "Esso Saint Agne",
+        "address": "105 Route De Narbonne",
+        "city": "Toulouse",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.458556,
+          43.566531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 60,
+      "properties": {
+        "name": "Esso Saint Christophe",
+        "address": "Bd Geoffroy St Hilaire",
+        "city": "Hyeres",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.128694,
+          43.108385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 61,
+      "properties": {
+        "name": "Esso Saint Roch",
+        "address": "11 Bd Pierre Semard",
+        "city": "Nice",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.29188,
+          43.7199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 62,
+      "properties": {
+        "name": "Esso Mediterranee",
+        "address": "Rte De Marseille",
+        "city": "Montelimar",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.746316,
+          44.543845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 63,
+      "properties": {
+        "name": "Esso Terres Blanches",
+        "address": "236 Route De Grasse",
+        "city": "Antibes",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.10437,
+          43.5917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 64,
+      "properties": {
+        "name": "Esso Vendargues",
+        "address": "Rn 110 Route D'Ales",
+        "city": "Vendargues",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.96208,
+          43.6556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 65,
+      "properties": {
+        "name": "Esso Violesie",
+        "address": "Le Collet Rouge R.N. 8",
+        "city": "Fos Sur Mer",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.39716243743896,
+          43.4353299290964
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 66,
+      "properties": {
+        "name": "Esso Bourgogne",
+        "address": "69 Av Du 25Eme Rts",
+        "city": "Lyon  9",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.80033,
+          45.7807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 67,
+      "properties": {
+        "name": "Esso Carreau",
+        "address": "49 Av De Verdun Le Carreau",
+        "city": "Meyzieu",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.99058,
+          45.7765
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 68,
+      "properties": {
+        "name": "Esso Du Chateau",
+        "address": "7 Rue Briand Rn5 Rte D'Auxonne",
+        "city": "Genlis",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.22371,
+          47.2386
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 69,
+      "properties": {
+        "name": "Esso Du Bac",
+        "address": "153 Bd Gustave Flaubert",
+        "city": "Clermont Ferrand",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.127528,
+          45.757332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 70,
+      "properties": {
+        "name": "Esso Bonne Rencontre 2",
+        "address": "54 Avenue D'Evian",
+        "city": "Thonon Les Bains",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.49081,
+          46.3796
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 71,
+      "properties": {
+        "name": "Esso Du Canal",
+        "address": "37 Av Nicephore Niepce",
+        "city": "Chalon Sur Saone",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.84758,
+          46.782
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 72,
+      "properties": {
+        "name": "Esso Montplaisir",
+        "address": "36 Rue De Terrenoire",
+        "city": "St Etienne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.41635,
+          45.4335
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 73,
+      "properties": {
+        "name": "Esso Charbonnieres 69",
+        "address": "50 Rue Du 11 Novembre",
+        "city": "Tassin La Demi Lune",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.75898,
+          45.7645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 74,
+      "properties": {
+        "name": "Esso Dijon Langres",
+        "address": "2 Avenue De Langres",
+        "city": "Dijon",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.04499,
+          47.3422
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 75,
+      "properties": {
+        "name": "Esso Moirans",
+        "address": "8 Route De Grenoble",
+        "city": "Moirans",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.573368,
+          45.326932
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 76,
+      "properties": {
+        "name": "Esso Ecully",
+        "address": "28 Ave Edouard Aynard",
+        "city": "Ecully",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.77858,
+          45.779
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 77,
+      "properties": {
+        "name": "Esso Puy De Dome",
+        "address": "Av Du Puy De Dome",
+        "city": "Clermont Ferrand",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.05851,
+          45.788
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 78,
+      "properties": {
+        "name": "Esso Pochet Lagaye",
+        "address": "21 Boulevard Pochet Lagaye",
+        "city": "Clermont Ferrand",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.105822,
+          45.76601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 79,
+      "properties": {
+        "name": "Esso Joliot Curie",
+        "address": "112 Av Joliot Curie",
+        "city": "Venissieux",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.88309,
+          45.7103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 80,
+      "properties": {
+        "name": "Esso Rond Point",
+        "address": "50 Av Grand Port Rp Hopitaux",
+        "city": "Aix Les Bains",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.90793,
+          45.6967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 81,
+      "properties": {
+        "name": "Esso Pasteur Dole",
+        "address": "14 Avenue Du Marechal Juin",
+        "city": "Dole",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.496103,
+          47.086382
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 82,
+      "properties": {
+        "name": "Esso Des Vallees",
+        "address": "6 Rte Des Vallees",
+        "city": "Annemasse",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.241142,
+          46.193975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 83,
+      "properties": {
+        "name": "Esso Villefranche",
+        "address": "705 Rue D'Anse",
+        "city": "Villefranche Sur Saone",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.718178,
+          45.979019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 84,
+      "properties": {
+        "name": "Esso Salengro",
+        "address": "145 Bld Roger Salengro",
+        "city": "Villefranche Sur Saone",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.716138,
+          45.997412
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 85,
+      "properties": {
+        "name": "Esso Beaune Sud",
+        "address": "27 Rue De Pommard",
+        "city": "Beaune",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.826731,
+          47.018115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 86,
+      "properties": {
+        "name": "Esso Craponne",
+        "address": "15 Av Edouard Millaud",
+        "city": "Craponne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7337,
+          45.7471
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 87,
+      "properties": {
+        "name": "Esso De Paris",
+        "address": "Avenue De La Republique",
+        "city": "Cran Gevrier",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.11342,
+          45.9061
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 88,
+      "properties": {
+        "name": "Esso Croix Rousse",
+        "address": "22 Rue Philippe De Lassalle",
+        "city": "Lyon  4",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.82092,
+          45.7764
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 89,
+      "properties": {
+        "name": "Esso St Jacques",
+        "address": "41 Bd Claude Bernard",
+        "city": "Clermont Ferrand",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.0893,
+          45.7624
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 90,
+      "properties": {
+        "name": "Esso Portes Lyon",
+        "address": "Aire Porte De Lyon",
+        "city": "Dardilly",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.76029,
+          45.8207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 91,
+      "properties": {
+        "name": "Esso Les Echets",
+        "address": "Rn 83",
+        "city": "Les Echets",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.91235,
+          45.8719
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 92,
+      "properties": {
+        "name": "Esso La Brevenne",
+        "address": "Quai De La Brevenne",
+        "city": "Sain Bel",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.60161,
+          45.8131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 93,
+      "properties": {
+        "name": "Esso Layat",
+        "address": "31 Av De Paris",
+        "city": "Riom",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.11831,
+          45.8993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 94,
+      "properties": {
+        "name": "Esso De L Europe",
+        "address": "145 Bd De L'Europe",
+        "city": "Pierre Benite",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.82618,
+          45.6958
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 95,
+      "properties": {
+        "name": "Esso Schumann",
+        "address": "5/7 Bd Robert Schumann",
+        "city": "Dijon",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.05064,
+          47.3056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 96,
+      "properties": {
+        "name": "Esso Bourgoin",
+        "address": "45 Av Alsace Lorraine",
+        "city": "Bourgoin Jallieu",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.26448,
+          45.5858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 97,
+      "properties": {
+        "name": "Esso Francheville",
+        "address": "42 Av Du Chater",
+        "city": "Francheville",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.77175,
+          45.7432
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 98,
+      "properties": {
+        "name": "Esso Cluses",
+        "address": "1 Av Du Mont Blanc",
+        "city": "Cluses",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.57351,
+          46.0587
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 99,
+      "properties": {
+        "name": "Esso Novel",
+        "address": "Avenue De La Plaine",
+        "city": "Annecy",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1288,
+          45.9165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 100,
+      "properties": {
+        "name": "Esso Victor Hugo Valence",
+        "address": "396 Av Victor Hugo",
+        "city": "Valence",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.88425,
+          44.912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 101,
+      "properties": {
+        "name": "Esso Chabeuil",
+        "address": "295 Av De Chabeuil",
+        "city": "Valence",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.91506,
+          44.9275
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 102,
+      "properties": {
+        "name": "Esso Voiron",
+        "address": "Av Du 8 Mai 1945",
+        "city": "Voiron",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.58093,
+          45.376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 103,
+      "properties": {
+        "name": "Esso Val Vert",
+        "address": "106 Av Du Marechal Foch",
+        "city": "Le Puy En Velay",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.885693,
+          45.032664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 104,
+      "properties": {
+        "name": "Esso Chamalieres",
+        "address": "77 Av De Royat",
+        "city": "Chamalieres",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.064873,
+          45.77486
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 105,
+      "properties": {
+        "name": "Esso Du Grand Verger",
+        "address": "204 Avenue Du Grand Verger",
+        "city": "Chambery",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.90927,
+          45.5798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 106,
+      "properties": {
+        "name": "Esso Les 4 Vents",
+        "address": "50 Bld Leon Blum",
+        "city": "Besancon",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.02882,
+          47.259383
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 107,
+      "properties": {
+        "name": "Esso Biviers",
+        "address": "Rn 90 Les Evequaux",
+        "city": "Biviers",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.81762,
+          45.2391
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 108,
+      "properties": {
+        "name": "Esso Des Savoies",
+        "address": "Rn 6",
+        "city": "St Laurent De Mure",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.045071,
+          45.688881
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 109,
+      "properties": {
+        "name": "Esso Grand Soleil",
+        "address": "Rn 532",
+        "city": "Alixan",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.999599,
+          44.998214
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 110,
+      "properties": {
+        "name": "Esso Du Borne",
+        "address": "3515 Av Du Mont Blanc",
+        "city": "St Pierre En Faucigny",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.392007,
+          46.072878
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 111,
+      "properties": {
+        "name": "Esso Bourroches",
+        "address": "108 Bd Des Bourroches",
+        "city": "Dijon",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.01533,
+          47.3112
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 112,
+      "properties": {
+        "name": "Esso Champ Fleury",
+        "address": "328 Av Jean Jaures",
+        "city": "Decines Charpieu",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.968978,
+          45.771416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 113,
+      "properties": {
+        "name": "Esso Eybens (Val D')",
+        "address": "128 Av Jean Jaures",
+        "city": "Eybens",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.74985,
+          45.1498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 114,
+      "properties": {
+        "name": "Esso Ste Barbe",
+        "address": "43 Rue D Arras",
+        "city": "Lens",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.81944,
+          50.4272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 115,
+      "properties": {
+        "name": "Esso De La Base",
+        "address": "1 Av Coste & Bellonte",
+        "city": "Marly",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.15146,
+          49.0869
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 116,
+      "properties": {
+        "name": "Esso Hippodrome",
+        "address": "237 Av De L'Hippodrome",
+        "city": "Lambersart",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.02808,
+          50.6448
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 117,
+      "properties": {
+        "name": "Esso La Ternoise",
+        "address": "Rte D Arras",
+        "city": "St Michel Sur Ternoise",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.352873,
+          50.378046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 118,
+      "properties": {
+        "name": "Esso Clemenceau",
+        "address": "115 Bd Clemenceau",
+        "city": "Marcq En Baroeul",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.08854,
+          50.6647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 119,
+      "properties": {
+        "name": "Esso Sarreguemines",
+        "address": "24 Rue Du Marechal Foch",
+        "city": "Sarreguemines",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.074017,
+          49.113875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 120,
+      "properties": {
+        "name": "Esso Avesnoise",
+        "address": "39 Avenue Stroh Rn2",
+        "city": "Avesnes Sur Helpe",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.93759,
+          50.1296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 121,
+      "properties": {
+        "name": "Esso La Seille",
+        "address": "29 Rue De Metz",
+        "city": "Chateau Salins",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.505474,
+          48.825286
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 122,
+      "properties": {
+        "name": "Esso Ars",
+        "address": "Rue Du Bois Le Pretre",
+        "city": "Ars Sur Moselle",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.074021,
+          49.073827
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 123,
+      "properties": {
+        "name": "Esso Joeuf",
+        "address": "96 Rue Franchepre",
+        "city": "Joeuf",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.015009,
+          49.225584
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 124,
+      "properties": {
+        "name": "Esso Grenay",
+        "address": "22 Rue Francois Beaucamp",
+        "city": "Grenay",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.73979,
+          50.4467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 125,
+      "properties": {
+        "name": "Esso Borny",
+        "address": "192 Avenue De Strasbourg",
+        "city": "Metz",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.20955,
+          49.1053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 126,
+      "properties": {
+        "name": "Esso Gambetta 59",
+        "address": "20 Rue Gambetta",
+        "city": "Armentieres",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.882385,
+          50.682651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 127,
+      "properties": {
+        "name": "Esso Nations Unies",
+        "address": "70 Avenue Des Nations Unies",
+        "city": "Roubaix",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.18323,
+          50.6944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 128,
+      "properties": {
+        "name": "Esso Le Progres",
+        "address": "109 Rue D'Arras",
+        "city": "St Omer",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.256327,
+          50.747344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 129,
+      "properties": {
+        "name": "Esso St Joseph 54",
+        "address": "40 Av De La Liberation",
+        "city": "Nancy",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.167278,
+          48.692781
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 130,
+      "properties": {
+        "name": "Esso Malzeville",
+        "address": "49 Rue Du Colonel Driant",
+        "city": "Malzeville",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.19213,
+          48.705
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 131,
+      "properties": {
+        "name": "Esso Hayange",
+        "address": "Rue Du Marechal Foch",
+        "city": "Hayange",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.05704,
+          49.331
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 132,
+      "properties": {
+        "name": "Esso Dombasle",
+        "address": "69 Rue Gabriel Peri Rn4",
+        "city": "Dombasle Sur Meurthe",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.34871,
+          48.6236
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 133,
+      "properties": {
+        "name": "Esso Chanzy",
+        "address": "R.D. 946 - Chestres",
+        "city": "Vouziers",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7146,
+          49.3987
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 134,
+      "properties": {
+        "name": "Esso Nancy Est",
+        "address": "55 Av Du 69Eme Ri",
+        "city": "Essey Les Nancy",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.23495,
+          48.7077
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 135,
+      "properties": {
+        "name": "Esso De La Pilaterie",
+        "address": "Rue De La Couture Et De Mons",
+        "city": "Wasquehal",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.12622,
+          50.6529
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 136,
+      "properties": {
+        "name": "Esso Rimbaud",
+        "address": "17 21 Rue Charles De Gaulle",
+        "city": "Charleville Mezieres",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.71856,
+          49.7666
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 137,
+      "properties": {
+        "name": "Esso Douai",
+        "address": "121 Avenue Roger Salengro",
+        "city": "Sin Le Noble",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.097253,
+          50.364288
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 138,
+      "properties": {
+        "name": "Esso Magny",
+        "address": "28/30 Av Andre Malraux",
+        "city": "Metz",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1795,
+          49.1062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 139,
+      "properties": {
+        "name": "Esso Jean Jaures",
+        "address": "47 Bd Jean Jaures",
+        "city": "Nancy",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.17888,
+          48.681181
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 140,
+      "properties": {
+        "name": "Esso Royal Lieu",
+        "address": "12 Av Martyrs De La Liberte",
+        "city": "Compiegne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.806411,
+          49.400419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 141,
+      "properties": {
+        "name": "Esso Betting",
+        "address": "Rn 3",
+        "city": "Betting Les St Avold",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.807467,
+          49.140663
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 142,
+      "properties": {
+        "name": "Esso De L'Ill",
+        "address": "Route De Lyon Rn 83",
+        "city": "Erstein",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.63598,
+          48.4156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 143,
+      "properties": {
+        "name": "Esso Carnot Laon",
+        "address": "16 Bd Pierre Brossolette",
+        "city": "Laon",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.62143,
+          49.569557
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 144,
+      "properties": {
+        "name": "Esso Valenciennes",
+        "address": "3 Bld Eisen",
+        "city": "Valenciennes",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.53024,
+          50.3634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 145,
+      "properties": {
+        "name": "Esso Heurtebise",
+        "address": "275 Rue Sadi Carnot Bp 92",
+        "city": "Haubourdin",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.99912,
+          50.6122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 146,
+      "properties": {
+        "name": "Esso Du Petit Margny",
+        "address": "20 Rue De Clermont",
+        "city": "Compiegne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.81962,
+          49.4196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 147,
+      "properties": {
+        "name": "Esso Adele",
+        "address": "3 Rue Du Barrois",
+        "city": "Creutzwald",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.708793,
+          49.202232
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 148,
+      "properties": {
+        "name": "Esso Caraquet",
+        "address": "Rn 341 Route De Boulogne",
+        "city": "Longfosse",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.825329,
+          50.66659
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 149,
+      "properties": {
+        "name": "Esso Vandoeuvre",
+        "address": "22/24 Ave Jeanne D'Arc",
+        "city": "Vandoeuvre Les Nancy",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.183767,
+          48.659782
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 150,
+      "properties": {
+        "name": "Esso Lamarck",
+        "address": "45 Av De La Marne",
+        "city": "Sedan",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.918794,
+          49.696886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 151,
+      "properties": {
+        "name": "Esso Quercitaine",
+        "address": "2 Place De La Gare",
+        "city": "Le Quesnoy",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.640704,
+          50.251466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 152,
+      "properties": {
+        "name": "Esso Bollaert",
+        "address": "162 Rue Alfred Maes",
+        "city": "Lens",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.80798,
+          50.4274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 153,
+      "properties": {
+        "name": "Esso Dietsch",
+        "address": "655 Rue De Sarreguemines",
+        "city": "Oeting",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.917544,
+          49.174769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 154,
+      "properties": {
+        "name": "Esso Cliron",
+        "address": "Rn 43 Le Port Leroy",
+        "city": "Cliron",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.615321,
+          49.808391
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 155,
+      "properties": {
+        "name": "Esso Wittenheim",
+        "address": "37 Rue De Kingersheim",
+        "city": "Wittenheim",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.33753,
+          47.806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 156,
+      "properties": {
+        "name": "Esso St Sauveur",
+        "address": "72 Av Du President Kennedy",
+        "city": "Lille",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.07066,
+          50.6322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 157,
+      "properties": {
+        "name": "Esso La Meinau",
+        "address": "250 Route De Colmar",
+        "city": "Strasbourg Meinau",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.74414,
+          48.5534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 158,
+      "properties": {
+        "name": "Esso De La Marne",
+        "address": "2 Bd De La Marne",
+        "city": "Tourcoing",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.15578,
+          50.7136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 159,
+      "properties": {
+        "name": "Esso Haguenau",
+        "address": "121 Bis Rte De Strasbourg",
+        "city": "Haguenau",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.76909,
+          48.8026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 160,
+      "properties": {
+        "name": "Esso Aire Sur La Lys",
+        "address": "Route De Lambres",
+        "city": "Aire Sur La Lys",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.39076,
+          50.6285
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 161,
+      "properties": {
+        "name": "Esso Victor Hugo",
+        "address": "491 Rue De Landrecies",
+        "city": "Cambrai",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.24886,
+          50.1747
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 162,
+      "properties": {
+        "name": "Esso Metz Centre",
+        "address": "8 Bis Av Leclerc De Hautecloqu",
+        "city": "Metz",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.17027,
+          49.1095
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 163,
+      "properties": {
+        "name": "Esso Soissons",
+        "address": "1 Place De Laon",
+        "city": "Soissons",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.30894,
+          49.3667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 164,
+      "properties": {
+        "name": "Esso Vauxbuin",
+        "address": "183 Route De Paris Rn 2",
+        "city": "Vauxbuin",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.33387,
+          49.386103
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 165,
+      "properties": {
+        "name": "Esso St Pol Sur Mer",
+        "address": "18 Rue De La Republique",
+        "city": "St Pol Sur Mer",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.35908,
+          51.0288
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 166,
+      "properties": {
+        "name": "Esso Rocade Lens",
+        "address": "Cd 46",
+        "city": "Fouquieres Les Lens",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.922,
+          50.4302
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 167,
+      "properties": {
+        "name": "Esso Flandres",
+        "address": "Route Nationale 16",
+        "city": "Bierne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.420998,
+          50.974876
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 168,
+      "properties": {
+        "name": "Esso Sarrebourgeoise",
+        "address": "15 Bis Av De France",
+        "city": "Sarrebourg",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.04634,
+          48.7351
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 169,
+      "properties": {
+        "name": "Esso Horbourg",
+        "address": "73 Grande Rue",
+        "city": "Horbourg Wihr",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.398527,
+          48.080111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 170,
+      "properties": {
+        "name": "Esso Gloriette",
+        "address": "1 Av Burello",
+        "city": "Chaumont",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.142465,
+          48.117899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 171,
+      "properties": {
+        "name": "Esso Galavaude",
+        "address": "2 Av Miribel",
+        "city": "Verdun",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.387017,
+          49.166994
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 172,
+      "properties": {
+        "name": "Esso Du Stade",
+        "address": "601 Rte De Meteren",
+        "city": "Bailleul",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.72634,
+          50.7383
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 173,
+      "properties": {
+        "name": "Esso Blanquart",
+        "address": "126 Bd Louis Lesage Rn.41",
+        "city": "Cambrin",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.74736,
+          50.5124
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 174,
+      "properties": {
+        "name": "Esso Liberte",
+        "address": "Bld De La Liberte",
+        "city": "Cambrai",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.23326,
+          50.1688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 175,
+      "properties": {
+        "name": "Esso De Guise",
+        "address": "199 Rue Nationale",
+        "city": "Forbach",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.89033,
+          49.1826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 176,
+      "properties": {
+        "name": "Esso Vauban",
+        "address": "1 Rue De Sarrebourg",
+        "city": "Phalsbourg",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.253297,
+          48.76756
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 177,
+      "properties": {
+        "name": "Esso Montebello Flandres",
+        "address": "83 Bd Montebello",
+        "city": "Lille",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.04562,
+          50.6222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 178,
+      "properties": {
+        "name": "Esso Neuves Maisons",
+        "address": "46 Rue Du Capitaine Caillon",
+        "city": "Neuves Maisons",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.10382,
+          48.6147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 179,
+      "properties": {
+        "name": "Esso Faidherbe",
+        "address": "46/52 Avenue Faidherbe",
+        "city": "Saint Quentin",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.27934,
+          49.844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 180,
+      "properties": {
+        "name": "Esso Aerodrome",
+        "address": "Route De Vitry",
+        "city": "St Dizier",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.908953,
+          48.641427
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 181,
+      "properties": {
+        "name": "Esso Des Abbayes",
+        "address": "48 Rue Raymond Breteche",
+        "city": "Le Trait",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.804953,
+          49.487267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 182,
+      "properties": {
+        "name": "Esso Les Essarts",
+        "address": "Rn 138 Les Essarts",
+        "city": "Grand Couronne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.03024,
+          49.3541
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 183,
+      "properties": {
+        "name": "Esso St Christophe Cergy",
+        "address": "Bd D'Osny Prolonge",
+        "city": "Cergy",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.04626,
+          49.0531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 184,
+      "properties": {
+        "name": "Esso Vignes Bennettes",
+        "address": "46 Av Du Pdt Kennedy",
+        "city": "Le Pecq",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.09711,
+          48.8809
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 185,
+      "properties": {
+        "name": "Esso Franconville",
+        "address": "9 Boulevard Du Bel Air",
+        "city": "Franconville",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.238619,
+          48.985444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 186,
+      "properties": {
+        "name": "Esso Asnieres",
+        "address": "81 Rue Des Bas",
+        "city": "Asnieres Sur Seine",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.288872,
+          48.919984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 187,
+      "properties": {
+        "name": "Esso Grand Cerf",
+        "address": "138 Ter A 142 Bd Jean Jaures",
+        "city": "Houilles",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.204153,
+          48.922095
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 188,
+      "properties": {
+        "name": "Esso Bondy",
+        "address": "108 Av Gallieni",
+        "city": "Bondy",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.48097,
+          48.9057
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 189,
+      "properties": {
+        "name": "Esso Beauregard",
+        "address": "64 Rue Louis Rene Duchesne",
+        "city": "La Celle St Cloud",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.129458,
+          48.837352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 190,
+      "properties": {
+        "name": "Esso Les Coquets",
+        "address": "24 Av Mont Aux Malades",
+        "city": "Mont St Aignan",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.08255,
+          49.461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 191,
+      "properties": {
+        "name": "Esso Pont Colbert",
+        "address": "50 Rue Du Pont Colbert",
+        "city": "Versailles",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.14988,
+          48.7878
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 192,
+      "properties": {
+        "name": "Esso Gallieni",
+        "address": "205 209 Avenue Gallieni",
+        "city": "Bondy",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.48857,
+          48.9074
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 193,
+      "properties": {
+        "name": "Esso Bois Au Coq",
+        "address": "253 255 Rue Du Bois Au Coq",
+        "city": "Le Havre",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.12681,
+          49.5116
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 194,
+      "properties": {
+        "name": "Esso Octeville",
+        "address": "Av Normandie Zup Octeville",
+        "city": "Octeville",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.635403,
+          49.627368
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 195,
+      "properties": {
+        "name": "Esso Chantilly",
+        "address": "41 Av Du Gl Leclerc",
+        "city": "Chantilly",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4533,
+          49.1743
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 196,
+      "properties": {
+        "name": "Esso Emeraude",
+        "address": "20 Bis Bd Saint Germain",
+        "city": "Fougeres",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.209281,
+          48.362817
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 197,
+      "properties": {
+        "name": "Esso Caucriauville Sud",
+        "address": "Av Du General Ferrie",
+        "city": "Le Havre",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.17463,
+          49.5079
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 198,
+      "properties": {
+        "name": "Esso Igoville",
+        "address": "Rn 15",
+        "city": "Igoville",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.15598,
+          49.3198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 199,
+      "properties": {
+        "name": "Esso St Etienne",
+        "address": "Bd Lenine",
+        "city": "St Etienne Du Rouvray",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.111869,
+          49.395157
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 200,
+      "properties": {
+        "name": "Esso Kennedy",
+        "address": "1 Ave Kennedy",
+        "city": "Beauvais",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.09241,
+          49.4304
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 201,
+      "properties": {
+        "name": "Esso Deuil La Barre",
+        "address": "17 Route De St Denis",
+        "city": "Deuil La Barre",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.326001,
+          48.960395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 202,
+      "properties": {
+        "name": "Esso De Normandie",
+        "address": "2 Route De Normandie",
+        "city": "Salouel",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.24136,
+          49.8701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 203,
+      "properties": {
+        "name": "Esso Marechaux",
+        "address": "86 Av Delattre De Tassigny",
+        "city": "Epinay Sur Seine",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.30355,
+          48.9599
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 204,
+      "properties": {
+        "name": "Esso Pont D'Argenteuil",
+        "address": "2 Av Gabriel Peri",
+        "city": "Argenteuil",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.25279,
+          48.9428
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 205,
+      "properties": {
+        "name": "Esso Arnouville",
+        "address": "100 Avenue De La Republique",
+        "city": "Arnouville Les Gonesse",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.426142,
+          48.980651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 206,
+      "properties": {
+        "name": "Esso Montgomery",
+        "address": "Boulevard Montgomery",
+        "city": "Bayeux",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.69389,
+          49.2708
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 207,
+      "properties": {
+        "name": "Esso Darnetal",
+        "address": "42 Rue Sadi Carnot",
+        "city": "Darnetal",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.148194,
+          49.441037
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 208,
+      "properties": {
+        "name": "Esso Mathieu",
+        "address": "Lieu Dit Manoir Et Clos Du Pin",
+        "city": "Mathieu",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.38085,
+          49.2607
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 209,
+      "properties": {
+        "name": "Esso N D Gravenchon",
+        "address": "Carrefour De L'Europe",
+        "city": "Nd De Gravenchon",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.56608,
+          49.4887
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 210,
+      "properties": {
+        "name": "Esso Du Min",
+        "address": "Avenue Du Commandant Bicheray",
+        "city": "Rouen",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.0492,
+          49.4498
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 211,
+      "properties": {
+        "name": "Esso Riva Bella",
+        "address": "Cd 84 Route De Caen",
+        "city": "Ouistreham",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.258934,
+          49.267935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 212,
+      "properties": {
+        "name": "Esso Port De Cherbourg",
+        "address": "Zi Portuaire Des Mielles",
+        "city": "Cherbourg",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.59891,
+          49.6454
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 213,
+      "properties": {
+        "name": "Esso Picardie",
+        "address": "Boulevard De Roubaix",
+        "city": "Amiens",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.31792,
+          49.9074
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 214,
+      "properties": {
+        "name": "Esso Eaubonne",
+        "address": "5 Avenue Voltaire",
+        "city": "Eaubonne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.280117,
+          48.994201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 215,
+      "properties": {
+        "name": "Esso St Roch",
+        "address": "28 Place Marechal Foch",
+        "city": "Amiens",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.28488,
+          49.8941
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 216,
+      "properties": {
+        "name": "Esso St Acheul",
+        "address": "160 Chaussee Jules Ferry",
+        "city": "Amiens",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.327363,
+          49.882223
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 217,
+      "properties": {
+        "name": "Esso Du Stade Alencon",
+        "address": "71 Avenue De Quakenbruck",
+        "city": "Alencon",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.105237,
+          48.439839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 218,
+      "properties": {
+        "name": "Esso La Garenne",
+        "address": "13 15 Av De Verdun",
+        "city": "La Garenne Colombes",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.23598,
+          48.9056
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 219,
+      "properties": {
+        "name": "Esso Les Ibis",
+        "address": "101 Bd Carnot",
+        "city": "Le Vesinet",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.126982,
+          48.895369
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 220,
+      "properties": {
+        "name": "Esso Porte Oceane",
+        "address": "8 Rue Beranger",
+        "city": "Le Havre",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.097106,
+          49.49414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 221,
+      "properties": {
+        "name": "Esso Les Canadiens",
+        "address": "78 Rue Gambetta",
+        "city": "Dieppe",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.074328,
+          49.915803
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 222,
+      "properties": {
+        "name": "Esso Abbevilloise",
+        "address": "213 Bld De La Republique",
+        "city": "Abbeville",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.828682,
+          50.11332
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 223,
+      "properties": {
+        "name": "Esso Herblay",
+        "address": "Rn 14 - 61 Bd Du Havre",
+        "city": "La Patte D Oie D Herblay",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.17949,
+          49.0018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 224,
+      "properties": {
+        "name": "Esso Aeroport",
+        "address": "2 Av Du 8 Mai 1945",
+        "city": "Le Blanc Mesnil",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.43124,
+          48.9404
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 225,
+      "properties": {
+        "name": "Esso Saint Cloud",
+        "address": "24 Rue Pasteur",
+        "city": "Saint Cloud",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.20236,
+          48.8421
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 226,
+      "properties": {
+        "name": "Esso Bonneuil",
+        "address": "Cd 60 Route De La Pompadour",
+        "city": "Bonneuil Sur Marne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.47855,
+          48.765
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 227,
+      "properties": {
+        "name": "Esso Relais Du Pave Blanc",
+        "address": "448 Av Du General De Gaulle",
+        "city": "Clamart",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.238297,
+          48.780249
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 228,
+      "properties": {
+        "name": "Esso Fontenay Aux Roses",
+        "address": "21/23 Av J & M Dolivet",
+        "city": "Fontenay Aux Roses",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.2904,
+          48.7933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 229,
+      "properties": {
+        "name": "Esso Favreuse",
+        "address": "Rn 118 - Plaine De Favreuse",
+        "city": "Bievres",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.195395,
+          48.745832
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 230,
+      "properties": {
+        "name": "Esso Avon Fontainebleau",
+        "address": "73 Avenue Franklin Roosevelt",
+        "city": "Avon",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.7238,
+          48.4168
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 231,
+      "properties": {
+        "name": "Esso Montgeron",
+        "address": "105 Avenue De La Republique",
+        "city": "Montgeron",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.46229,
+          48.7034
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 232,
+      "properties": {
+        "name": "Esso St Julien",
+        "address": "210 Faubourg Croncels",
+        "city": "Troyes",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.079016,
+          48.282591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 233,
+      "properties": {
+        "name": "Esso Lyon Rapee",
+        "address": "36 Quai De La Rapee",
+        "city": "Paris",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.37329,
+          48.841623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 234,
+      "properties": {
+        "name": "Esso Ste Genevieve",
+        "address": "Bld Gallieni Ave Ch Delacroix",
+        "city": "Auxerre",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.55288,
+          47.7991
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 235,
+      "properties": {
+        "name": "Esso Petit Marais",
+        "address": "1 Rue De Paris - Cd 60",
+        "city": "Sucy En Brie",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.4986,
+          48.7733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 236,
+      "properties": {
+        "name": "Esso Chalonnaise",
+        "address": "Route D'Epernay",
+        "city": "Chalons En Champagne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.33186,
+          48.9544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 237,
+      "properties": {
+        "name": "Esso Foch",
+        "address": "99 101 Avenue Foch",
+        "city": "Saint Maur",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.49963,
+          48.7993
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 238,
+      "properties": {
+        "name": "Esso Joinville",
+        "address": "8 Bld De L'Europe",
+        "city": "Joinville Le Pont",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.46534,
+          48.8138
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 239,
+      "properties": {
+        "name": "Esso Le Perreux",
+        "address": "264 266 Av General De Gaulle",
+        "city": "Le Perreux Sur Marne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.49527,
+          48.8509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 240,
+      "properties": {
+        "name": "Esso La Paix",
+        "address": "115 Av Du General De Gaulle",
+        "city": "Issy Les Moulineaux",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.27676,
+          48.8177
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 241,
+      "properties": {
+        "name": "Esso Verrieres",
+        "address": "Bd Du Marechal Juin",
+        "city": "Verrieres Le Buisson",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.272469,
+          48.752778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 242,
+      "properties": {
+        "name": "Esso Barsequanaise",
+        "address": "14 Faubourg De Bourgogne",
+        "city": "Bar Sur Seine",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.377039,
+          48.106083
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 243,
+      "properties": {
+        "name": "Esso Fagnieres",
+        "address": "Rte De Troyes Rn77",
+        "city": "Fagnieres",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.339891,
+          48.941288
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 244,
+      "properties": {
+        "name": "Esso Gentilly",
+        "address": "67 Boulevard Raspail",
+        "city": "Gentilly",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.34777,
+          48.8135
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 245,
+      "properties": {
+        "name": "Esso Louis Blanc",
+        "address": "2/6 Rue Louis Blanc",
+        "city": "Paris 10",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.369747,
+          48.878705
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 246,
+      "properties": {
+        "name": "Esso Rn 305",
+        "address": "14 Bd De Stalingrad",
+        "city": "Choisy Le Roi",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.40303,
+          48.7683
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 247,
+      "properties": {
+        "name": "Esso Rte Roses",
+        "address": "22 Avenue Pierre Brossolette",
+        "city": "Creteil",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.46194,
+          48.7911
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 248,
+      "properties": {
+        "name": "Esso Paris Metz",
+        "address": "Av President Salvador Allende",
+        "city": "Meaux",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.88467,
+          48.9572
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 249,
+      "properties": {
+        "name": "Esso Picardie Vda",
+        "address": "191 Rte De Versailles",
+        "city": "Ville D Avray",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1679,
+          48.8188
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 250,
+      "properties": {
+        "name": "Esso Valmy",
+        "address": "Place De Verdun",
+        "city": "Chalons En Champagne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.3668,
+          48.9637
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 251,
+      "properties": {
+        "name": "Esso St Marceaux",
+        "address": "11 Bld St Marceaux",
+        "city": "Reims",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.04712,
+          49.2561
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 252,
+      "properties": {
+        "name": "Esso Boule D'Or",
+        "address": "70 Rue Aristide Briand",
+        "city": "Romilly",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.71996,
+          48.5117
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 253,
+      "properties": {
+        "name": "Esso Arcueil",
+        "address": "20 Avenue Paul Vaillant Couturier",
+        "city": "Arcueil",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.33856,
+          48.8018
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 254,
+      "properties": {
+        "name": "Esso Chilly Mazarin",
+        "address": "7 Rue Pierre Brosolette",
+        "city": "Chilly Mazarin",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.318285,
+          48.700753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 255,
+      "properties": {
+        "name": "Esso Ste Savine",
+        "address": "24/26 Av Du Gl Leclerc",
+        "city": "Ste Savine",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.04329,
+          48.2928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 256,
+      "properties": {
+        "name": "Esso Migennes",
+        "address": "129 Avenue Jean Jaures",
+        "city": "Migennes",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.50199,
+          47.962826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 257,
+      "properties": {
+        "name": "Esso Freres Voisins",
+        "address": "19 Boulevard Des Frères Voisins",
+        "city": "Paris",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.271842,
+          48.827961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 258,
+      "properties": {
+        "name": "Esso Chevilly La Rue",
+        "address": "264 Av Stalingrad",
+        "city": "Chevilly Larue",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.36753,
+          48.7671
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 259,
+      "properties": {
+        "name": "Esso Rouget De L'Isle",
+        "address": "159 Avenue Rouget De L'Isle",
+        "city": "Vitry",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.39459,
+          48.7811
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 260,
+      "properties": {
+        "name": "Esso Arpajon",
+        "address": "Rn 20",
+        "city": "St Germain Les Arpajon",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.24821,
+          48.6028
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 261,
+      "properties": {
+        "name": "Esso Valenton Churchil",
+        "address": "20 Ave Winston Churchill",
+        "city": "Villeneuve St Georges",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.45054,
+          48.7537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 262,
+      "properties": {
+        "name": "Esso Rabelais",
+        "address": "18 Rue Jean Moulin",
+        "city": "Antony",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.3069,
+          48.7528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 263,
+      "properties": {
+        "name": "Esso Paris Geneve",
+        "address": "5 Avenue Leon Blum",
+        "city": "Maisons Alfort",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.43559,
+          48.802
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 264,
+      "properties": {
+        "name": "Esso Du Champy",
+        "address": "2 Allee Des Hauts Chateaux",
+        "city": "Noisy Le Grand",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.57659,
+          48.8431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 265,
+      "properties": {
+        "name": "Esso Du Stade Psm",
+        "address": "5 Rue Roger Salengro",
+        "city": "Pont Ste Marie",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.09718,
+          48.3114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 266,
+      "properties": {
+        "name": "Esso Malibran",
+        "address": "Bld De La Malibran",
+        "city": "Roissy En Brie",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.64309,
+          48.7957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 267,
+      "properties": {
+        "name": "Esso La Marne Noisy",
+        "address": "22/36 Route De Neuilly",
+        "city": "Noisy Le Grand",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.53471,
+          48.8506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 268,
+      "properties": {
+        "name": "Esso Du Plateau",
+        "address": "38 Rue Pierre Brossolette",
+        "city": "Ris Orangis",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.937953,
+          43.928693
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 269,
+      "properties": {
+        "name": "Esso Epernay",
+        "address": "34 Avenue Jean Jaurès",
+        "city": "Epernay",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.950034,
+          49.046836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 270,
+      "properties": {
+        "name": "Esso Evry",
+        "address": "Bd Des Champs Elysees",
+        "city": "Evry",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.42721,
+          48.639
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 271,
+      "properties": {
+        "name": "Esso Du Gresivaudan",
+        "address": "Autoroute A 41",
+        "city": "Brignoud",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.94778080943953,
+          45.2307660235371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 272,
+      "properties": {
+        "name": "Esso Aquitaine 1",
+        "address": "A 630 Roc.Presqu'Ile Lac Cote1",
+        "city": "Bruges",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.579261,
+          44.888035
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 273,
+      "properties": {
+        "name": "Esso Aquitaine 2",
+        "address": "A 630 Roc.Presqu'Ile Lac Cote2",
+        "city": "Bruges",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.579467,
+          44.8875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 274,
+      "properties": {
+        "name": "Esso Chatellerault",
+        "address": "Autoroute A10",
+        "city": "Antran",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.52071,
+          46.9027
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 275,
+      "properties": {
+        "name": "Esso Cantepie",
+        "address": "Route Nationale 13",
+        "city": "Les Veys",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.16199,
+          49.3043
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 276,
+      "properties": {
+        "name": "Esso Le Lombard",
+        "address": "Autoroute A 43",
+        "city": "L Isle D Abeau",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.20868,
+          45.6125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 277,
+      "properties": {
+        "name": "Esso Bedenac 2",
+        "address": "Rn 10",
+        "city": "Bedenac",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.33811,
+          45.1673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 278,
+      "properties": {
+        "name": "Esso Tavel",
+        "address": "Autoroute A 9",
+        "city": "Tavel",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7028,
+          44.0028
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 279,
+      "properties": {
+        "name": "Esso Beaune Les Mines",
+        "address": "Autoroute A 20",
+        "city": "Beaune Les Mines",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.292459,
+          45.913777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 280,
+      "properties": {
+        "name": "Esso Villeroy",
+        "address": "Autoroute A 19",
+        "city": "Foucheres",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.172145,
+          48.165647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 281,
+      "properties": {
+        "name": "Esso Pierrelaye",
+        "address": "Autoroute A 15",
+        "city": "Pierrelaye",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.145931,
+          49.015354
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 282,
+      "properties": {
+        "name": "Esso La Vaupaliere",
+        "address": "Autoroute A 15",
+        "city": "St Jean Du Cardonnay",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.99766,
+          49.4952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 283,
+      "properties": {
+        "name": "Esso Canal De L'Est",
+        "address": "Autoroute A 330",
+        "city": "Richardmenil",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.173684,
+          48.607281
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 284,
+      "properties": {
+        "name": "Esso Authezat",
+        "address": "Autoroute A 75",
+        "city": "Authezat",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.1835,
+          45.6425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 285,
+      "properties": {
+        "name": "Esso Saugon",
+        "address": "Autoroute A10",
+        "city": "Saugon",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.49116,
+          45.1889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 286,
+      "properties": {
+        "name": "Esso Assevillers",
+        "address": "Autoroute A 1",
+        "city": "Peronne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.83959,
+          49.8896
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 287,
+      "properties": {
+        "name": "Esso St Denis D Orques",
+        "address": "Autoroute A 81",
+        "city": "St Denis D Orques",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.32391,
+          48.0233
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 288,
+      "properties": {
+        "name": "Esso Marchaux",
+        "address": "Autoroute A 36",
+        "city": "Marchaux",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.128949,
+          47.329406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 289,
+      "properties": {
+        "name": "Esso Vitrimont",
+        "address": "Rn 333",
+        "city": "Vitrimont",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.41947,
+          48.592156
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 290,
+      "properties": {
+        "name": "Esso La Bigue",
+        "address": "Autoroute A 57",
+        "city": "La Valette Du Var",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.01015,
+          43.1424
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 291,
+      "properties": {
+        "name": "Esso Brou Dampierre",
+        "address": "Autoroute A11 Oceane",
+        "city": "Dampierre Sous Brou",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.081109,
+          48.239395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 292,
+      "properties": {
+        "name": "Esso La Ferte St Aubin",
+        "address": "Autoroute A 71",
+        "city": "Chaumont Sur Tharonne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.92983,
+          47.6641
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 293,
+      "properties": {
+        "name": "Esso Labenne Est",
+        "address": "Autoroute A 63 Cote Est",
+        "city": "Labenne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.41891,
+          43.5853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 294,
+      "properties": {
+        "name": "Esso Blois Menars",
+        "address": "Autoroute A 10 41000 Villerbon",
+        "city": "Villerbon",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.388752,
+          47.665264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 295,
+      "properties": {
+        "name": "Esso Bolleville",
+        "address": "Autoroute A 29 76210 Bolleville",
+        "city": "Bolleville",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.54643,
+          49.6142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 296,
+      "properties": {
+        "name": "Esso Emerainville",
+        "address": "Rn 104 - Cd 51",
+        "city": "Emerainville",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.62262,
+          48.8167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 297,
+      "properties": {
+        "name": "Esso Cabries",
+        "address": "A 51 - 456 Av Chabauds",
+        "city": "Bouc Bel Air",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.3959,
+          43.4336
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 298,
+      "properties": {
+        "name": "Esso Groisy",
+        "address": "Autoroute A410 - 865 Route De Lecy",
+        "city": "Groisy",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.1659403243591,
+          45.9984246953892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 299,
+      "properties": {
+        "name": "Esso Bligny La Foret",
+        "address": "Autoroute A 6 21360 Bligny Sur Ouche",
+        "city": "Bligny Sur Ouche",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.713264,
+          47.105946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 300,
+      "properties": {
+        "name": "Esso Labenne Ouest",
+        "address": "Autoroute A 63 Cote Ouest",
+        "city": "Labenne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.42055,
+          43.5868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 301,
+      "properties": {
+        "name": "Esso Boismande",
+        "address": "Autoroute A 20",
+        "city": "St Sulpice Les Feuilles",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.420115,
+          46.313634
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 302,
+      "properties": {
+        "name": "Esso Mazargues",
+        "address": "14 Av De Lattre De Tassigny",
+        "city": "Marseille",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.40504,
+          43.24945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 303,
+      "properties": {
+        "name": "Esso Bourges Sainte Thorette",
+        "address": "A71",
+        "city": "Marmagne",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.239829,
+          47.094798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 304,
+      "properties": {
+        "name": "Esso Giberville",
+        "address": "Autoroute A13",
+        "city": "Giberville",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.27627,
+          49.1686
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 305,
+      "properties": {
+        "name": "Esso La Scoperta",
+        "address": "Autoroute A8",
+        "city": "La Turbie",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.397839,
+          43.754954
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 306,
+      "properties": {
+        "name": "Esso Saint-Remy",
+        "address": "Autoroute A31",
+        "city": "Woippy",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.17686,
+          49.1814
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 307,
+      "properties": {
+        "name": "Esso Gevrey Ouest",
+        "address": "Autoroute A31",
+        "city": "Gevrey Chambertin",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.00489,
+          47.2194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 308,
+      "properties": {
+        "name": "Esso Les Corbieres Nord",
+        "address": "Autoroute A61",
+        "city": "Capendu",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.543668,
+          43.17797
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 309,
+      "properties": {
+        "name": "Esso Service La Maxe",
+        "address": "Autoroute A31",
+        "city": "La Maxe",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.18462,
+          49.1496
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 310,
+      "properties": {
+        "name": "Esso Eurodisney",
+        "address": "1 Avenue Schuman",
+        "city": "Coupvray",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.7969753742218,
+          48.8726683254044
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 311,
+      "properties": {
+        "name": "Esso Les Chères Ouest",
+        "address": "Autoroute A 6",
+        "city": "Les Cheres",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.731554,
+          45.894753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 312,
+      "properties": {
+        "name": "Esso Ripaille",
+        "address": "Autoroute A41 Nord",
+        "city": "Seynod",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          6.07028389923096,
+          45.8765388393243
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 313,
+      "properties": {
+        "name": "Esso Gevrey Est",
+        "address": "Autoroute A31",
+        "city": "Gevrey Chambertin",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          5.009382,
+          47.222467
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 314,
+      "properties": {
+        "name": "Esso Les Chères Est",
+        "address": "Autoroute A 6",
+        "city": "Les Cheres",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          4.7301269,
+          45.9027906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 315,
+      "properties": {
+        "name": "Esso Moisselles",
+        "address": "Rn1",
+        "city": "Moisselles",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.34299,
+          49.040988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 316,
+      "properties": {
+        "name": "Esso Montigny",
+        "address": "11 Avenue des Pres",
+        "city": "L'Ile de Motigny",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.018626,
+          48.77719
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 317,
+      "properties": {
+        "name": "Esso Aire De Rely",
+        "address": "Autoroute 26  Le Mont De Hiettre",
+        "city": "Rely",
+        "country": "France"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.37736456,
+          50.5726088
+        ]
+      }
+    }
+  ]
+}

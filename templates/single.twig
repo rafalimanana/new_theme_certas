@@ -1,0 +1,95 @@
+{% extends "_base_page.twig" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+<div class="wrapper _bg_white {{sidebar_class}}" id="_pg_actualites">
+    <!-- Aide à la navigation -->
+    <div class="content-wrapper ">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb _bredcrumb_custo">
+                    <li class="breadcrumb-item"><a href="{{site.url}}">Accueil</a></li>
+                    {% if post.category %}
+                        <li class="breadcrumb-item">{{post.category}}</li>
+                    {% endif %}
+                    <li class="breadcrumb-item active">{{post.title}}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Aide à la navigation -->
+	<div class="content-wrapper">
+        <div class="container">
+            <article class="post-type-{{ post.post_type }} _pd_bt_25 row" id="post-{{ post.ID }}">
+                <section class="_article_content col-md-12">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="{{ post.thumbnail.src }}" width="100%">
+                        </div>
+                        <div class="col-md-7">
+                            <section class="article-content">
+                                <h1 class="article-h1 t_promos">{{ post.title }}</h1>
+                                {# <a href="{{ post.link }}">{{ _e('edit') }}</a>
+                                <p class="blog-author">
+                                    <span>By </span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.date }}
+                                </p> #}
+                                <div class="article-body">
+                                    {{post.content}}
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </section>
+                {% if posts is not empty %}
+                    <section class="_article_content col-md-12 mt-5" id="_nos_actus">
+                        <h1 class="_title_actus font-family-pers">
+                            <span class="fw-l">Nos </span> <b>Actualités</b> 
+                        </h1>
+                        <div class="slick_responsive row" id="slick_article">
+                            {% for term in posts %}
+                                <div class="col-md-3 _cnt_panel_actus">
+                                    <div class="panel _panel_actus" style="height: initial;">
+                                        <a href="{{term.link}}">
+                                            <div class="panel-body">
+                                                <img src="{{term.thumbnail.src}}" class="_actu_img">
+                                            </div>
+                                            <div class="panel-footer">
+                                                <h4 class="_actu_date">{{term.date}}</h4>
+                                                <h2 class="_actu_title">{{term.title}}</h2>
+                                                <p class="_actu_description">
+                                                    {{ term.title|striptags|length > 10 ? term.post_content|excerpt(12) : term.post_content|excerpt(20) }}
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </section>
+                {% endif %}
+
+                <!-- comment box -->
+                {# <section class="comment-box"> #}
+                    <!-- comments -->
+                    {# <div class="comments">
+                        {% if post.comments %} #}
+                        {# <h3> comments </h3> #}
+                        {# {% for cmt in post.comments %}
+                            {% include "comment.twig" with {comment:cmt} %}
+                        {% endfor %}
+                        {% endif %}
+                    </div>
+
+                    {% if post.comment_status == "closed" %}
+                        <p> les commentaires pour cet article sont fermés </p>
+                    {% else %} #}
+                        <!-- comment form -->
+                       {#  {% include "comment-form.twig" %}
+                    {% endif %} #}
+                {# </section> #}
+            </article>
+        </div>
+	</div><!-- /content-wrapper -->
+</div>
+{% endblock %}

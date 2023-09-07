@@ -1,0 +1,114 @@
+<!doctype html>
+<!--[if lt IE 9]><html class="no-js no-svg ie lt-ie9 lt-ie8 lt-ie7" {{ site.language_attributes }}> <![endif]-->
+<!--[if IE 9]><html class="no-js no-svg ie ie9 lt-ie9 lt-ie8" {{ site.language_attributes }}> <![endif]-->
+<!--[if gt IE 9]><!--> <!--<![endif]-->
+<html class="no-js no-svg" {{ site.language_attributes }}>
+<head>
+    <meta charset="{{ site.charset }}" />
+    <meta name="description" content="{{ site.description }}">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {# <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> #}
+    <link rel="shortcut icon" type="image/png" href="{{site.theme.link}}/images/favicon/favicon.ico">
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/font-awesome.css">
+    <link rel="author" href="{{ site.theme.link }}/humans.txt" />
+    <link rel="pingback" href="{{ site.pingback_url }}" />
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ site.theme.link }}/leaflet/leaflet.css" />
+
+    <link rel="stylesheet" href="{{ site.theme.link }}/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/animate.css">
+    
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/aos.css">
+
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/flaticon.css">
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/icomoon.css">
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/style.css">
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/_style.css">
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/apropos.css">
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/slick.css">
+    <link rel="stylesheet" href="{{ site.theme.link }}/css/slick-theme.css">
+    {# <link rel="stylesheet" href="{{ site.theme.link }}/select2/css/select2.min.css"> #}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.css' rel='stylesheet' />
+
+
+    {# <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>#}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    {#<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.cs">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"> </script>#}
+    {#<script src="{{ site.theme.link }}/select2/js/select2.min.js"></script>
+    <script src="{{ site.theme.link }}/select2/js/select2.full.js"></script>#}
+
+    <script src="{{ site.theme.link }}/js/jquery.min.js"></script>
+    <script src="{{ site.theme.link }}/js/bootstrap.min.js"></script>
+    <script src="{{ site.theme.link }}/js/slick.min.js"></script>
+    <script src="{{ site.theme.link }}/js/script.js"></script>
+    <script src="{{ site.theme.link }}/js/script-menu.js"></script>
+    <script src="{{ site.theme.link }}/leaflet/leaflet.js"></script>
+    <script src="https://unpkg.com/esri-leaflet@2.3.1/dist/esri-leaflet.js"></script>
+    <script src="https://unpkg.com/esri-leaflet-geocoder@2.3.1/dist/esri-leaflet-geocoder.js"></script>
+    <script src="https://unpkg.com/esri-leaflet-vector@2.0.2/dist/esri-leaflet-vector.js"></script>
+    <script src="https://unpkg.com/esri-leaflet-cluster@2.0.1/dist/esri-leaflet-cluster.js"></script>
+    <script type="text/javascript">let OL = L;</script>
+    <script src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js'></script>
+    <script type="text/javascript">
+        L.mapbox.accessToken = 'pk.eyJ1IjoiZmFicmljZXdlYiIsImEiOiJjazI1cmpmMGswcXI3M3FwOTJ2c25ldGVzIn0.4X0G-2us5zurU019Yu9tPw';
+    </script>
+
+    <script type="text/javascript">
+    {% if fn('is_page', 'a-propos') %}
+    {% else %}
+        setTimeout(function() {
+            $("a[href='#nos-valeurs']").attr('href', "{{site.url}}/a-propos#nos-valeurs");
+        },300)
+    {% endif %}
+
+    window.onscroll = function() {myScroll()};
+    const height = $(window).height();
+    const scrollTop = $(window).scrollTop();
+    function myScroll() {
+        console.log(window.pageYOffset)
+      if (window.pageYOffset > 0) {
+        $("#ftco-navbar").css("position", "fixed");
+        $("#ftco-navbar").css({ 'background' : ''});
+        // $("#ftco-navbar").css({ 'background' : '#4E3189'});
+        $("#ftco-navbar").css({ 'background' : 'linear-gradient(#9483B3,#AB9EC4)'});
+        $("#ftco-navbar").css({ 'z-index' : '99'});
+        if (screen.width > 600) {
+            if ($('#wpadminbar').length > 0 ) {
+                $("#ftco-navbar").css({ 'top' : '32px'});
+            }
+        }
+      } else {
+        $("#ftco-navbar").css("position", "relative");
+        $("#ftco-navbar").css({ 'background' : ''});
+        $("#ftco-navbar").css({ 'background' : 'linear-gradient(rgba(74, 45, 127, 0.6), rgba(74, 45, 127, 0.45))'});
+        $("#ftco-navbar").css({ 'top' : '0'});
+        $("#ftco-navbar").css({ 'z-index' : '3'});
+      }
+    }
+    </script>
+
+
+
+    {{function('wp_head')}}

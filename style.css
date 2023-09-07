@@ -1,0 +1,171 @@
+/*
+ * Theme Name: Certas Theme New
+ * Description: Starter Theme to use with Timber
+ * Author: Upstatement and YOU!
+*/
+
+/** css header **/
+
+.container-mouse{
+	background-color: #fff;
+	max-width: 719px !important;
+	border-radius: 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	box-shadow: 3px 7px 21px 2px #979696b0;
+}
+
+.container-mouse .title{
+	font-size: 35px;
+	color: #4e2490;
+}
+
+.container-mouse .title-bold{
+	font-size: 35px;
+	color: #4e2490;
+	font-weight: bold;
+}
+
+.navbar .container {
+    max-width: 1350px;
+}
+
+.a-prs{
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.why-section{
+	background-color: rgb(240, 239, 244);
+}
+
+.services-express{
+	padding-left: 35px;
+}
+
+/*.header-bg{
+	border-bottom-left-radius: 45%;
+    border-bottom-right-radius: 45%;
+}*/
+
+.header-bg {
+   /*border-bottom-left-radius: 50%;
+   border-bottom-right-radius: 50%;*/
+   width: 110% !important;
+   left: -5%;
+}
+
+.header{
+	/*background-image: url(../images/_bg/_bg_img.png);*/
+	background-color: #fff !important;
+}
+
+#content{
+	padding-top: 15%;
+}
+
+.btn-reseau{
+	border-color: #4e2490 !important;
+	color: #4e2490 !important;
+	border-bottom-left-radius: 22px !important;
+	border-bottom-right-radius: 22px !important;
+	border-top-left-radius: 22px !important;
+	border-top-right-radius: 22px !important;
+	font-weight: 550 !important;
+}
+
+/** css footer **/
+.footer-logo{
+	color: #FFF !important;
+}
+.immobilier-container{
+	width: 100% !important;
+	background-color: rgb(96,62,156);
+	max-width: inherit !important;
+}
+.copyright-container{
+	width: 100% !important;
+	background-color: rgb(162,156,168);
+	max-width: inherit !important;
+}
+.ftco-section {
+	padding-bottom: inherit !important;
+}
+
+.copyright-container p, .immobilier-container p{
+    margin: 5px;
+    font-size: 0.9rem;
+}
+
+/** css section pourquoi choisir certas **/
+
+.why-section .icon span {
+    font-size: 60px;
+    color: #FFF;
+}
+
+.why h3 {
+	font-size: 18px;
+	font-weight: 600;
+	color: #FFF;
+}
+
+.why-competition{
+	background-color: rgb(1,181,205);;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+}
+
+.why-fiability{
+	background-color: #4e2490;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+}
+
+.why-proprete{
+	background-color: rgb(162, 156,168);
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+}
+
+.col-md-12-btn{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.why {
+    width: 180px !important;
+}
+
+.why-section .title, .section-actus .title{
+	font-size: 22px;
+	color: #4e2490;
+}
+
+
+.why-section .title-bold, .section-actus .title-bold{
+	font-size: 22px;
+	color: #4e2490;
+	font-weight: bold;
+}
+
+/*** css actus ***/
+.bg-white p {
+    color: rgb(162, 156,168);
+}
+
+.heading-news{
+	color: rgb(1,181,205)
+}
+
+
+.carousel-page
+{
+	width:100%;
+	height:400px;
+	background-color:#5f666d;
+	color:white;
+}
+

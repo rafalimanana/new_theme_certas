@@ -1,0 +1,17 @@
+{% extends "tease.twig" %}
+
+{# {% block content %}
+	<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
+		<p>{{post.preview.length(25)}}</p>
+		{% if post.thumbnail.src %}
+			<img src="{{post.thumbnail.src}}" />
+		{% endif %}
+{% endblock %} #}
+{% block content %}
+	{% if post.thumbnail.src %}
+		<a href="{{post.link}}" class="block-20 img" style="background-image: url('{{post.thumbnail.src}};"></a>
+	{% endif %}
+	<h3 class="heading heading-news text-uppercase">NEWS</h3>
+	<h3 class="heading text-uppercase"><a href="{{post.link}}">{{post.title}}</a></h3>
+    <p>{{post.preview.length(25)}}</p>
+{% endblock %}

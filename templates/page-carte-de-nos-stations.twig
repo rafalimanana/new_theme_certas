@@ -1,0 +1,530 @@
+{% extends "_base_page.twig" %}
+{% block header %}
+    <style type="text/css">
+    .leaflet-popup-content-wrapper {
+        /*right: 182px !important;*/
+    }
+    .tooltip-inner {
+        background-color: #4e2490 !important;
+    }
+    .bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^="top"] .arrow::before {
+        border-top-color: #4e2490 !important;
+    }
+    </style>
+{% endblock %}
+{% block content %}
+<div class="wrapper {{sidebar_class}}">
+
+
+    <!-- Aide à la navigation -->
+    <div class="content-wrapper _bg_white">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb _bredcrumb_custo">
+                    <li class="breadcrumb-item"><a class="a-navig" href="{{ site.url }}">Accueil</a></li>
+                    {% if post.parent.parent.title %}
+                        <li class="breadcrumb-item"><a class="a-navig" href="{{ post.parent.parent.link }}">{{post.parent.parent.title}}</a></li>
+                    {% endif %}
+                    {% if post.parent.title %}
+                        <li class="breadcrumb-item"><a class="a-navig" href="{{post.parent.link}}">{{post.parent.title}}</a></li>
+                    {% endif %}
+                    <li class="breadcrumb-item active">{{post.title}}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Aide à la navigation -->
+  <div class="container content-wrapper _pd_tp_50 _pd_bt_50">
+    <div class="row">
+        <div class="col-md-12"><h2 class="services-h2" style="color:#4f2f8d;">Trouvez votre station ESSO </h2></div>
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-4 l_search">
+            <div class="input-group md-form form-sm form-2 pl-0 div-search">
+              <input class="form-control my-0 py-1 red-border" name="search" id="search" type="text" placeholder="Recherche par ville" aria-label="Rechercher">
+              <div class="input-group-append">
+                <span class="input-group-text red lighten-3" id="basic-text1"><i class="fa fa-search text-grey"
+                    aria-hidden="true"></i></span>
+              </div>
+            </div>
+            <div class="dropdown map_dropdown" id="dropdown">
+            </div>
+            <div class="dropdown" id="l_resultat">
+            </div>
+            <div class="dropdown" id="l_default">
+            </div>
+        </div>
+        <div class="col-md-8">
+            {% set icon_sp95_e5 = post.get_field('icon_sp95_e5') %}
+            {% set icon_sp95_e10 = post.get_field('icon_sp95_e10') %}
+            {% set icon_sp98s = post.get_field('icon_sp98s') %}
+            {% set icon_diesel_standard = post.get_field('icon_diesel_standard') %}
+            {% set icon_diesel_premium = post.get_field('icon_diesel_premium') %}
+            {% set icon_adblue = post.get_field('icon_adblue') %}
+            <input type="hidden" name="icon_SP95_E10" id="icon_SP95_E10" value="{% if icon_sp95_e10 %}{{icon_sp95_e10.url}}{% endif %}">
+            <input type="hidden" name="icon_SP95_E5" id="icon_SP95_E5" value="{% if icon_sp95_e5 %}{{icon_sp95_e5.url}}{% endif %}">
+            <input type="hidden" name="icon_SP98S" id="icon_SP98S" value="{% if icon_sp98s %}{{icon_sp98s.url}}{% endif %}">
+            <input type="hidden" name="icon_diesel_standard" id="icon_diesel_standard" value="{% if icon_diesel_standard %}{{icon_diesel_standard.url}}{% endif %}">
+            <input type="hidden" name="icon_diesel_premium" id="icon_diesel_premium" value="{% if icon_diesel_premium %}{{icon_diesel_premium.url}}{% endif %}">
+            <input type="hidden" name="icon_adblue" id="icon_adblue" value="{% if icon_adblue %}{{icon_adblue.url}}{% endif %}">
+            <div id="map" style="width:100%;height:720px;z-index:10;"></div>
+            <div id="maps" style="display:none"></div>
+        </div>
+    </div>
+  </div><!-- /content-wrapper -->
+</div>
+
+<!-- Fichiers Javascript -->
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/esri-leaflet-geocoder@2.3.1/dist/esri-leaflet-geocoder.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+<link rel="stylesheet" href="{{ site.theme.link }}/css/_carte-station.css">
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.1.0/dist/MarkerCluster.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.1.0/dist/MarkerCluster.Default.css">
+<script src="https://unpkg.com/leaflet.markercluster@1.1.0/dist/leaflet.markercluster-src.js"></script>
+<script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&libraries=geometry"></script>
+<script type="text/javascript">
+let NL = L;
+       var lat = 44.798770;
+        var lon = -0.663530;
+        window.macarte = null
+        var geocoder = L.mapbox.geocoder('mapbox.places');
+        var map = L.mapbox.map('map', 'mapbox.streets');
+        L.mapbox.styleLayer('mapbox://styles/fabriceweb/ck25u1v0s00931cpunlpz8bjj').addTo(map);
+        var myLayer = L.mapbox.featureLayer().addTo(map);
+        var greenIcon = L.icon({
+            iconUrl: '{{site.theme.link}}/images/_map/logo-esso.svg',
+            iconSize:     [35, 90],
+        });
+        var featureLayer = L.mapbox.featureLayer().addTo(map);
+        window.marker = L.marker([lat, lon], {icon: greenIcon});
+        var markers = new L.MarkerClusterGroup({
+            iconCreateFunction : function (cluster) {
+                let defineBucket = (cc) =>{
+                    let bcks = [
+                        0,10,100,1000,10000,100000
+                    ]
+                    let v = 5
+                    bcks.map((bucket,key) =>{
+                        if(bcks[key+1]){
+                            if(bcks[key] <= cc && cc < bcks[key+1]){
+                                v = key+1
+                            }
+                        }
+                        return true
+                    })
+                    return v;
+                }
+                let definedBucket = defineBucket(cluster.getChildCount())
+                return L.divIcon( {
+                    html : '<b class="map-icon-container"><img class="map-icon" src="{{site.theme.link}}/images/_icons/m'+definedBucket+'.png" /><span class="map-icon-text" >' + cluster.getChildCount() + '</span></b>', 
+                    className : 'mycluster', 
+                    iconSize : [50, 50]
+                });
+            }
+        });
+        let lay = {}
+        let icon_SP95_E10 = $('#icon_SP95_E10').val();
+        let icon_SP95_E5 = $('#icon_SP95_E5').val();
+        let icon_SP98S = $('#icon_SP98S').val();
+        let icon_diesel_standard = $('#icon_diesel_standard').val();
+        let icon_diesel_premium = $('#icon_diesel_premium').val();
+        let icon_adblue = $('#icon_adblue').val();
+        $.getJSON('{{site.theme.link}}/json/geoLocation.json',function(data){
+            var d_i = 1; 
+            var geojson = L.geoJson(data, {
+              onEachFeature: function (feature, layer) {
+                let d_name=feature.properties.name;
+                let d_id = feature.id
+                var d_content = '<div class="col mt-2 l_carte">'+
+                    '<h5 class="t_esso">'+titleCase(d_name)+'</h5>'+
+                    '<p>'+
+                        '<img src="{{ site.theme.link }}/images/_icons/localization-carte.svg" style="width:16px; margin-right: 8px;">'+
+                        '<span>'+titleCase(feature.properties.address)+'</span><br>'+
+                        '<span style="padding-left: 20px;">' + titleCase(feature.properties.city) + ' - ' + feature.properties.country +'</span>'+
+                    '</p>'+
+                    '<p class="c_information" id="d_click'+d_id+'" data-val="'+d_id+'" >'+
+                        '<span>Plus d\'informations</span>'+
+                    '</p>'+
+                '</div>';
+                if (d_i <= 4) {
+                    $('#l_default').append(d_content);
+                    $('#d_click'+d_id).on('click',function(event) {
+                        setTimeout(function(){
+                            $('img').tooltip() ;
+                            console.log('ok')
+                        }, 200)
+                        $("#l_resultat").html('');
+                        $('#search').val('');
+                        var c_bounds =feature.geometry.coordinates;
+                        let d_lat = feature.geometry.coordinates[1];
+                        let d_lng = feature.geometry.coordinates[0];
+                        var fit = [
+                            [d_lat-0.01, d_lng-0.01],
+                            [d_lat+0.01, d_lng+0.01],
+                        ]
+                        map.fitBounds(fit);
+                        var d2_content = '<div class="pl-1">'+
+                        '<h5 class="t_esso">' + titleCase(feature.properties.name) + '</h5>'+
+                        '<p>'+
+                            '<img src="{{ site.theme.link }}/images/_icons/localization-carte.svg" style="width:16px; margin-right: 8px;">'+
+                            '<span class="c_popup">'+
+                            '<span>' + titleCase(feature.properties.address) + ',</span><br>'+
+                            '<span style="padding-left: 20px;">' + titleCase(feature.properties.city) + ' - ' + feature.properties.country +'</span>'+
+                            '</span>'+
+                        '</p>'+
+                        '<p>'+
+                            '<span>'+
+                                '<img src="{{ site.theme.link }}/images/_icons/objet-dynamique-vectoriel4.svg" style="width:30px;">'+feature.properties.wash+
+                            '</span>'+
+                            '<span class="pl-3">'+
+                                '<img src="{{ site.theme.link }}/images/_icons/objet-dynamique-vectoriel7.svg" style="width:30px;">'+
+                            '</span>'+
+                        '</p>'+
+                        '</div>';
+                        layer
+                            .openPopup();
+                            
+                            // .bindPopup(d2_content)
+                    })
+                    d_i++;
+                }
+                let id = feature.id
+                lay[id] = layer
+
+                let carburant = [] ;
+
+                if (feature.properties.SP95_E10 && feature.properties.SP95_E10==="yes") {
+                    if(icon_SP95_E10 && icon_SP95_E10 !== ''){
+                        carburant.push('<img src="'+icon_SP95_E10+'" style="width:30px;" data-toggle="tooltip" title="SP95_E10">');
+                    }else {
+                        carburant.push('<img src="{{ site.theme.link }}/images/_icons/_carte/icon_SP95.svg" style="width:30px;" data-toggle="tooltip" title="SP95_E10">');
+                    }
+                }
+                if (feature.properties.SP98S && feature.properties.SP98S==="yes") {
+                    if(icon_SP98S && icon_SP98S !== ''){
+                        carburant.push('<img src="'+icon_SP98S+'" style="width:30px;" data-toggle="tooltip" title="SP98S">');
+                    }else {
+                        carburant.push('<img src="{{ site.theme.link }}/images/_icons/_carte/icon_SP98.svg" style="width:30px;" data-toggle="tooltip" title="SP98S">');
+                    }
+                }
+                if (feature.properties.GO && feature.properties.GO==="yes") {
+                    if(icon_diesel_standard && icon_diesel_standard !== ''){
+                        carburant.push('<img src="'+icon_diesel_standard+'" style="width:30px;" data-toggle="tooltip" title="Diesel standard">');
+                    }else {
+                        carburant.push('<img src="{{ site.theme.link }}/images/_icons/_carte/icon_diesel_standard.svg" style="width:30px;" data-toggle="tooltip" title="Diesel standard">');
+                    }
+                }
+                if (feature.properties.GOS && feature.properties.GOS==="yes") {
+                    if(icon_diesel_premium && icon_diesel_premium !== ''){
+                        carburant.push('<img src="'+icon_diesel_premium+'" style="width:30px;" data-toggle="tooltip" title="Diesel premium">');
+                    }else {
+                        carburant.push('<img src="{{ site.theme.link }}/images/_icons/_carte/icon_diesel_premium.svg" style="width:30px;" data-toggle="tooltip" title="Diesel premium">');
+                    }
+                }
+                if (feature.properties.AdBlue && feature.properties.AdBlue==="yes") {
+                    if(icon_adblue && icon_adblue !== ''){
+                        carburant.push('<img src="'+icon_adblue+'" style="width:30px;" data-toggle="tooltip" title="AdBlue">');
+                    }else {
+                        carburant.push('<img src="{{ site.theme.link }}/images/_icons/_carte/icon_adblue.svg" style="width:30px;" data-toggle="tooltip" title="AdBlue">');
+                    }
+                }
+                if (feature.properties.SP95_E5 && feature.properties.SP95_E5==="yes") {
+                    if(icon_SP95_E5 && icon_SP95_E5 !== ''){
+                        carburant.push('<img src="'+icon_SP95_E5+'" style="width:30px;" data-toggle="tooltip" title="SP95_E5">');
+                    }else {
+                        carburant.push('<img src="{{ site.theme.link }}/images/_icons/_carte/icon_SP95.svg" style="width:30px;" data-toggle="tooltip" title="SP95_E5">');
+                    }
+                }
+                if (feature.properties.GPL && feature.properties.GPL==="yes") {
+                    carburant.push('GPL');
+                }
+
+                let _carburants = carburant.join(' ');
+
+                let service = [] ;
+                let _service = '' ;
+                if (feature.properties.amazon) {
+                    if (feature.properties.amazon === 'amazon-locker' ) {
+                        service.push('<img src="{{ site.theme.link }}/images/_icons/_carte/icon_amazon_locker.png" style="width:17px;" data-toggle="tooltip" title="'+feature.properties.amazon+'">')
+                    } else {
+                        service.push('<img src="{{ site.theme.link }}/images/_icons/_carte/_amazon.png" style="width:27px;" data-toggle="tooltip" title="'+feature.properties.amazon+'">')
+                    }
+                }
+                if (feature.properties.air && feature.properties.air==="Yes") {
+                    service.push('<img src="{{ site.theme.link }}/images/_icons/_carte/icon_gonflage.svg" style="width:30px;" data-toggle="tooltip" title="Gonflage">')
+                }
+                if (feature.properties.wash) {
+                    service.push('<img src="{{ site.theme.link }}/images/_icons/_carte/icon_car_wash.svg" style="width:17px;" data-toggle="tooltip" title="'+feature.properties.wash+'">')
+                }
+                if (feature.properties.shop && feature.properties.shop!='') {
+                    service.push('<img src="{{ site.theme.link }}/images/_icons/_carte/icon_shop.svg" style="width:17px;" data-toggle="tooltip" title="Shop : '+feature.properties.shop+'">')
+                }
+                if (service.length > 0) {
+                    _service = '<p style="color:#a29da9;"><span style="font-weight: bold">Services : </span>'+service.join(' ')+'</p>'
+                }
+
+
+                //console.log(feature);
+                var htmlBind = '<div class="pl-1">'+
+                '<h5 class="t_esso">' + titleCase(feature.properties.name) + '</h5>'+
+                '<p>'+
+                    '<img src="{{ site.theme.link }}/images/_icons/localization-carte.svg" style="width:16px; margin-right: 8px;">'+
+                    '<span class="c_popup">'+
+                    '<span>' + titleCase(feature.properties.address) + ',</span><br>'+
+                    '<span style="padding-left: 20px;">' + titleCase(feature.properties.city) + ' - ' + feature.properties.country +'</span>'+
+                    '</span>'+
+                '</p>'+
+                '<p style="color:#a29da9;"><span style="font-weight: bold">Caburants : </span>'+_carburants+'</p>'
+                    +_service+
+                '</div>';
+                // USE A CUSTOM MARKER
+                layer.setIcon(greenIcon);
+
+                // ADD A POPUP WITH A CHART
+                layer.bindPopup(htmlBind);
+                $('img').tooltip() ;
+
+              }
+            });
+            markers.addLayer(geojson);
+            map.fitBounds(markers.getBounds());
+            markers.addTo(map);
+
+        });
+        function initMap() {
+            let L = OL
+            macarte = L.map('maps', {attributionControl: false}).setView([lat, lon], 6);
+            L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+                minZoom: 1,
+                maxZoom: 20
+            }).addTo(macarte);
+
+            var greenIcon = L.icon({
+                iconUrl: '{{site.theme.link}}/images/_icons/localization-map.svg',
+                iconSize:     [38, 95]
+            });
+
+            var esso_alou = '<h5 class="t_esso">Esso Alouette</h5>'+
+                '<p>'+
+                    '<img src="{{ site.theme.link }}/images/_icons/localization-carte.svg" style="width:16px; margin-right: 8px;">'+
+                    '<span>Route des Alpes,</span><br>'+
+                    '<span style="padding-left: 20px;">Aix-en-provence - France</span>'+
+                '</p>';
+
+
+
+            // Nous ajoutons un marqueur
+            var marker = L.marker([lat, lon], {icon: greenIcon})
+            .addTo(macarte)
+            .bindPopup(esso_alou)
+            .openPopup();
+
+            // Control 2: This add a scale to the map
+            L.control.scale().addTo(macarte);
+        }
+        window.onload = function(){
+            initMap(); 
+        };
+        window.re_bounds=[];
+        window.curerntId = 0
+        $('#search').on('keyup', function(event) {
+            let _map = map
+            let L = OL
+            let _NL = NL
+            curerntId++
+            let id = curerntId
+            var search = $(this).val().toLowerCase();
+            $('#l_resultat').html('');
+            $('#l_resultat').css('display', 'none');
+            $('#l_default').css('display', 'none');
+            if (search != '' && search.length >= 2 && event.keyCode != 46) {
+               setTimeout(function(){
+                  window.recherche=search;
+                  var low_search=search.toLowerCase();
+                  var geocoder = L.esri.Geocoding.geocodeService();
+                  var map = macarte;
+                    L.esri.Geocoding.geocode()
+                    .city(low_search)
+                    /*.region(low_search)
+                    .postal(low_search)
+                    .country(low_search)*/
+                    .address(low_search)
+                    .run(function (error, results, response) {
+                        if (error) {
+                          return;
+                        }
+                        var res = results.results;
+                        // console.log('results', res)
+                        if (res && res[0]) {
+                            var f_res=res[0];
+                            var latS = f_res.latlng.lat;
+                            var lonS = f_res.latlng.lng;
+                            $.getJSON('{{site.theme.link}}/json/geoLocation.json', function (data) {
+                                let scores = []
+                                let scoresindex = {}
+                                var geojson = L.geoJson(data, {
+                                    onEachFeature: function (feature, layer) {
+                                        let properties = feature.properties
+                                        let id = feature.id
+                                        let n_score = 0;
+                                        var geoLat = feature.geometry.coordinates[1];
+                                        var geoLng = feature.geometry.coordinates[0];
+                                        var p1 = new google.maps.LatLng(latS, lonS);
+                                        var p2 = new google.maps.LatLng(geoLat, geoLng);
+                                        var distance = calcDistance(p1, p2);
+
+                                        // console.log("distance",distance)
+                                        if (distance <= 200) {
+                                            n_score=distance;
+                                        }
+                                        scoresindex[id] = feature
+                                        scores.push({
+                                            id:id,
+                                            score:n_score,
+                                        });
+                                    }
+                                });
+                                for (var i = 0; i < scores.length; i++) {
+                                    for (var j = i+1; j < scores.length; j++) {
+                                        if(scores[i].score-0>scores[j].score-0){
+                                            let t = scores[i]
+                                            scores[i] = scores[j]
+                                            scores[j] = t
+                                        }
+                                    }
+                                }
+                                scores = scores.filter((score) =>{
+                                    return score.score>0
+                                })
+                                let _scores = scores.filter((s,k) =>{
+                                    if(k<4){
+                                        return true
+                                    }
+                                    return false
+                                })
+                                scores = _scores;
+                                let div = '';
+                                $('#l_resultat').css('display', 'block');
+                                $('#l_resultat').html('')
+                                scoresFunction(scores,scoresindex,_map,map,lay);
+                            });
+                        }
+                    })
+
+                }, 1000);
+            }
+        });
+
+        $(document).on('click', function(event) {
+          if (!$(event.target).closest('#l_resultat').length && event.target != $('#search')[0])  {
+                // $("#l_resultat").html('');
+                $('#search').val('');
+                $('#l_resultat').css('display', 'block');
+                // $('#l_default').css('display', 'block');
+          }
+        });
+
+        function distance(lat1, lon1, lat2, lon2, unit) {
+            var radlat1 = Math.PI * lat1/180
+            var radlat2 = Math.PI * lat2/180
+            var theta = lon1-lon2
+            var radtheta = Math.PI * theta/180
+            var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+            if (dist > 1) {
+                dist = 1;
+            }
+            dist = Math.acos(dist)
+            dist = dist * 180/Math.PI
+            dist = dist * 60 * 1.1515
+            if (unit=="K") { dist = dist * 1.609344 }
+            if (unit=="N") { dist = dist * 0.8684 }
+            return dist
+        }
+
+        function calcDistance(p1, p2) {
+          return (google.maps.geometry.spherical.computeDistanceBetween(p1, p2) / 1000).toFixed(2);
+        }
+        function scoresFunction(scores,scoresindex,_map,map,lay) {
+            $('#l_resultat').html('')
+            scores.map((score,i) =>{
+                let id = score.id
+                let feature = scoresindex[id];
+                let affiche=titleCase(feature.properties.name);
+                var div = '<div class="col mt-2 l_carte">'+
+                    '<h5 class="t_esso">'+affiche+'</h5>'+
+                    '<p>'+
+                        '<img src="{{ site.theme.link }}/images/_icons/localization-carte.svg" style="width:16px; margin-right: 8px;">'+
+                        '<span>'+titleCase(feature.properties.address)+'</span><br>'+
+                        '<span style="padding-left: 20px;">' + titleCase(feature.properties.city) + ' - ' + feature.properties.country +'</span>'+
+                    '</p>'+
+                    '<p class="c_information" id="sel'+id+'" data-val="'+id+'" >'+
+                        '<span>Plus d\'informations</span>'+
+                    '</p>'+
+                '</div>';
+                $('#l_resultat').append(div);
+
+                $('#sel'+id).on('click',function(event) {
+                    setTimeout(function(){
+                        $('img').tooltip() ;
+                        console.log('ok')
+                    }, 200)
+                    // $("#l_resultat").html('');
+                    $('#search').val('');
+                    $(".l_city").removeClass();
+                    var fil = $(this).data('val');
+                    var feat = scoresindex[id];
+                    var c_bounds =feat.geometry.coordinates;
+                    let lat = feat.geometry.coordinates[1];
+                    let lng = feat.geometry.coordinates[0];
+                    var fit = [
+                        [lat-0.01, lng-0.01],
+                        [lat+0.01, lng+0.01],
+                    ]
+                    _map.fitBounds(fit);
+                    map.panTo(new L.LatLng(lat, lng));
+                    var content = '<div class="pl-1">'+
+                    '<h5 class="t_esso">' + feat.properties.name + '</h5>'+
+                    '<p>'+
+                        '<img src="{{ site.theme.link }}/images/_icons/localization-carte.svg" style="width:16px; margin-right: 8px;">'+
+                        '<span class="c_popup">'+
+                        '<span>' + feat.properties.address + ',</span><br>'+
+                        '<span style="padding-left: 20px;">' + feat.properties.city + ' - ' + feat.properties.country +'</span>'+
+                        '</span>'+
+                    '</p>'+
+                    '<p>'+
+                        '<span>'+
+                            '<img src="{{ site.theme.link }}/images/_icons/objet-dynamique-vectoriel4.svg" style="width:30px;">'+
+                        '</span>'+
+                        '<span class="pl-3">'+
+                            '<img src="{{ site.theme.link }}/images/_icons/objet-dynamique-vectoriel7.svg" style="width:30px;">'+
+                        '</span>'+
+                    '</p>'+
+                    '</div>';
+                    var newLatLng = new L.LatLng(lat,lng);
+                    lay[id]
+                        .openPopup();
+
+                })
+
+            })
+        }
+
+    function titleCase(str) {
+       var splitStr = str.toLowerCase().split(' ');
+       for (var i = 0; i < splitStr.length; i++) {
+           // You do not need to check if i is larger than splitStr length, as your for does that for you
+           // Assign it back to the array
+           splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+       }
+       // Directly return the joined string
+       return splitStr.join(' '); 
+    }
+    window.addEventListener('click',() =>{
+        setTimeout(function(){
+            $('img').tooltip() ;
+        }, 200)
+    });
+</script>
+
+{% endblock %}

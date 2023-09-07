@@ -1,0 +1,83 @@
+<footer class="ftco-footer ftco-section">
+    <div class="container">
+        <div class="row _cnt_f_list">
+            <div class="col-md col-sm-6">
+                <div class="ftco-footer-widget mb-4">
+                    <a class="_navbar_brand" href="{{site.url}}">
+                        <img src="{{ site.theme.link }}/images/_icons/certas.png" class="_h_logo">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md col-sm-6">
+                <div class="ftco-footer-widget mb-4 ml-md-4 _cnt_link1">{#
+                    <h2 class="ftco-heading-2 text-uppercase">A propos</h2> #}
+                    <ul class="list-unstyled">
+                        {% if footermenu1.items is not empty %}
+                            {% for footer in footermenu1.items %}
+                                <li><a href="{{footer.link}}" class=" text-uppercase">{{footer.title}}</a></li>
+                            {% endfor %}
+                        {% endif %}
+                        {# <li><a href="{{ site.url }}/a-propos" class=" text-uppercase">à propos</a></li>
+                        <li><a href="{{ site.url }}/services-en-stations" class=" text-uppercase">Nos Stations</a></li>
+                        <li><a href="{{ site.url }}/nos-carburants" class=" text-uppercase">Nos Carburants </a></li>
+                        <li><a href="{{ site.url }}/nos-promos" class=" text-uppercase">Nos Promos</a></li> #}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md col-sm-6">
+                <div class="ftco-footer-widget mb-4 _cnt_link2">{#
+                    <h2 class="ftco-heading-2 text-uppercase">Club CERTAS ENERGY</h2> #}
+                    <ul class="list-unstyled">
+                        {% if footermenu2.items is not empty %}
+                            {% for footer in footermenu2.items %}
+                                <li><a href="{{footer.link}}" class=" text-uppercase">{{footer.title}}</a></li>
+                            {% endfor %}
+                        {% endif %}
+                        {# <li><a href="{{ site.url }}/club-certas-energy" class=" text-uppercase">Club CERTAS ENERGY</a></li>
+                        <li><a href="{{ site.url }}/nos-actualites" class=" text-uppercase">Actualités</a></li>
+                        <li><a href="{{ site.url }}/contact" class=" text-uppercase">Nous contacter</a></li> #}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md col-sm-6">
+                <div class="ftco-footer-widget mb-4 _cnt_link3">
+                    <ul class="list-unstyled">
+                        <li><span class="text">Certas Energy France</span></li>
+                        <li><span class="text">9 Avenue Edouard Belin</span></li>
+                        <li><span class="text">92500 Rueil-Malmaison</span></li>
+                        <li class="_f_social_ntwrk">
+                            <a target="_blank" href="https://www.facebook.com/Certas-Energy-France-2015975705133649/?rf=966527246808368" class="_f_icon_lnk"><i class="fa fa-facebook" style="font-size:20px"></i></a>
+                            <a target="_blank" href="https://fr.linkedin.com/company/certas-energy-france" class="_f_icon_lnk"><i class="fa fa-linkedin" style="font-size:20px"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {# <div class="row">
+            <div class="col-md-12 text-center">
+                <p>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright {{"now"|date('Y')}} All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+            </div>
+        </div> #}
+    </div>
+    {# <div class="container immobilier-container">
+        <div class="row">
+            <div class="col-md-12 text-center ">
+                <p class="fw-6">IMMOBILIER</p>
+            </div>
+        </div>
+    </div> #}
+    <div class="container copyright-container">
+        <div class="row">
+            <div class="col-md-12 text-center ">
+                <p>&copy; Certas Energy France {{"now"|date('Y')}} - <a href="#" class="a-footer">Mentions Légales </a> - <a href="#" class="a-footer">Contact</a> </p>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+</script>
+</footer>

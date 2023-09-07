@@ -1,0 +1,597 @@
+{# {% extends "base_page.twig" %}
+
+{% block content %}
+ <section class="ftco-section goto-here why-section">
+    	<div class="container">
+    	
+        <div class="row">
+        	<div class="col-md-6">
+        		<div class="property-wrap ftco-animate">
+        			<a href="#" class="img" style="background-image: url({{ site.theme.link }}/images/work-1.jpg);"></a>
+        		</div>
+        	</div>
+        	<div class="col-md-6">
+        		<div class="property-wrap ftco-animate">
+					      	<div class="row justify-content-center">
+					          <div class="col-md-12 heading-section text-center ftco-animate mb-5 font-family-pers">
+					           <span class="title text-uppercase"> Pourquoi </span> <span class="title-bold text-uppercase">Choisir Certas ?</span>
+					          </div>
+					        </div>
+					        <div class="row d-flex">
+					          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					            <div class="media block-6 why why-competition d-block text-center">
+					            	<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-piggy-bank"></span></div>
+					              <div class="media-body py-md-4">
+					                <h3 class="text-uppercase">Compétitivité</h3>
+					              </div>
+					            </div>      
+					          </div>
+					          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					            <div class="media block-6 why why-fiability d-block text-center">
+					            	<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-wallet"></span></div>
+					              <div class="media-body py-md-4">
+					                <h3 class="text-uppercase">Fiabilité</h3>
+					              </div>
+					            </div>      
+					          </div>
+					          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					            <div class="media block-6 why why-proprete d-block text-center">
+					            	<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-file"></span></div>
+					              <div class="media-body py-md-4">
+					                <h3 class="text-uppercase">Propreté</h3>
+					              </div>
+					            </div>      
+					          </div>
+					           <div class="col-md-12 col-md-12-btn text-center">
+					           <a href='#'> <button type="button" class="btn btn-reseau text-uppercase">Notre valeur ajoutée</button>   </a>  
+					         </div>
+					        </div>
+        		</div>
+        	</div>
+        </div>
+    	</div>
+    </section>
+
+
+   <section class="pt-5 bg-white section-actus">
+      <div class="container">
+      <div class="row justify-content-center">
+      <div class="col-md-12 heading-section text-center ftco-animate mb-5 font-family-pers">
+        <span class="title text-uppercase"> Nos </span> <span class="title-bold text-uppercase">actualités</span>
+      </div>
+    </div>
+      <div class="container my-4">
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+
+        {% set i=0 %}
+        <div class="carousel-item  {% if i==0 %} active {% endif %}">
+          <div class="row">
+               {% for post in posts %}
+                          {% if  i!= 0 and i%4 == 0 %}
+                   </div>
+            </div>
+             <div class="carousel-item  {% if i==0 %} active {% endif %}">
+                <div class="row">
+                          {% endif %}
+                          <div class="col-md-3 d-flex ftco-animate test- {{i}} ">
+                            <div class="blog-entry justify-content-end">
+                              <div class="text">
+                                {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+                              </div>
+                            </div>
+                           </div>
+                           {% set i=1+i %}
+                      {% endfor %}
+                   </div>
+
+      </div>
+      <!--/.Slides-->
+   
+    </div>
+  </div>
+     <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="sr-only">Previous</span>
+       </a>
+       <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="sr-only">Next</span>
+        </a>
+</div> 
+    </div>
+      
+  </section>
+
+
+{% endblock %} #}
+
+{% extends "_base_page.twig" %}
+{% block header %}
+<div class="wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="_navbar_brand" href="{{site.url}}">
+                <img src="{{ site.theme.link }}/images/_icons/certas.png" class="_h_logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#_nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse _h_cnt_menu" id="_nav">
+                <ul class="navbar-nav ml-auto" id="_menu">
+                    <li class="nav-item"><a href="{{site.url}}/a-propos" class="nav-link text-uppercase">A Propos</a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-uppercase" id="n_station">Nos Stations</a>
+                        <ul class="nav-item submenu" id="sub_station">
+                            <li class="nav-item">
+                                <a href="{{site.url}}/nos-stations/services-en-stations" class="nav-link text-uppercase i_page">Services en stations</a>
+                                <a href="#" class="nav-link text-uppercase i_mobile"  id="child_station">Services en stations</a>
+                                <ul class="nav-item submenu"  id="lavage_station">
+                                    <li class="nav-item i_mobile">
+                                        <a href="{{site.url}}/nos-stations/services-en-stations" class="nav-link text-uppercase">Services en stations</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{site.url}}/nos-stations/services-en-stations/lavage" class="nav-link text-uppercase">Lavage</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            {# <li class="nav-item"><a href="{{site.url}}/nos-stations/carte-de-nos-stations" class="nav-link text-uppercase">Carte de nos stations</a></li> #}
+                            <li class="nav-item"><a href="{{site.url}}/nos-stations/carte-de-nos-stations-adresse" class="nav-link text-uppercase">Carte de nos stations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{site.url}}/nos-carburants" class="nav-link text-uppercase i_page">Nos carburants</a>
+                        <a href="#" class="nav-link text-uppercase i_mobile" id="n_carburant">Nos carburants</a>
+                        <ul class="nav-item submenu" id="l_produit">
+                            <li class="nav-item i_mobile">
+                                <a href="{{site.url}}/nos-carburants" class="nav-link text-uppercase">Nos carburants</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{site.url}}/nos-carburants/produits" class="nav-link text-uppercase">Liste des produits vendus</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="{{site.url}}/nos-promos" class="nav-link text-uppercase">Nos Promos</a></li>
+                    <li class="nav-item">
+                        <a href="{{site.url}}/club-certas-energy" class="nav-link text-uppercase i_page">Club certas Anergy</a>
+                        <a href="#" class="nav-link text-uppercase i_mobile" id="c_energy">Club certas Anergy</a>
+                        <ul class="nav-item submenu" id="c_marche">
+                            <li class="nav-item i_mobile">
+                                <a href="{{site.url}}/club-certas-energy" class="nav-link text-uppercase">Club certas Anergy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{site.url}}/club-certas-energy/comment-ca-marche" class="nav-link text-uppercase">Comment ça marche</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="{{site.url}}/nos-actualites" class="nav-link text-uppercase">Actualités</a></li>
+                    <li class="nav-item"><a href="{{site.url}}/contact" class="nav-link  text-uppercase">Nous contacter</a></li>
+                    <li class="nav-item _h_cnt_btn">
+                      <ul class="_h_lst_btn">
+                        {% for menu_nav in navigation.get_items %}
+                            <li>
+                                <a href="{{menu_nav.link}}">
+                                    <button class="_h_btn">{{menu_nav.title}}</button>
+                                </a>
+                            </li>
+                        {% endfor %}
+                        {# <li><a href="#" class="_h_btn">Partenaires</a></li>
+                        <li><a href="#" class="_h_btn">Emplois</a></li>
+                        <li><a href="#" class="_h_btn">Immobilier</a></li> #}
+                    </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="_h_cnt_btn">
+                <ul class="_h_lst_btn">
+                    {% for menu_nav in navigation.get_items %}
+                        <li>
+                            <a href="{{menu_nav.link}}">
+                                <button class="_h_btn">{{menu_nav.title}}</button>
+                            </a>
+                        </li>
+                    {% endfor %}
+                    {# <li><a href="#" class="_h_btn">Partenaires</a></li>
+                    <li><a href="#" class="_h_btn">Emplois</a></li>
+                    <li><a href="#" class="_h_btn">Immobilier</a></li> #}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="_header_carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#_header_carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#_header_carousel" data-slide-to="1"></li>
+            <li data-target="#_header_carousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="hero-wrap ftco-degree-bg header-bg propos-header" data-stellar-background-ratio="0.5">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="row no-gutters slider-text justify-content-center align-items-center">
+                            <div class="col-lg-8 col-md-6 ftco-animate {# d-flex align-items-end #}">
+                                <div class="text text-center">
+                                    <h1 class="mb-4">{{post.post_title}}</h1>
+                                    <p style="font-size: 18px;">
+                                        {% if post.get_field('description_header') %}
+                                        {{post.get_field('description_header')}}
+                                        {% else %}
+                                        Certas Energy France fournit à plus de 100 000 personnes quotidiennement, des carburants de qualité dans environ 400 sites répartis sur l'ensemble du territoire français : plus de 270 stations automates Esso Express ouvertes 24h/24h, 7j/7j, environ 50 stations Esso sur autoroutes et un esemble de clients revendeurs à la marque <a href="#" class="a-prs">Esso.</a>
+                                        {% endif %}
+                                        <a href="#" class="a-prs"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-wrap ftco-degree-bg header-bg propos-header" data-stellar-background-ratio="0.5">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="row no-gutters slider-text justify-content-center align-items-center">
+                            <div class="col-lg-8 col-md-6 ftco-animate {# d-flex align-items-end #}">
+                                <div class="text text-center">
+                                    <h1 class="mb-4">{{post.post_title}}</h1>
+                                    <p style="font-size: 18px;">
+                                        {% if post.get_field('description_header') %}
+                                        {{post.get_field('description_header')}}
+                                        {% else %}
+                                        Certas Energy France fournit à plus de 100 000 personnes quotidiennement, des carburants de qualité dans environ 400 sites répartis sur l'ensemble du territoire français : plus de 270 stations automates Esso Express ouvertes 24h/24h, 7j/7j, environ 50 stations Esso sur autoroutes et un esemble de clients revendeurs à la marque <a href="#" class="a-prs">Esso.</a>
+                                        {% endif %}
+                                        <a href="#" class="a-prs"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-wrap ftco-degree-bg header-bg propos-header" data-stellar-background-ratio="0.5">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="row no-gutters slider-text justify-content-center align-items-center">
+                            <div class="col-lg-8 col-md-6 ftco-animate {# d-flex align-items-end #}">
+                                <div class="text text-center">
+                                    <h1 class="mb-4">{{post.post_title}}</h1>
+                                    <p style="font-size: 18px;">
+                                        {% if post.get_field('description_header') %}
+                                        {{post.get_field('description_header')}}
+                                        {% else %}
+                                        Certas Energy France fournit à plus de 100 000 personnes quotidiennement, des carburants de qualité dans environ 400 sites répartis sur l'ensemble du territoire français : plus de 270 stations automates Esso Express ouvertes 24h/24h, 7j/7j, environ 50 stations Esso sur autoroutes et un esemble de clients revendeurs à la marque <a href="#" class="a-prs">Esso.</a>
+                                        {% endif %}
+                                        <a href="#" class="a-prs"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Left and right controls -->
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="wrapper {{sidebar_class}}">
+    <!--Corona-->
+    <style type="text/css">
+        .popup{
+            position: fixed;
+            top: 20%;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            background-color: transparent;
+            overflow-y: hidden;
+        }
+
+        .italic{
+            font-style: italic;
+        }
+
+    </style>
+    <div class="popup ">
+    <div class="container _bg_white">
+        <div class="row">
+            <h2>NOS STATIONS SERVICES (ESSO EXPRESS ET ESSO AUROROUTIERES) RESTENT OUVERTES PENDANT LE CONFINEMENT.</h2>
+            <div class="col-md-12">
+                <p>Dans ce contexte de crise sanitaire les stations-services sont parmi les activités qui restent en exercice afin que les services de santé puissent continuer à sauver des vies, que nos magasins d’alimentation continuent à être approvisionnés et que nous puissions continuer à nous déplacer</p>
+ 
+                <p>Les boutiques de nos stations autoroutières vous permettront de continuer à acheter des produits soit par système de passe-paquet, soit en limitant le nombre de personnes entrant dans le magasin à 2 ou 3 en même temps.
+                Nous veillons plus que jamais à l’entretien, au nettoyage de nos stations ; nos agents d’entretien passent quotidiennement afin de désinfecter pistolets, pompes et automates de paiement afin de vous garantir le maximum de protection face à ce virus Covid 19.</p>
+                 
+                <p>Malgré le sérieux que nous portons à la sécurité sanitaire, aux règles d’hygiène et de prévention en vigueur, il en va de la responsabilité de chacun d’appliquer à titre individuel les précautions absolument indispensables à la non-propagation du Covid 19.</p>
+                 
+                <p>Se protéger et protéger les siens, passe par des gestes simples, désinfection des mains systématiques, distances de sécurité d’au moins 1 mètre, tousser dans son coude et utilisation de mouchoirs à usage unique- Restez dans votre véhicule pendant que vous attendez votre tour.</p>
+                 
+               <p><strong> Des gants sont mis à votre disposition et nous vous recommandons vivement de vous en servir lors de vos manipulations pour vous approvisionner en carburant.</strong></p>
+
+                <p class="italic">Nous en appelons à votre civisme afin de ne pas en utiliser plus que nécessaire ou de ne pas faire de stock afin que chaque client puisse en avoir à sa disposition à chacun de ses passages</p>
+
+                <p>Les efforts collectifs et la prise de conscience de chacun permettra d’éradiquer la propagation.</p>
+                 
+                <p>Seul ce respect strict des consignes nous permettra de revenir à nos habitudes sociales et familiales plus rapidement.
+                Chacun est acteur dans cette situation.</p>
+                 
+                <p><strong>L’Equipe Certas Energy stations-services Esso</strong></p>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- end of corona -->
+    <div class="container _bg_white _pd_tp_40 _pd_bt_40" id="_reseau">
+        <h1 class="_title_reseau font-family-pers"><span class="fw-l"> Notre </span> <b>réseau</b></h1>
+        <div class="row _cnt_bloc">
+            <div class="col-md-4">
+                <a href="{{}}">
+                    <div class="_bloc">
+                        <div class="_bloc_ico">
+                                <img src="{{ site.theme.link }}/images/_icons/_pg_home/_express.png" class="nr-reseau">
+                        </div>
+                        <div class="_bloc_info">
+                            <h3 class="_bloc_title">
+                                {% if post.get_field('reseau_express') %}
+                                  {{ post.get_field('reseau_express') }}
+                                {% else %}
+                                  Express
+                                {% endif %}
+                            </h3>
+                            <p class="_bloc_desc">
+                                {% if post.get_field('description_express') %}
+                                  {{ post.get_field('description_express') }}
+                                {% else %}
+                                  Prix bas toute l'année,<br>24h/24h
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4">
+                <div class="_bloc">
+                    <div class="_bloc_ico">
+                            <img src="{{ site.theme.link }}/images/_icons/_pg_home/_road.png" class="nr-reseau">
+                    </div>
+                    <div class="_bloc_info">
+                        <h3 class="_bloc_title">
+                            {% if post.get_field('reseau_autoroute') %}
+                              {{ post.get_field('reseau_autoroute') }}
+                            {% else %}
+                              Autoroute
+                            {% endif %}
+                        </h3>
+                        <p class="_bloc_desc">
+                            {% if post.get_field('description_autoroute') %}
+                              {{ post.get_field('description_autoroute') }}
+                            {% else %}
+                              Confort total pour les  <br> longs voyages
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="_bloc">
+                    <div class="_bloc_ico">
+                            <img src="{{ site.theme.link }}/images/_icons/_pg_home/_buyer.png" class="nr-reseau">
+                    </div>
+                    <div class="_bloc_info">
+                        <h3 class="_bloc_title">
+                            {% if post.get_field('reseau_acheteurs') %}
+                              {{ post.get_field('reseau_acheteurs') }}
+                            {% else %}
+                              Acheteurs
+                            {% endif %}
+                        </h3>
+                        <p class="_bloc_desc">
+                            {% if post.get_field('description_acheteurs') %}
+                              {{ post.get_field('description_acheteurs') }}
+                            {% else %}
+                              Service complet,<br> style ESSO
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-12 _cnt_btn">
+            <a href="{{post.get_field('bouton_decouvrez_notre_reseau')}}" class="_btn_lnk">Découvrez notre réseau
+            </a>
+        </div>
+    </div>
+    <div class="content-wrapper _bg_grey _pd_tp_50 _pd_bt_50">
+        <div class="container">
+            <div class="row" id="_prquoi">
+                <div class="col-md-6">
+                    <div class="ftco-animate">
+                        {% set img_sec = post.get_field('decouvrez')["second_section_first"] %}
+                        {# <a href="#" class="img" style="background-image: url({{ site.theme.link }}/images/work-1.jpg);"></a> #}
+                        {% if img_sec %}
+                        <img src="{{img_sec.url}}" style="width:100%">
+                        {% else %}
+                        <img src="{{site.theme.link}}/images/Pourquoi-certas.png" style="width:100% border-radius: 11px;">
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-md-6 _cnt_prquoi_bloc">
+                    <div class="ftco-animate">
+                        <div class="row">
+                            <div class="col-md-12 _cnt_title_prquoi">
+                                {% if post.get_field('decouvrez')['second_section_titre'] %}
+                                  <h2 class="_title_prquoi font-family-pers">
+                                      {{post.get_field('decouvrez')['second_section_titre']}}
+                                  </h2>
+                                {% else %}
+                                  <h2 class="_title_prquoi font-family-pers">POURQUOI <strong>CHOISIR CERTAS ?</strong> </h2>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-4 _prquoi_bloc">
+                                <div class="_bloc" style="background: #02b5ca">
+                                    <div class="_cnt_ico">
+                                        <img src="{{site.theme.link}}/images/trophy.svg" class="img-section6">
+                                    </div>
+                                    <div class="_cnt_bloc_title">
+                                        <h3 class="_bloc_title">
+                                            {% if post.get_field('decouvrez')['second_section_competitive'] %}
+                                            {{post.get_field('decouvrez')['second_section_competitive']}}
+                                            {% else %}
+                                            Compétitivité
+                                            {% endif %}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 _prquoi_bloc">
+                                <div class="_bloc" style="background: #4f2f8d">
+                                    <div class="_cnt_ico">
+                                        <img src="{{site.theme.link}}/images/trusted.svg" class="img-section6">
+                                    </div>
+                                    <div class="_cnt_bloc_title">
+                                        <h3 class="_bloc_title">
+                                            {% if post.get_field('decouvrez')['second_section_faibilite'] %}
+                                            {{post.get_field('decouvrez')['second_section_faibilite']}}
+                                            {% else %}
+                                            Fiabilité
+                                            {% endif %}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 _prquoi_bloc">
+                                <div class="_bloc" style="background: #a29da9">
+                                    <div class="_cnt_ico">
+                                        <img src="{{site.theme.link}}/images/broom.svg" class="img-section6">
+                                    </div>
+                                    <div class="_cnt_bloc_title">
+                                        <h3 class="_bloc_title">
+                                            {% if post.get_field('decouvrez')['second_section_propriete'] %}
+                                            {{post.get_field('decouvrez')['second_section_propriete']}}
+                                            {% else %}
+                                            Propriété
+                                            {% endif %}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 _cnt_btn">
+                                <a href="{{post.get_field('decouvrez')['bouton_notre_valeur_ajoute']}}" class="_btn_lnk">Notre valeur ajoutée
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /content-wrapper -->
+    <div class="container _bg_white pt-5 pb-5" id="_nos_actus">
+        {# {% filter shortcodes|raw %}
+        [recent_post_carousel slides_to_show="3" slides_to_scroll="1"]
+        {% endfilter %} #}
+        <h1 class="_title_actus font-family-pers"><span class="fw-l"> Nos </span> <b>Actualités</b></h1>
+        <div class="slick_responsive row" id="slick_article">
+          {% if posts is not empty %}
+            {% for term in posts %}
+                <div class="col-md-3 _cnt_panel_actus">
+                    <div class="panel _panel_actus">
+                        <div class="panel-body">
+                            <img src="{{term.thumbnail.src}}" class="_actu_img">
+                        </div>
+                        <div class="panel-footer">
+                            <h4 class="_actu_date">{{term.date}}</h4>
+                            <h2 class="_actu_title">{{term.title}}</h2>
+                            <p class="_actu_description">{{term.post_content|excerpt(13)}}</p>
+                        </div>
+                    </div>
+                </div>
+                 {% endfor %}
+          {% else %}
+              <div class="col-md-3 _cnt_panel_actus">
+                  <div class="panel _panel_actus">
+                      <div class="panel-body">
+                          <img src="{{ site.theme.link }}/images/_pages/_nos_actualites/actus3.jpg}}" class="_actu_img">
+                      </div>
+                      <div class="panel-footer">
+                          <h4 class="_actu_date">20 avril 2018</h4>
+                          <h2 class="_actu_title">nos lavages</h2>
+                          <p class="_actu_description">Depuis que Certas Energy a racheté une partie des stations-service ESSO il y a plus de 3 ans, nous avons…</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 _cnt_panel_actus">
+                  <div class="panel _panel_actus">
+                      <div class="panel-body">
+                          <img src="{{ site.theme.link }}/images/_pages/_nos_actualites/actus3.jpg}}" class="_actu_img">
+                      </div>
+                      <div class="panel-footer">
+                          <h4 class="_actu_date">20 avril 2018</h4>
+                          <h2 class="_actu_title">nos lavages</h2>
+                          <p class="_actu_description">Depuis que Certas Energy a racheté une partie des stations-service ESSO il y a plus de 3 ans, nous avons…</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 _cnt_panel_actus">
+                  <div class="panel _panel_actus">
+                      <div class="panel-body">
+                          <img src="{{ site.theme.link }}/images/_pages/_nos_actualites/actus3.jpg}}" class="_actu_img">
+                      </div>
+                      <div class="panel-footer">
+                          <h4 class="_actu_date">20 avril 2018</h4>
+                          <h2 class="_actu_title">nos lavages</h2>
+                          <p class="_actu_description">Depuis que Certas Energy a racheté une partie des stations-service ESSO il y a plus de 3 ans, nous avons…</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 _cnt_panel_actus">
+                  <div class="panel _panel_actus">
+                      <div class="panel-body">
+                          <img src="{{ site.theme.link }}/images/_pages/_nos_actualites/actus3.jpg}}" class="_actu_img">
+                      </div>
+                      <div class="panel-footer">
+                          <h4 class="_actu_date">20 avril 2018</h4>
+                          <h2 class="_actu_title">nos lavages</h2>
+                          <p class="_actu_description">Depuis que Certas Energy a racheté une partie des stations-service ESSO il y a plus de 3 ans, nous avons…</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 _cnt_panel_actus">
+                  <div class="panel _panel_actus">
+                      <div class="panel-body">
+                          <img src="{{ site.theme.link }}/images/_pages/_nos_actualites/actus3.jpg}}" class="_actu_img">
+                      </div>
+                      <div class="panel-footer">
+                          <h4 class="_actu_date">20 avril 2018</h4>
+                          <h2 class="_actu_title">nos lavages</h2>
+                          <p class="_actu_description">Depuis que Certas Energy a racheté une partie des stations-service ESSO il y a plus de 3 ans, nous avons…</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-3 _cnt_panel_actus">
+                  <div class="panel _panel_actus">
+                      <div class="panel-body">
+                          <img src="{{ site.theme.link }}/images/_pages/_nos_actualites/actus3.jpg}}" class="_actu_img">
+                      </div>
+                      <div class="panel-footer">
+                          <h4 class="_actu_date">20 avril 2018</h4>
+                          <h2 class="_actu_title">nos lavages</h2>
+                          <p class="_actu_description">Depuis que Certas Energy a racheté une partie des stations-service ESSO il y a plus de 3 ans, nous avons…</p>
+                      </div>
+                  </div>
+              </div>
+          {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,90 @@
+{% extends "_base_page.twig" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+<div class="wrapper {{sidebar_class}}" id="_pg_carburants">
+	<!-- Aide à la navigation -->
+	<div class="content-wrapper _bg_white">
+	    <div class="container">
+	    	<nav aria-label="breadcrumb">
+				<ol class="breadcrumb _bredcrumb_custo">
+			    	<li class="breadcrumb-item"><a class="a-navig" href="{{ site.url }}">Accueil</a></li>
+                    {% if post.parent.parent.title %}
+                        <li class="breadcrumb-item"><a class="a-navig" href="{{ post.parent.parent.link }}">{{post.parent.parent.title}}</a></li>
+                    {% endif %}
+                    {% if post.parent.title %}
+                        <li class="breadcrumb-item"><a class="a-navig" href="{{post.parent.link}}">{{post.parent.title}}</a></li>
+                    {% endif %}
+			    	<li class="breadcrumb-item active"> <strong>{{post.title}}</strong></li>
+			  	</ol>
+			</nav>
+	    </div>
+	</div>
+	<!-- Aide à la navigation -->
+
+	<div class="content-wrapper _bg_white">
+	    <div class="container">
+	        <article class="post-type-{{post.post_type}} _pd_bt_25 row" id="post-{{post.ID}}">
+	            <section class="_article_content col-md-12">
+                        {% if post.get_field('titre_carburants') %}
+                             <h2 class="text-uppercase  services-h2">
+                                {{post.get_field('titre_carburants')}}
+                            </h2>
+                        {% endif %}
+	                <div class="_article_body">
+                        {% if post.get_field('contenu') %}
+                            {{post.get_field('contenu')}}
+                        {% endif %}
+	                </div>
+	            </section>
+
+	            <section class="_article_content col-md-12 _carbu_img">
+                    <div class="row">
+    	                <div class="col-md-6">
+                            {% set img_b1 = post.get_field('premier_image_background') %}
+                            {% set p_url = post.get_field('url_produits_vendus') %}
+                            <a href="{% if p_url.url %}{{p_url.url}}{% else %}#{% endif %}" target="{% if p_url.target %}{{p_url.target}}{% else %}_self{% endif %}">
+                                <div class="_carbu_bloc_img" style="background-image: url({% if img_b1 %}{{img_b1.url}}{% else %}{{site.theme.link }}/images/_pages/_nos_carburants/_list_produits_vendus.jpg}}{% endif %}); background-position-y: -55px;">
+                                    <div class="_carbu_bloc_shadow">
+                                        {% if post.get_field('produits_vendus') %}
+                                            <h2 class="_carbu_img_title">
+                                                {{post.get_field('produits_vendus')}}
+                                            </h2>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-6">
+                            {% set img_b2 = post.get_field('deuxieme_image_background') %}
+                            {% set s_url = post.get_field('url_specificites') %}
+                            <a href="{% if s_url.url %}{{s_url.url}}{% else %}#{% endif %}" target="{% if s_url.target %}{{s_url.target}}{% else %}_self{% endif %}">
+                                <div class="_carbu_bloc_img" style="background-image: url({% if img_b2 %}{{img_b2.url}}{% else %}{{site.theme.link }}/images/_pages/_nos_carburants/_specificites_avantages.jpg}}{% endif %}); background-position-y: -175px;">
+                                    <div class="_carbu_bloc_shadow">
+                                        {% if post.get_field('specificites') %}
+                                            <h2 class="_carbu_img_title">
+                                                    {{post.get_field('specificites')}}
+                                            </h2>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+	            </section>
+                <section class="_article_content col-md-12 mt-5">
+                    {% if post.get_field('contenu_rendement') %}
+                        <div class="_article_body" style="font-size:13px;">
+                            {{post.get_field('contenu_rendement')}}
+                        </div>
+                    {% endif %}
+                </section>
+
+	        </article>
+	    </div>
+	</div><!-- /content-wrapper -->
+
+</div>
+
+{% endblock %} 

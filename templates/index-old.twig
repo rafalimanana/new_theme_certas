@@ -1,0 +1,108 @@
+{% extends "base.twig" %}
+
+{% block content %}
+ <section class="ftco-section goto-here why-section">
+    	<div class="container">
+    	
+        <div class="row">
+        	<div class="col-md-6">
+        		<div class="property-wrap ftco-animate">
+        			<a href="#" class="img" style="background-image: url({{ site.theme.link }}/images/work-1.jpg);"></a>
+        		</div>
+        	</div>
+        	<div class="col-md-6">
+        		<div class="property-wrap ftco-animate">
+					      	<div class="row justify-content-center">
+					          <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+					           <span class="title text-uppercase"> Pourquoi </span> <span class="title-bold text-uppercase">Choisir Certas ?</span>
+					          </div>
+					        </div>
+					        <div class="row d-flex">
+					          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					            <div class="media block-6 why why-competition d-block text-center">
+					            	<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-piggy-bank"></span></div>
+					              <div class="media-body py-md-4">
+					                <h3 class="text-uppercase">Compétitivité</h3>
+					              </div>
+					            </div>      
+					          </div>
+					          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					            <div class="media block-6 why why-fiability d-block text-center">
+					            	<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-wallet"></span></div>
+					              <div class="media-body py-md-4">
+					                <h3 class="text-uppercase">Fiabilité</h3>
+					              </div>
+					            </div>      
+					          </div>
+					          <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+					            <div class="media block-6 why why-proprete d-block text-center">
+					            	<div class="icon d-flex justify-content-center align-items-center"><span class="flaticon-file"></span></div>
+					              <div class="media-body py-md-4">
+					                <h3 class="text-uppercase">Propreté</h3>
+					              </div>
+					            </div>      
+					          </div>
+					           <div class="col-md-12 col-md-12-btn text-center">
+					           <a href='#'> <button type="button" class="btn btn-reseau text-uppercase">Notre valeur ajoutée</button>   </a>  
+					         </div>
+					        </div>
+        		</div>
+        	</div>
+        </div>
+    	</div>
+    </section>
+
+
+   <section class="pt-5 bg-white section-actus">
+      <div class="container">
+      <div class="row justify-content-center">
+      <div class="col-md-12 heading-section text-center ftco-animate mb-5">
+        <span class="title text-uppercase"> Nos </span> <span class="title-bold text-uppercase">actualités</span>
+      </div>
+    </div>
+      <div class="container my-4">
+    <!--Carousel Wrapper-->
+    <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+      <div class="carousel-inner" role="listbox">
+
+        {% set i=0 %}
+        <div class="carousel-item  {% if i==0 %} active {% endif %}">
+          <div class="row">
+               {% for post in posts %}
+                          {% if  i!= 0 and i%4 == 0 %}
+                   </div>
+            </div>
+             <div class="carousel-item  {% if i==0 %} active {% endif %}">
+                <div class="row">
+                          {% endif %}
+                          <div class="col-md-3 d-flex ftco-animate test- {{i}} ">
+                            <div class="blog-entry justify-content-end">
+                              <div class="text">
+                                {% include ['tease-'~post.post_type~'.twig', 'tease.twig'] %}
+                              </div>
+                            </div>
+                           </div>
+                           {% set i=1+i %}
+                      {% endfor %}
+                   </div>
+
+      </div>
+      <!--/.Slides-->
+   
+    </div>
+  </div>
+     <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+         <span class="sr-only">Previous</span>
+       </a>
+       <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+         <span class="sr-only">Next</span>
+        </a>
+</div> 
+    </div>
+      
+  </section>
+
+
+{% endblock %}

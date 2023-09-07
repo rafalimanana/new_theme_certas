@@ -1,0 +1,222 @@
+{% extends "_base_page.twig" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+<div class="wrapper {{sidebar_class}}" id="_pg_stations">
+	<!-- Aide à la navigation -->
+	<div class="content-wrapper _bg_white">
+	    <div class="container">
+	    	<nav aria-label="breadcrumb">
+				<ol class="breadcrumb _bredcrumb_custo">
+			    	<li class="breadcrumb-item"><a class="a-navig" href="{{ site.url }}">Accueil</a></li>
+                    {% if post.parent.parent.title %}
+                        <li class="breadcrumb-item"><a class="a-navig" href="{{ post.parent.parent.link }}">{{post.parent.parent.title}}</a></li>
+                    {% endif %}
+                    {% if post.parent.title %}
+                        <li class="breadcrumb-item"><a class="a-navig" href="{{post.parent.link}}">{{post.parent.title}}</a></li>
+                    {% endif %}
+			    	<li class="breadcrumb-item active"><strong>{{post.title}}</strong></li>
+			  	</ol>
+			</nav>
+	    </div>
+	</div>
+	<!-- Aide à la navigation -->
+
+	<div class="content-wrapper _bg_white">
+	    <div class="container">
+	        <article class="post-type-{{post.post_type}} _pd_bt_25" id="post-{{post.ID}}">
+	            <section class="_article_content">
+	                
+	                <h2 class="text-uppercase  services-h2">
+                        {% if  post.get_field('premier_titre') %}
+                            {{post.get_field('premier_titre')}}
+                        {% else %}
+                            <p><span class="font-family-pers" style="color: #4f2f8d;"><span class="fw-l">Faites le plein  </span><strong>d'avantages !</strong></span></p>
+                        {% endif %}
+					</h2>
+
+	                <div class="_article_body">
+                        {% if  post.get_field('premier_contenu') %}
+                            {{post.get_field('premier_contenu')}}
+                        {% else %}
+                            <p>Vous avez besoin de faire le plein d'essence sur autoroute ou en ville ? Profitez-en aussi pour faire le plein d'avantages ! Chez Esso Express, nous avons bien compris que les automobilistes ne choisissent pas leur station essence par hasard. Le réseau, composé de près de 300 stations-service ouvertes en continu, 7/7 et 24H/24, et partout sur le territoire français, permet de réaliser un plein d'essence avec du carburant de grande qualité et des prix compétitifs, se situant ainsi chaque année dans le top 5 des meilleures enseignes.<br> D'ailleurs nous proposons également un paiement facile et rapide, puisqu'il se réalise uniquement par carte bancaire ou carte carburant comme la « Esso Card », « DKV » ou « UTA ». Les stations-service Esso Express garantissent la sécurité des automobilistes grâce à la vidéosurveillance présente sur les stations: toutes nos caméras sont reliées à un centre de télésurveillance 7/7 et 24H/24.</p>
+                            <p>Certaines stations-service de notre réseau proposent également de l’AdBlue pour les véhicules et poids lourds, dotés de la nouvelle technologie SCR pour la réduction des émissions polluantes.</p>
+                            <p>Esso va encore plus loin dans ses performances, en développant la marque Synergy, un nouveau concept de station-service avec des produits encore plus performants. Toutes les stations-service ESSO Express du réseau de Certas Energy France seront équipées, au courant de l’année, de l’empreinte Synergy.</p>
+                        {% endif %}
+	                </div>
+	            </section>
+	        </article>
+	        <article class="post-type-{{post.post_type}} _pd_bt_25" id="post-{{post.ID}}">
+	  			<section class="_article_content">
+	                <h2 class="text-uppercase  services-h2">
+                        {% if  post.get_field('deuxieme_titre') %}
+                            {{post.get_field('deuxieme_titre')}}
+                        {% else %}
+                            <p><span class="font-family-pers" style="color: #4f2f8d;"><span class="fw-l">Le plein de services pour   </span><strong>satisfaire le client</strong></span></p>
+                        {% endif %}
+					</h2>
+
+	                <div class="_article_body">
+                         {% if  post.get_field('deuxieme_contenu') %}
+                            {{post.get_field('deuxieme_contenu')}}
+                        {% else %}
+                            <p>Avec les stations Esso Express, le client a également la possibilité de profiter de nombreux services diversifiés. Certas Energy France ré-ouvre ses boutiques et permet à ses partenaires d’installer leurs activités sur ses stations-service,  par exemple le « café » PauseExpresso à Montaudran, ou encore le caviste Vignobles à Ville d’Avray. De prochaines ouvertures sont prévues au courant de l’année 2017.</p>
+                            <p>Afin de satisfaire pleinement le client, Certas propose  un service de gonflage de pneu Air-Serv, mais aussi de lavage automatisé WashTec, ou encore de Lockers Amazon pour récupérer vos commandes quand vous voulez.</p>
+                            <p>Avec Esso Express, Certas Energy France vous propose un réseau de proximité avec une gamme de services variés, sans oublier nos prix bas toute l’année !</p>
+                        {% endif %}
+	                </div>
+	            </section>
+	        </article>
+	    </div>
+	</div><!-- /content-wrapper -->
+
+	<div class="content-wrapper _bg_grey _pd_bt_50 _pd_tp_50">
+	    <div class="container">
+	        <article class="post-type-{{post.post_type}} row" id="post-{{post.ID}}">
+	        	<div class="col-md-1"></div>	
+	        	<div class="col-md-2">
+		            <section class="_bloc_content">
+		            	<div class="_cnt_ico">
+                            {% if post.get_field('equipements')['premier_icon_equipement'] %}
+                                <img src=" {{post.get_field('equipements')['premier_icon_equipement'].url}}" class="_bloc_ico">
+                            {% else %}
+                                <img src="{{ site.theme.link }}/images/_icons/_pg_stations/_lavage.png" class="_bloc_ico">
+                            {% endif %}
+		            	</div>
+		            	<h3 class="_bloc_title">
+                            {% if post.get_field('equipements')['premier_titre_equipement'] %}
+                                {{post.get_field('equipements')['premier_titre_equipement']}}
+                            {% else %}
+                                LAVAGES<br>(Les équipements)
+                            {% endif %}
+                        </h3>
+		            </section>
+		        </div>
+		        <div class="col-md-2">
+		            <section class="_bloc_content">
+		            	<div class="_cnt_ico">
+                            {% if post.get_field('equipements')['deuxieme_icon_equipement'] %}
+                                <img src=" {{post.get_field('equipements')['deuxieme_icon_equipement'].url}}" class="_bloc_ico">
+                            {% else %}
+                                <img src="{{ site.theme.link }}/images/_icons/_pg_stations/_aspirateur.png" class="_bloc_ico">
+                            {% endif %}
+		            	</div>
+		            	<h3 class="_bloc_title">
+                            {% if post.get_field('equipements')['deuxieme_titre_equipement'] %}
+                                {{post.get_field('equipements')['deuxieme_titre_equipement']}}
+                            {% else %}
+                                aspirateurs
+                            {% endif %}
+                        </h3>
+		            </section>
+		        </div>
+		        <div class="col-md-2">
+		            <section class="_bloc_content">
+		            	<div class="_cnt_ico">
+                            {% if post.get_field('equipements')['troisieme_icon_equipement'] %}
+                                <img src=" {{post.get_field('equipements')['troisieme_icon_equipement'].url}}" class="_bloc_ico">
+                            {% else %}
+                                <img src="{{ site.theme.link }}/images/_icons/_pg_stations/_gonfleur.png" class="_bloc_ico">
+                            {% endif %}
+		            	</div>
+		            	<h3 class="_bloc_title">
+                            {% if post.get_field('equipements')['troisieme_titre_equipement'] %}
+                                {{post.get_field('equipements')['troisieme_titre_equipement']}}
+                            {% else %}
+                                gonfleurs
+                            {% endif %}
+                        </h3>
+		            </section>
+		        </div>
+		        <div class="col-md-2">
+		            <section class="_bloc_content">
+		            	<div class="_cnt_ico">
+                            {% if post.get_field('equipements')['quatrieme_icon_equipement'] %}
+                                <img src=" {{post.get_field('equipements')['quatrieme_icon_equipement'].url}}" class="_bloc_ico">
+                            {% else %}
+                                <img src="{{ site.theme.link }}/images/_icons/_pg_stations/_boutique.png" class="_bloc_ico">
+                            {% endif %}
+		            	</div>
+		            	<h3 class="_bloc_title">
+                            {% if post.get_field('equipements')['quatrieme_titre_equipement'] %}
+                                {{post.get_field('equipements')['quatrieme_titre_equipement']}}
+                            {% else %}
+                                Boutiques<br>sur mv
+                            {% endif %}
+                        </h3>
+		            </section>
+		        </div>
+		        <div class="col-md-2">
+		            <section class="_bloc_content">
+		            	<div class="_cnt_ico">
+                            {% if post.get_field('equipements')['cinquieme_icon_equipement'] %}
+                                <img src=" {{post.get_field('equipements')['cinquieme_icon_equipement'].url}}" class="_bloc_ico">
+                            {% else %}
+                                <img src="{{ site.theme.link }}/images/_icons/_pg_stations/_locker.png" class="_bloc_ico">
+                            {% endif %}
+		            	</div>
+		            	<h3 class="_bloc_title">
+                            {% if post.get_field('equipements')['cinquieme_titre_equipement'] %}
+                                {{post.get_field('equipements')['cinquieme_titre_equipement']}}
+                            {% else %}
+                                lockers<br>amazon
+                            {% endif %}
+                        </h3>
+		            </section>
+		        </div>
+	        	<div class="col-md-1"></div>
+            	{# {% set pe_url = post.get_field('equipements')['premier_url_equipement'] %}
+	        	<a href="{% if pe_url.url %}{{pe_url.url}}{% else %}#{% endif %}" class="_lnk_bloc" 
+	        	target="{% if pe_url.target %}{{pe_url.target}}{% else %}_self{% endif %}">
+			    </a>
+
+            	{% set de_url = post.get_field('equipements')['deuxieme_url_equipement'] %}
+			    <a href="{% if de_url.url %}{{de_url.url}}{% else %}#{% endif %}" class="_lnk_bloc" 
+	        	target="{% if de_url.target %}{{de_url.target}}{% else %}_self{% endif %}">
+			    </a>
+
+			    {% set te_url = post.get_field('equipements')['troisieme_url_equipement'] %}
+			    <a href="{% if te_url.url %}{{te_url.url}}{% else %}#{% endif %}" class="_lnk_bloc" 
+	        	target="{% if te_url.target %}{{te_url.target}}{% else %}_self{% endif %}">
+			    </a>
+
+				{% set qe_url = post.get_field('equipements')['quatrieme_url_equipement'] %}
+			    <a href="{% if qe_url.url %}{{qe_url.url}}{% else %}#{% endif %}" class="_lnk_bloc"
+	        	target="{% if qe_url.target %}{{qe_url.target}}{% else %}_self{% endif %}">
+			    </a>
+
+				{% set ce_url = post.get_field('equipements')['cinquieme_url_equipement'] %}
+			    <a href="{% if ce_url.url %}{{ce_url.url}}{% else %}#{% endif %}" class="_lnk_bloc"
+	        	target="{% if ce_url.target %}{{ce_url.target}}{% else %}_self{% endif %}">
+			    </a> 
+
+			    {% set se_url = post.get_field('equipements')['sixieme_url_equipement'] %}
+			    <a href="{% if se_url.url %}{{se_url.url}}{% else %}#{% endif %}" class="_lnk_bloc"
+	        	target="{% if se_url.target %}{{se_url.target}}{% else %}_self{% endif %}">
+			        <div class="col-md-2">
+			            <section class="_bloc_content">
+			            	<div class="_cnt_ico">
+                                {% if post.get_field('equipements')['sixieme_icon_equipement'] %}
+                                    <img src=" {{post.get_field('equipements')['sixieme_icon_equipement'].url}}" class="_bloc_ico">
+                                {% else %}
+                                    <img src="{{ site.theme.link }}/images/_icons/_pg_stations/_click.png" class="_bloc_ico">
+                                {% endif %}
+			            	</div>
+			            	<h3 class="_bloc_title">
+                                {% if post.get_field('equipements')['sixieme_titre_equipement'] %}
+                                    {{post.get_field('equipements')['sixieme_titre_equipement']}}
+                                {% else %}
+                                    click & collect<br>butagaz
+                                {% endif %}
+                            </h3>
+			            </section>
+			        </div>
+				</a> #}
+
+	        </article>
+	    </div>
+	</div><!-- /content-wrapper -->
+</div>
+
+{% endblock %} 

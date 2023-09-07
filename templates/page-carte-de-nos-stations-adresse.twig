@@ -1,0 +1,604 @@
+{% extends "_base_page.twig" %}
+{% block header %}
+<style>
+</style>
+{% endblock %}
+{% block content %}
+<div class="wrapper {{sidebar_class}}">
+
+
+    <!-- Aide à la navigation -->
+    <div class="content-wrapper _bg_white">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb _bredcrumb_custo">
+                    <li class="breadcrumb-item"><a class="a-navig" href="{{ site.url }}">Accueil</a></li>
+                    {% if post.parent.parent.title %}
+                        <li class="breadcrumb-item"><a class="a-navig" href="{{ post.parent.parent.link }}">{{post.parent.parent.title}}</a></li>
+                    {% endif %}
+                    {% if post.parent.title %}
+                        <li class="breadcrumb-item"><a class="a-navig" href="{{post.parent.link}}">{{post.parent.title}}</a></li>
+                    {% endif %}
+                    <li class="breadcrumb-item active">{{post.title}}</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Aide à la navigation -->
+  <div class="container content-wrapper _pd_tp_50 _pd_bt_50">
+    <div class="row">
+        <div class="col-md-4 l_search">
+            <div class="input-group md-form form-sm form-2 pl-0 div-search">
+              <input class="form-control my-0 py-1 red-border" name="search" id="search" type="text" placeholder="Recherche par ville" aria-label="Rechercher">
+              <div class="input-group-append">
+                <span class="input-group-text red lighten-3" id="basic-text1"><i class="fa fa-search text-grey"
+                    aria-hidden="true"></i></span>
+              </div>
+            </div>
+            {# <div class="dropdown map_dropdown" id="dropdown">
+            </div> #}
+            <div class="dropdown" id="list">
+            </div>
+            
+            <div class="dropdown" id="l_default">
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div id="map" style="width:100%;height:720px;"></div>
+            <div id="maps" style="display:none"></div>
+        </div>
+    </div>
+  </div><!-- /content-wrapper -->
+</div>
+
+<!-- Fichiers Javascript -->
+
+<script src="{{ site.theme.link }}/leaflet/leaflet.js"></script>
+<script src="https://unpkg.com/esri-leaflet@2.3.1/dist/esri-leaflet.js"></script>
+<script src="https://unpkg.com/esri-leaflet-geocoder@2.3.1/dist/esri-leaflet-geocoder.js"></script>
+<script src="https://unpkg.com/esri-leaflet-vector@2.0.2/dist/esri-leaflet-vector.js"></script>
+<script src="https://unpkg.com/esri-leaflet-cluster@2.0.1/dist/esri-leaflet-cluster.js"></script>
+<script type="text/javascript">
+let OL = L;</script>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/esri-leaflet-geocoder@2.3.1/dist/esri-leaflet-geocoder.css">
+<script src='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.2.1/mapbox.css' rel='stylesheet' />
+<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+{# <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/leaflet.markercluster.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.css' rel='stylesheet' />
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v1.0.0/MarkerCluster.Default.css' rel='stylesheet' /> #}
+<!-- Leaflet.markercluster assets -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.1.0/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="{{ site.theme.link }}/css/_carte-station.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.1.0/dist/MarkerCluster.Default.css">
+  <script src="https://unpkg.com/leaflet.markercluster@1.1.0/dist/leaflet.markercluster-src.js"></script>
+<!-- Example data. -->
+<script src="/mapbox.js/assets/data/realworld.388.js"></script>
+<script type="text/javascript">
+let NL = L;
+       var lat = 46.227638;
+        var lon = 2.213749;
+        window.macarte = null
+        // Fonction d'initialisation de la carte
+
+        L.mapbox.accessToken = 'pk.eyJ1IjoiZmFicmljZXdlYiIsImEiOiJjazI1cmpmMGswcXI3M3FwOTJ2c25ldGVzIn0.4X0G-2us5zurU019Yu9tPw';
+        var geocoder = L.mapbox.geocoder('mapbox.places');
+        // map = L.mapbox.map('map', 'mapbox.streets');
+        var map = L.mapbox.map('map', 'mapbox.streets');
+        // Add tiles from the Mapbox Static Tiles API
+        // (https://docs.mapbox.com/api/maps/#static-tiles)
+        // Tiles are 512x512 pixels and are offset by 1 zoom level
+        L.mapbox.styleLayer('mapbox://styles/fabriceweb/ck25u1v0s00931cpunlpz8bjj').addTo(map);
+        // var mcg = L.markerClusterGroup().addTo(map);
+        var l_mark_icon=L.mapbox.marker;
+        var greenIcon = L.icon({
+            iconUrl: '{{site.theme.link}}/images/_icons/localization-map.svg',
+            iconSize:     [30, 60], // size of the icon
+        });
+        window.marker = L.marker([lat, lon], {icon: greenIcon});
+        var markers = new L.MarkerClusterGroup({
+            iconCreateFunction : function (cluster) {
+                let defineBucket = (cc) =>{
+                    let bcks = [
+                        0,10,100,1000,10000,100000
+                    ]
+                    let v = 5
+                    bcks.map((bucket,key) =>{
+                        if(bcks[key+1]){
+                            if(bcks[key] <= cc && cc < bcks[key+1]){
+                                v = key+1
+                            }
+                        }
+                        return true
+                    })
+                    return v;
+                }
+                let definedBucket = defineBucket(cluster.getChildCount())
+                    console.log("cc-calculation-out---------------------",definedBucket,cluster.getChildCount())
+                return L.divIcon( {
+                    html : '<b class="map-icon-container"><img class="map-icon" src="{{site.theme.link}}/images/_icons/m'+definedBucket+'.png" /><span class="map-icon-text" >' + cluster.getChildCount() + '</span></b>', 
+                    className : 'mycluster', 
+                    iconSize : [50, 50]
+                });
+            }
+        });
+        /*var markersClusterCustom = new L.MarkerClusterGroup({
+            iconCreateFunction: function(cluster) {
+                var digit = (cluster.getChildCount()+'').length;
+                return L.divIcon({ 
+                    html: cluster.getChildCount(), 
+                    className: 'mycluster digit-'+digit, 
+                    iconSize: null 
+                });
+            }
+        });*/
+
+        var searchIcon = L.icon({
+            iconUrl: '{{site.theme.link}}/images/_icons/localization-map.svg',
+            iconSize:     [30, 60], // size of the icon
+        });
+
+        $.getJSON("{{site.theme.link}}/json/geoLocation.json", function(data) {
+            var d_i = 1; 
+            var geojson = L.geoJson(data, {
+              onEachFeature: function (feature, layer) {
+                let d_name=feature.properties.name;
+                let d_id = feature.id
+                var d_content = '<div class="col mt-4 l_carte">'+
+                    '<h5 class="t_esso">'+d_name+'</h5>'+
+                    '<p>'+
+                        '<img src="{{ site.theme.link }}/images/_icons/localization-carte.svg" style="width:16px;">'+
+                        '<span>'+feature.properties.address+'</span><br>'+
+                        '<span style="padding-left: 20px;">' + feature.properties.city + ' - ' + feature.properties.country +'</span>'+
+                    '</p>'+
+                    '<p class="c_information" id="d_click'+d_id+'" data-val="'+d_id+'" >'+
+                        '<span>Plus d\'informations</span>'+
+                    '</p>'+
+                '</div>';
+                if (d_i <= 4) {
+                    $('#l_default').append(d_content);
+                    $('#d_click'+d_id).on('click',function(event) {
+                        $("#l_resultat").html('');
+                        $('#search').val('');
+                        var c_bounds =feature.geometry.coordinates;
+                        let d_lat = feature.geometry.coordinates[1];
+                        let d_lng = feature.geometry.coordinates[0];
+                        var fit = [
+                            [d_lat-0.01, d_lng-0.01],
+                            [d_lat+0.01, d_lng+0.01],
+                        ]
+                        map.fitBounds(fit);
+                        var d2_content = '<div class="pl-1">'+
+                        '<h5 class="t_esso">' + feature.properties.name + '</h5>'+
+                        '<p>'+
+                            '<img src="{{ site.theme.link }}/images/_icons/localization-carte.svg" style="width:16px;">'+
+                            '<span class="c_popup">'+
+                            '<span>' + feature.properties.address + ',</span><br>'+
+                            '<span style="padding-left: 20px;">' + feature.properties.city + ' - ' + feature.properties.country +'</span>'+
+                            '</span>'+
+                        '</p>'+
+                        '<p>'+
+                            '<span>'+
+                                '<img src="{{ site.theme.link }}/images/_icons/objet-dynamique-vectoriel4.svg" style="width:45px;">'+
+                            '</span>'+
+                            '<span class="pl-3">'+
+                                '<img src="{{ site.theme.link }}/images/_icons/objet-dynamique-vectoriel7.svg" style="width:34px;">'+
+                            '</span>'+
+                        '</p>'+
+                        '</div>';
+                        layer
+                            .openPopup();
+                            
+                            // .bindPopup(d2_content)
+                    })
+                    d_i++;
+                }
+                //console.log(feature);
+                var htmlBind = '<div class="pl-1">'+
+                '<h5 class="t_esso">' + feature.properties.name + '</h5>'+
+                '<p>'+
+                    '<img src="{{ site.theme.link }}/images/_icons/localization-carte.svg" style="width:16px;">'+
+                    '<span class="c_popup">'+
+                    '<span>' + feature.properties.address + ',</span><br>'+
+                    '<span style="padding-left: 20px;">' + feature.properties.city + ' - ' + feature.properties.country +'</span>'+
+                    '</span>'+
+                '</p>'+
+                '<p>'+
+                    '<span>'+
+                        '<img src="{{ site.theme.link }}/images/_icons/objet-dynamique-vectoriel4.svg" style="width:45px;">'+
+                    '</span>'+
+                    '<span class="pl-3">'+
+                        '<img src="{{ site.theme.link }}/images/_icons/objet-dynamique-vectoriel7.svg" style="width:34px;">'+
+                    '</span>'+
+                '</p>'+
+                '</div>';
+                // USE A CUSTOM MARKER
+                layer.setIcon(greenIcon);
+
+                // ADD A POPUP WITH A CHART
+                layer.bindPopup(htmlBind);
+
+              }
+            });
+            markers.addLayer(geojson);
+
+            // CONSTRUCT THE MAP
+            map.fitBounds(markers.getBounds());
+            markers.addTo(map);
+          });
+
+        /*var addressPoints = [
+            [46.227638, 2.213749, 'France'],
+        ];
+
+        for (var i = 0; i < 55; i++) {
+            var a = addressPoints[0];
+            var title = a[2];
+            var marker = L.marker(new L.LatLng(a[0]+i*0.001, a[1]+i*0.001), {
+                icon: L.mapbox.marker.icon({}),
+                title: title
+            });
+            marker.bindPopup(title);
+            markers.addLayer(marker);
+        }
+
+        addressPoints = [
+            [50.845539, 4.355710, 'Belgique'],
+        ];
+
+
+
+        for (var i = 0; i < 60; i++) {
+            var a = addressPoints[0];
+            var title = a[2];
+            var marker = L.marker(new L.LatLng(a[0], a[1]), {
+                icon: L.mapbox.marker.icon({'marker-symbol': 'post', 'marker-color': '0044FF'}),
+                title: title
+            });
+            marker.bindPopup(title);
+            markers.addLayer(marker);
+        }
+
+
+        addressPoints = [
+            [49.815273, 6.129583, 'Luxembourg'],
+        ];
+
+
+        for (var i = 0; i < 39; i++) {
+            var a = addressPoints[0];
+            var title = a[2];
+            var marker = L.marker(new L.LatLng(a[0], a[1]), {
+                icon: L.mapbox.marker.icon({'marker-symbol': 'post', 'marker-color': '0044FF'}),
+                title: title
+            });
+            marker.bindPopup(title);
+            markers.addLayer(marker);
+        }
+
+
+
+
+        addressPoints = [
+            [46.948002, 7.448130, 'Suisse'],
+        ];
+
+
+        for (var i = 0; i < 4; i++) {
+            var a = addressPoints[0];
+            var title = a[2];
+            var marker = L.marker(new L.LatLng(a[0], a[1]), {
+                icon: L.mapbox.marker.icon({'marker-symbol': 'post', 'marker-color': '0044FF'}),
+                title: title
+            });
+            marker.bindPopup(title);
+            markers.addLayer(marker);
+        }
+
+        addressPoints = [
+            [48.856613, 2.352222, 'Paris'],
+        ];
+
+        for (var i = 0; i < 50; i++) {
+            var a = addressPoints[0];
+            var title = a[2];
+            var marker = L.marker(new L.LatLng(a[0], a[1]), {
+                icon: L.mapbox.marker.icon({'marker-symbol': 'post', 'marker-color': '0044FF'}),
+                title: title
+            });
+            marker.bindPopup(title);
+            markers.addLayer(marker);
+        }
+
+
+
+        addressPoints = [
+            [43.738419, 7.424616, 'Monaco'],
+        ];
+
+
+        for (var i = 0; i < 47; i++) {
+            var a = addressPoints[0];
+            var title = a[2];
+            var marker = L.marker(new L.LatLng(a[0], a[1]), {
+                icon: L.mapbox.marker.icon({'marker-symbol': 'post', 'marker-color': '0044FF'}),
+                title: title
+            });
+            marker.bindPopup(title);
+            markers.addLayer(marker);
+        }
+
+
+        addressPoints = [
+            [42.507530, 1.521820, 'Andorre'],
+        ];*/
+
+        /*for (var i = 0; i < 17; i++) {
+            var a = addressPoints[0];
+            var title = a[2];
+            var marker = L.marker(new L.LatLng(a[0], a[1]), {
+                icon: L.mapbox.marker.icon({'marker-symbol': 'andorre', 'marker-color': '0044FF'}),
+                title: title
+            });
+            marker.bindPopup(title);
+            markers.addLayer(marker);
+        }*/
+        // map.addLayer(markers);
+        //map.addLayer(markersClusterCustom);
+
+
+
+       function initMap() {
+        let L = OL
+            // Créer l'objet "macarte" et l'insèrer dans l'élément HTML qui a l'ID "map"
+            macarte = L.map('maps', {attributionControl: false}).setView([lat, lon], 11);
+            // Leaflet ne récupère pas les cartes (tiles) sur un serveur par défaut. Nous devons lui préciser où nous souhaitons les récupérer. Ici, openstreetmap.fr
+            L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+                // Il est toujours bien de laisser le lien vers la source des données
+                // attribution: 'données © <a href="//osm.org/copyright">OpenStreetMap</a>/ODbL - rendu <a href="//openstreetmap.fr">OSM France</a>',
+                minZoom: 1,
+                maxZoom: 20
+            }).addTo(macarte);
+
+            var greenIcon = L.icon({
+                iconUrl: '{{site.theme.link}}/images/_map/logo-esso.svg',
+                iconSize:     [38, 95], // size of the icon
+            });
+
+            var esso_alou = '<h5 class="t_esso">Esso Alouette</h5>'+
+                '<p>'+
+                    '<img src="{{ site.theme.link }}/images/_icons/localization-carte.svg" style="width:16px;">'+
+                    '<span>Route des Alpes,</span><br>'+
+                    '<span style="padding-left: 20px;">Aix-en-provence - France</span>'+
+                '</p>';
+
+
+
+            // Nous ajoutons un marqueur
+            var marker = L.marker([lat, lon], {icon: greenIcon})
+            .addTo(macarte)
+            .bindPopup(esso_alou)
+            .openPopup();
+
+            // Control 2: This add a scale to the map
+            L.control.scale().addTo(macarte);
+
+        // Control 3: This add a Search bar
+            var resu = new L.LayerGroup().addTo(macarte);
+
+            L.esri.Geocoding.geocode().text('380 New York St, Redlands, California, 92373').run(function (err, results, response) {
+              if (err) {
+                console.log(err);
+                return;
+              }
+              console.log(results);
+              var res =results.results;
+              resu.clearLayers();
+              for (var i = res.length - 1; i >= 0; i--) {
+                resu.addLayer(L.marker(res[i].latlng, {icon: greenIcon}).bindPopup("<b>"+res[i].city+"</b><br>"+res[i].address+"").openPopup());
+              }
+            });
+        }
+        window.onload = function(){
+            // Fonction d'initialisation qui s'exécute lorsque le DOM est chargé
+            initMap(); 
+        };
+        window.re_bounds=[];
+        window.re_properties=[];
+        window.curerntId = 0
+       /*$('#search').keyup(function(event) {
+            var search = $(this).val();
+            geocoder.query(search, function(err,data) {
+                if (data.lbounds) {
+
+                                    console.log("data-c_bounds",data.lbounds)
+                    map.fitBounds(data.lbounds);
+                    var newLatLng = new L.LatLng(data.latlng[0], data.latlng[1]);
+                    marker.setLatLng(newLatLng);
+                } else if (data.latlng) {
+
+                    //map.setView([data.latlng[0], data.latlng[1]], 13);
+                    //marker.addTo(map);
+                }
+            });
+        });*/
+        /*var csvLayer = omnivore.csv('/mapbox.js/assets/data/airports.csv', null, L.mapbox.featureLayer()).addTo(map);
+        function search() {
+            // get the value of the search input field
+
+            var searchString = $('#search').val().toLowerCase();
+
+            csvLayer.setFilter(showState);
+
+            // here we're simply comparing the 'state' property of each marker
+            // to the search string, seeing whether the former contains the latter.
+            function showState(feature) {
+            console.log('test');
+                // return feature.properties.state
+                //     .toLowerCase()
+                //     .indexOf(searchString) !== -1;
+            }
+        }*/
+        $('#search').on('keyup', function(event) {
+            let _map = map
+            let L = OL
+            let _NL = NL
+            let l_icon = l_mark_icon
+            curerntId++
+            let id = curerntId
+            var search = $(this).val();
+            $('#list').html('');
+            $('#list').css('display', 'none');
+            $('#l_default').css('display', 'none');
+            if (search != '' && search.length >= 2 && event.keyCode != 46) {
+               setTimeout(function(){
+                  window.recherche=search;
+                  //document.getElementById('map').innerHTML='';
+                  var geocoder = L.esri.Geocoding.geocodeService();
+                  var map = macarte;
+                  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+                  }).addTo(map);
+                  L.esri.Geocoding.geocode()
+                  .address(search)
+                  .city(search)
+                  .region(search)
+                  .postal(search)
+                  .country(search)
+                  .run(function (error, results, response) {
+                    if(id != curerntId){
+                        return true
+                    }
+                    if (error) {
+                      return;
+                    }
+                    var res =results.results;
+                    if (res) {
+                        $('#list').css('display', 'block');
+                        $('#list').html('')
+                        console.log(res)
+                        var j_count=0;
+                        if (j_count>=4) {
+                            return false;
+                        }else {
+                            for (var i = res.length - 1; i >= 0; i--) {
+                                j_count++;
+                                window.re_bounds[i] = res[i].bounds;
+                                window.re_properties[i] = res[i].properties;
+                                var affiche = '';
+                                if (res[i].properties.City != '') {
+                                    affiche=res[i].properties.City;
+                                }else if(res[i].properties.LongLabel != '') {
+                                    affiche=res[i].properties.LongLabel;
+                                }
+                                else if (res[i].text != '') {
+                                    affiche=res[i].text;
+                                }else {
+                                    affiche=res[i].properties.Place_addr;
+                                }
+                                 var div = '<div class="col mt-4 l_carte">'+
+                                    '<h5 class="t_esso">'+affiche+'</h5>'+
+                                    '<p>'+
+                                        '<img src="{{ site.theme.link }}/images/_icons/localization-carte.svg" style="width:16px;">'+
+                                        '<span>'+res[i].properties.Place_addr+'</span>'+
+                                    '</p>'+
+                                    '<p class="c_information" id="sel'+i+'" data-val="'+i+'">'+
+                                        '<span>Plus d\'informations</span>'+
+                                    '</p>'+
+                                '</div>';
+                                // var div = "<div class='p_city'><div id='sel"+i+"' data-val='"+i+"' class='l_city'>"+affiche+"</div></div>";
+                                let __then = () =>{
+                                    $('#list').append(div);
+                                    function _f(i){
+                                        $('#sel'+i).on('click',function(event) {
+                                            $("#list").html('');
+                                            $('#search').val('');
+                                            $(".l_city").removeClass();
+                                            var fil = $(this).data('val');
+                                            var c_bounds = re_bounds[fil];
+                                            var c_properties = re_properties[fil];
+                                            var name = '';
+                                            if (c_properties.City != '') {
+                                                name=c_properties.City;
+                                            }else if(c_properties.LongLabel != '') {
+                                                name=c_properties.LongLabel;
+                                            }else {
+                                                name=c_properties.Place_addr;
+                                            }
+                                            var content = '<div class="pl-1">'+
+                                            '<h5 class="t_esso">' + name + '</h5>'+
+                                            '<p>'+
+                                                '<img src="{{ site.theme.link }}/images/_icons/localization-carte.svg" style="width:16px;">'+
+                                                '<span class="c_popup">'+
+                                                '<span>' + c_properties.Match_addr + ',</span><br>'+
+                                                '<span style="padding-left: 20px;">' + c_properties.City + ' - ' + c_properties.Country +'</span>'+
+                                                '</span>'+
+                                            '</p>'+
+                                            '<p>'+
+                                                '<span>'+
+                                                    '<img src="{{ site.theme.link }}/images/_icons/objet-dynamique-vectoriel4.svg" style="width:34px;">'+
+                                                '</span>'+
+                                                '<span class="pl-3">'+
+                                                    '<img src="{{ site.theme.link }}/images/_icons/objet-dynamique-vectoriel7.svg" style="width:30px;">'+
+                                                '</span>'+
+                                            '</p>'+
+                                            '</div>';
+                                            //map.fitBounds(c_bounds);
+                                            /*_map.panTo(new L.LatLng(res[i].latlng.lat, res[i].latlng.lng));
+                                            var newLatLng = new _NL.LatLng(res[i].latlng.lat, res[i].latlng.lng);
+                                            marker.setLatLng(newLatLng);*/
+                                            let lat = res[i].latlng.lat;
+                                            let lng = res[i].latlng.lng;
+                                            var fit = [
+                                                [lat-0.01, lng-0.01],
+                                                [lat+0.01, lng+0.01],
+                                            ]
+                                            _map.fitBounds(fit);
+                                            map.panTo(new L.LatLng(res[i].latlng.lat, res[i].latlng.lng));
+                                            /*var marker = _NL.marker(new _NL.LatLng(res[i].latlng.lat, res[i].latlng.lng), {
+                                                icon: searchIcon
+                                            });*/
+                                            var newLatLng = new _NL.LatLng(res[i].latlng.lat, res[i].latlng.lng);
+                                            marker
+                                            .setLatLng(newLatLng)
+                                            .addTo(_map)
+                                            .bindPopup(content)
+                                            .openPopup()
+                                            ;
+                                            // markers.addLayer(marker);
+                                            //map.addLayer(markers); 
+                                        })
+                                    }
+                                    _f(i)
+
+                                }
+                                if(j_count<=4){
+                                    __then()
+                                }
+                            }
+                        }
+                    }
+                    /*f(response.results[0]){
+                        console.log(response.results[0])
+                        map.fitBounds(response.results[0].bounds);
+                    }*/
+                  });
+                }, 100);
+            }
+        });
+
+        $(document).on('click', function(event) {
+            console.log(event.target);
+            console.log($('#search')[0]);
+          if (!$(event.target).closest('#list').length && event.target != $('#search')[0])  {
+                $("#list").html('');
+                $('#search').val('');
+                $('#list').css('display', 'none');
+                $('#l_default').css('display', 'block');
+          }
+        });
+
+</script>
+
+{% endblock %}

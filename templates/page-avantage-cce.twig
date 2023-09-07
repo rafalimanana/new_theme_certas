@@ -1,0 +1,167 @@
+{% extends "_base_page.twig" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+<div class="wrapper {{sidebar_class}}">
+    <!-- Aide à la navigation -->
+    <div class="content-wrapper _bg_white" id="_pg_club-energy">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb _bredcrumb_custo">
+                    <li class="breadcrumb-item"><a class="a-navig" href="{{ site.url }}">Accueil</a></li>
+                    {% if post.parent.parent.title %}
+                        <li class="breadcrumb-item"><a class="a-navig" href="{{ post.parent.parent.link }}">{{post.parent.parent.title}}</a></li>
+                    {% endif %}
+                    {% if post.parent.title %}
+                        <li class="breadcrumb-item"><a class="a-navig" href="{{post.parent.link}}">{{post.parent.title}}</a></li>
+                    {% endif %}
+                    <li class="breadcrumb-item active"><strong>{{post.title}}</strong></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Aide à la navigation -->
+    <div class="container content-wrapper _pd_tp_50 _pd_bt_50">
+        <article class="post-type-{{post.post_type}}" id="post-{{post.ID}}">
+            <section class="article-content">
+                <h1 class="article-h1" style="color: #4f2f8d;text-transform:uppercase;">{{post.title}}</h1>
+                <div class="article-body">
+                    {{post.get_field('univers')}}
+                    <div class="_pd_tp_50 _pd_bt_50">
+                        <div class="slick_responsive row" id="logo_marque">
+                            {% set photos = post.get_field('logo')|split(',') %}
+                            {% if photos is not empty %}
+                                {% for pho in photos %}
+                                    {% if pho %}
+                                        <div class="col-md-3">
+                                            {% set attachment = TimberPost(pho) %}
+                                            <img src="{{TimberImage(pho).file_loc|resize(480)}}" class="logo_cce" />
+                                            {# <a href="{{attachment.get_field('link_url')}}">
+                                            </a> #}
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    {{post.get_field('comment_ca_marche')}}
+                </div>
+            </section>
+            <section class="article-content">
+                {% set acceder = post.get_field('acceder_au_site') %}
+                {% if acceder %}
+                    <div class="text-center">
+                      <a target="{% if acceder.target %}{{acceder.target}}{% else %}_self{% endif %}" href="{% if acceder.url %}{{acceder.url}}{% else %}#{% endif %}">
+                        <button id="acces_site" class="{# btn-primary btn  #} btn btn-secondary btn-first"> 
+                          {{acceder.title}}
+                        </button>
+                      </a>
+                    </div>
+                {% endif %}
+            </section>
+        </article>
+        {# {% set break = false %}
+        {% for i in 1..20  if not break %}
+            {% set avantage = post.get_field("groupe_avantage_"~i) %}
+            {% if avantage is null %}
+                {% set break = true %}
+            {% endif %}
+            {% if avantage and (avantage.premier_titre or avantage.premier_contenu) %}
+                <div class="row">
+                    <div class="col-md-6 class_club_energy">
+                        {% if  avantage.premier_titre %}
+                            <h2 class="text-uppercase  services-h2">
+                                {{avantage.premier_titre}}
+                            </h2>
+                        {% endif %}
+                        {% if  avantage.premier_contenu %}
+                            {{avantage.premier_contenu}}
+                        {% endif %}
+                        <p class="text-center _pd_tp_40">
+                            {% set p_url = avantage.premier_url_savoir_plus %}
+                            {% if avantage.premier_texte_savoir_plus %}
+                                <a href="{% if p_url.url %}{{p_url.url}}{% else %}#{% endif %}" class="" target="{% if p_url.target %}{{p_url.target}}{% else %}_self{% endif %}">
+                                        <button class="btn btn-secondary btn-first">
+                                                {{avantage.premier_texte_savoir_plus}}
+                                        </button>
+                                </a>
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div class="col-md-6 pl_club">
+                        {% if  avantage.premier_image %}
+                            {% set img_p = avantage.premier_image %}
+                            <img class="img_club" src="{{img_p.url}}">
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+            {% if avantage and (avantage.deuxieme_titre or avantage.deuxieme_contenu) %}
+                <div class="row mt-5">
+                    <div class="col-md-6">
+                        {% if  avantage.deuxieme_image %}
+                            <img class="img_club" src="{{avantage.deuxieme_image.url}}">
+                        {% endif %}
+                    </div>
+                    <div class="col-md-6 pl_club class_club_energy">
+                        {% if  avantage.deuxieme_titre %}
+                            <h2 class="text-uppercase  services-h2">
+                                {{avantage.deuxieme_titre}}
+                            </h2>
+                        {% endif %}
+                        {% if  avantage.deuxieme_contenu %}
+                            {{avantage.deuxieme_contenu}}
+                        {% endif %}
+                        <p class="text-center _pd_tp_40">
+                            {% set d_url = avantage.deuxieme_url_savoir_plus %}
+                            {% if avantage.deuxieme_texte_savoir_plus %}
+                                <a href="{% if d_url.url %}{{d_url.url}}{% else %}#{% endif %}" class="" target="{% if d_url.target %}{{d_url.target}}{% else %}_self{% endif %}">
+                                        <button class="btn btn-secondary btn-first">
+                                            {{avantage.deuxieme_texte_savoir_plus}}
+                                        </button>
+                                </a>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            {% endif %}
+            {% if avantage and (avantage.troisieme_titre or avantage.troisieme_contenu) %}
+                <div class="row mt-5">
+                    <div class="col-md-6 class_club_energy">
+                        {% if  avantage.troisieme_titre %}
+                            <h2 class="text-uppercase  services-h2">
+                                {{avantage.troisieme_titre}}
+                            </h2>
+                        {% endif %}
+                        {% if  avantage.troisieme_contenu %}
+                            {{avantage.troisieme_contenu}}
+                        {% endif %}
+                        <p class="text-center _pd_tp_40">
+                            {% set t_url = avantage.troisieme_url_savoir_plus %}
+                            {% if avantage.troisieme_texte_savoir_plus %}
+                                <a href="{% if t_url.url %}{{t_url.url}}{% else %}#{% endif %}" class=""  target="{% if t_url.target %}{{t_url.target}}{% else %}_self{% endif %}">
+                                        <button class="btn btn-secondary btn-first ">
+                                                {{avantage.troisieme_texte_savoir_plus}}
+                                        </button>
+                                </a>
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div class="col-md-6 pl_club">
+                        {% if  avantage.troisieme_image %}
+                            <img class="img_club" src="{{avantage.troisieme_image.url}}">
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %} #}
+
+
+    </div>
+
+    {# <div style="color:gray; font-weight:600" class="content-wrapper _bg_grey text-center pt-3 pb-3">
+        <a target="_blank" href="https://www.club-certas.com/Account/Register">Accéder au site</a>
+    </div> #}
+</div>
+{% endblock %}

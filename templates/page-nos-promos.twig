@@ -1,0 +1,181 @@
+{% extends "_base_page.twig" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+<div class="wrapper {{sidebar_class}}" id="_pg_promos">
+    <!-- Aide à la navigation -->
+    <div class="content-wrapper _bg_white">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb _bredcrumb_custo">
+                    <li class="breadcrumb-item"><a class="a-navig" href="{{ site.url }}">Accueil</a></li>
+                    {% if post.parent.parent.title %}
+                        <li class="breadcrumb-item"><a class="a-navig" href="{{ post.parent.parent.link }}">{{post.parent.parent.title}}</a></li>
+                    {% endif %}
+                    {% if post.parent.title %}
+                        <li class="breadcrumb-item"><a class="a-navig" href="{{post.parent.link}}">{{post.parent.title}}</a></li>
+                    {% endif %}
+                    <li class="breadcrumb-item active"><strong>{{post.title}}</strong></li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="container content-wrapper pb-5">
+        {% if promos is not empty %}
+            {% for promo in promos %}
+                <div class="row">
+                    <div class="col-md-5"  {% if promo.promotion_expire %}style="opacity: 0.78;"{% endif %}>
+                        <a href="{{promo.link}}">
+                            <img class="img_promos" src="{{ promo.thumbnail.src }}">
+                        </a>
+                    </div>
+                    <div class="col-md-7 mt-3">
+                        
+                            <h5 class="t_promos" >
+                                <a href="{{promo.link}}">
+                                    <b class="b_promo" {% if promo.promotion_expire %}style="opacity: 0.78;"{% endif %}>
+                                        {{promo.title}}
+                                    </b>
+                                </a>
+                                {# {% if promo.promotion_expire %}<span class="close-icon-promo"></span>{% endif %} #}
+                            </h5>
+                            <p class="ccm-p"  {% if promo.promotion_expire %}style="opacity: 0.78;"{% endif %}>
+                                {{ promo.content|excerpt(34) }}
+                            </p>
+                        <div>
+                            {% if promo.promotion_expire %}
+                                <span class="p_expire">
+                                    Cette promotion est terminée
+                                </span>
+                            {% else %}
+                                <a href="{{promo.link}}">
+                                    <button class="btn btn-secondary btn-first">
+                                        Voir la promo
+                                    </button>
+                                </a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 col-xl-12"><hr></div>
+                </div>
+            {% endfor %}
+            <div class="tool-pagination c-std">
+                {% if promos.pagination.pages|length > 0 %}
+                    <div class="pagination">
+                        {% if promos.pagination.prev %}
+                            <a href="{{promos.pagination.prev.link}}" class="page-numbers prev {{promos.pagination.prev.link|length ? '' : 'invisible'}}">Précédent</a>
+                        {% endif %}
+                        {% for page in promos.pagination.pages %}
+                                {% if page.link %}
+                                    <a href="{{page.link}}" class="page-numbers {{page.class}}">{{page.title}}</a>
+                                {% else %}
+                                    <span class="page-numbers {{page.class}}">{{page.title}}</span>
+                                {% endif %}
+                        {% endfor %}
+                        {% if promos.pagination.next %}
+                            <a href="{{promos.pagination.next.link}}" class="page-numbers next {{promos.pagination.next.link|length ? '' : 'invisible'}}">Suivant</a>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            </div>
+        {% else %}
+            {# <div class="row">
+                <div class="col-md-5">
+                    <img class="img_promos" src="{{ site.theme.link }}/images/promo-1.png">
+                </div>
+                <div class="col-md-7 mt-3">
+                    <h5 class="t_promos"><b>Promo #1</b></h5>
+                    <p class="ccm-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra nec sapien egestas volutpat. Nulla facilisi. Etiam ac purus pellentesque, consectetur diam vel, scelerisque purus. Donec tempor ante pellentesque, aliquet tortor nec, ultricies mauris.
+                    </p>
+                    <div>
+                        <a href="#">
+                            <button class="btn btn-secondary btn-first">
+                                Voir la promo
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 col-xl-12"><hr></div>
+
+                <div class="col-md-5">
+                    <img class="img_promos" src="{{ site.theme.link }}/images/promo-2.png">
+                </div>
+                <div class="col-md-7 mt-3">
+                    <h5 class="t_promos"><b>Promo #2</b></h5>
+                    <p class="ccm-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra nec sapien egestas volutpat. Nulla facilisi. Etiam ac purus pellentesque, consectetur diam vel, scelerisque purus. Donec tempor ante pellentesque, aliquet tortor nec, ultricies mauris.
+                    </p>
+                    <div>
+                        <a href="#">
+                            <button class="btn btn-secondary btn-first">
+                                Voir la promo
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 col-xl-12"><hr></div>
+
+                <div class="col-md-5">
+                    <img class="img_promos" src="{{ site.theme.link }}/images/promo-1.png">
+                </div>
+                <div class="col-md-7 mt-3">
+                    <h5 class="t_promos"><b>Promo #3</b></h5>
+                    <p class="ccm-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra nec sapien egestas volutpat. Nulla facilisi. Etiam ac purus pellentesque, consectetur diam vel, scelerisque purus. Donec tempor ante pellentesque, aliquet tortor nec, ultricies mauris.
+                    </p>
+                    <div>
+                        <a href="#">
+                            <button class="btn btn-secondary btn-first">
+                                Voir la promo
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 col-xl-12"><hr></div>
+
+                <div class="col-md-5">
+                    <img class="img_promos" src="{{ site.theme.link }}/images/promo-2.png">
+                </div>
+                <div class="col-md-7 mt-3">
+                    <h5 class="t_promos"><b>Promo #4</b></h5>
+                    <p class="ccm-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra nec sapien egestas volutpat. Nulla facilisi. Etiam ac purus pellentesque, consectetur diam vel, scelerisque purus. Donec tempor ante pellentesque, aliquet tortor nec, ultricies mauris.
+                    </p>
+                    <div>
+                        <a href="#">
+                            <button class="btn btn-secondary btn-first">
+                                Voir la promo
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-md-12 col-lg-12 col-sm-12 col-xl-12"><hr></div>
+
+                <div class="col-md-5">
+                    <img class="img_promos" src="{{ site.theme.link }}/images/promo-1.png">
+                </div>
+                <div class="col-md-7 mt-3">
+                    <h5 class="t_promos"><b>Promo #5</b></h5>
+                    <p class="ccm-p">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pharetra nec sapien egestas volutpat. Nulla facilisi. Etiam ac purus pellentesque, consectetur diam vel, scelerisque purus. Donec tempor ante pellentesque, aliquet tortor nec, ultricies mauris.
+                    </p>
+                    <div>
+                        <a href="#">
+                            <button class="btn btn-secondary btn-first">
+                                Voir la promo
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div> #}
+        {% endif %}
+    </div>
+{% endblock %}

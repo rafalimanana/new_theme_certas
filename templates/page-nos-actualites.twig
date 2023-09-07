@@ -1,0 +1,189 @@
+{% extends "_base_page.twig" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+
+<div class="wrapper {{sidebar_class}}" id="_pg_actualites">
+	<!-- Aide à la navigation -->
+	<div class="content-wrapper _bg_white">
+	    <div class="container">
+	    	<nav aria-label="breadcrumb">
+				<ol class="breadcrumb _bredcrumb_custo">
+			    	<li class="breadcrumb-item"><a class="a-navig" href="{{ site.url }}">Accueil</a></li>
+                    {% if post.parent.parent.title %}
+                        <li class="breadcrumb-item"><a class="a-navig" href="{{ post.parent.parent.link }}">{{post.parent.parent.title}}</a></li>
+                    {% endif %}
+                    {% if post.parent.title %}
+                        <li class="breadcrumb-item"><a class="a-navig" href="{{post.parent.link}}">{{post.parent.title}}</a></li>
+                    {% endif %}
+			    	<li class="breadcrumb-item active"> <strong> Actualités </strong> </li>
+			  	</ol>
+			</nav>
+	    </div>
+	</div>
+	<!-- Aide à la navigation -->
+
+	<div class="content-wrapper _bg_white">
+	    <div class="container">
+	        <article class="post-type-{{post.post_type}} _pd_bt_25 row" id="post-{{post.ID}}">
+	            <section class="_article_content col-md-12">
+                    <h2 class="text-uppercase  services-h2">
+                        {% if post.get_field('titre_nos_actualites') %}
+                            {{post.get_field('titre_nos_actualites')}}
+                        {% else %}
+                            <p><span class="font-family-pers" style="color: #4f2f8d;"><span class="fw-l">nos</span><strong> actualités</strong></span></p>
+                        {% endif %}
+                    </h2>
+	            </section>
+
+	            <section class="_article_content col-md-12 ">
+
+                        {% if last_posts is not empty or posts is not empty %}
+                            <div class="row">
+                                {% if posts.pagination.prev.link|length == 0 %}
+                                    {% for last in last_posts %}
+                                        <div class="col-md-6 _cnt_panel_actus">
+                                            <a href="{{last.link}}">
+                                                <div class="_big_bloc_actus" style="background-image: url({% if last.thumbnail.src %}{{last.thumbnail.src}}{% else %}{{site.theme.link }}/images/_pages/_nos_actualites/subway_beach_flags.jpg}}{% endif %})">
+                                                    <div class="_bloc_shadow">
+                                                        <h4 class="_bloc_date">{{last.date}}</h4>
+                                                        <h2 class="_bloc_title">{{last.title}}</h2>
+                                                        <p class="_bloc_description">{{ last.post_content|excerpt(50) }}</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                                {% for term in posts %}
+                                    <div class="col-md-3 _cnt_panel_actus">
+                                        <div class="panel _panel_actus" style="min-height: 100% !important;height:initial;">
+                                            <a href="{{term.link}}">
+                                                <div class="panel-body">
+                                                    <img src="{{term.thumbnail.src}}" class="_actu_img">
+                                                </div>
+                                                <div class="panel-footer">
+                                                    <h4 class="_actu_date">{{term.date}}</h4>
+                                                    <h2 class="_actu_title">{{term.title}}</h2>
+                                                    <p class="_actu_description">
+                                                        {{ term.title|striptags|length > 10 ? term.post_content|excerpt(12) : term.post_content|excerpt(20) }}
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            <div class="tool-pagination c-std">
+                                {% if posts.pagination.pages|length > 0 %}
+                                    <div class="pagination">
+                                        {% if posts.pagination.prev %}
+                                            <a href="{{posts.pagination.prev.link}}" class="page-numbers prev {{posts.pagination.prev.link|length ? '' : 'invisible'}}">Précédent</a>
+                                        {% endif %}
+                                        {% for page in posts.pagination.pages %}
+                                                {% if page.link %}
+                                                    <a href="{{page.link}}" class="page-numbers {{page.class}}">{{page.title}}</a>
+                                                {% else %}
+                                                    <span class="page-numbers {{page.class}}">{{page.title}}</span>
+                                                {% endif %}
+                                        {% endfor %}
+                                        {% if posts.pagination.next %}
+                                            <a href="{{posts.pagination.next.link}}" class="page-numbers next {{posts.pagination.next.link|length ? '' : 'invisible'}}">Suivant</a>
+                                        {% endif %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                        {% else %}
+                            <div class="row">
+                                <div class="col-md-6 _cnt_panel_actus">
+                                    <div class="_big_bloc_actus" style="background-image: url({{ site.theme.link }}/images/_pages/_nos_actualites/subway_beach_flags.jpg}})">
+                                        <div class="_bloc_shadow">
+                                            <h4 class="_bloc_date">20 avril 2018</h4>
+                                            <h2 class="_bloc_title">Ouverture d'un restaurant<br>subway</h2>
+                                            <p class="_bloc_description">Dans le cadre de la réouverture progressive des boutiques sur nos stations...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 _cnt_panel_actus">
+                                    <div class="panel _panel_actus">
+                                        <div class="panel-body">
+                                            <img src="{{ site.theme.link }}/images/_pages/_nos_actualites/actus3.jpg}}" class="_actu_img">
+                                        </div>
+                                        <div class="panel-footer">
+                                            <h4 class="_actu_date">20 avril 2018</h4>
+                                            <h2 class="_actu_title">nos lavages</h2>
+                                            <p class="_actu_description">Depuis que Certas Energy a racheté une partie des stations-service ESSO il y a plus de 3 ans, nous avons…</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 _cnt_panel_actus">
+                                    <div class="panel _panel_actus">
+                                        <div class="panel-body">
+                                            <img src="{{ site.theme.link }}/images/_pages/_nos_actualites/actus3.jpg}}" class="_actu_img">
+                                        </div>
+                                        <div class="panel-footer">
+                                            <h4 class="_actu_date">20 avril 2018</h4>
+                                            <h2 class="_actu_title">nos lavages</h2>
+                                            <p class="_actu_description">Depuis que Certas Energy a racheté une partie des stations-service ESSO il y a plus de 3 ans, nous avons…</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 _cnt_panel_actus">
+                                    <div class="panel _panel_actus">
+                                        <div class="panel-body">
+                                            <img src="{{ site.theme.link }}/images/_pages/_nos_actualites/actus3.jpg}}" class="_actu_img">
+                                        </div>
+                                        <div class="panel-footer">
+                                            <h4 class="_actu_date">20 avril 2018</h4>
+                                            <h2 class="_actu_title">nos lavages</h2>
+                                            <p class="_actu_description">Depuis que Certas Energy a racheté une partie des stations-service ESSO il y a plus de 3 ans, nous avons…</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 _cnt_panel_actus">
+                                    <div class="panel _panel_actus">
+                                        <div class="panel-body">
+                                            <img src="{{ site.theme.link }}/images/_pages/_nos_actualites/actus3.jpg}}" class="_actu_img">
+                                        </div>
+                                        <div class="panel-footer">
+                                            <h4 class="_actu_date">20 avril 2018</h4>
+                                            <h2 class="_actu_title">nos lavages</h2>
+                                            <p class="_actu_description">Depuis que Certas Energy a racheté une partie des stations-service ESSO il y a plus de 3 ans, nous avons…</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 _cnt_panel_actus">
+                                    <div class="panel _panel_actus">
+                                        <div class="panel-body">
+                                            <img src="{{ site.theme.link }}/images/_pages/_nos_actualites/actus3.jpg}}" class="_actu_img">
+                                        </div>
+                                        <div class="panel-footer">
+                                            <h4 class="_actu_date">20 avril 2018</h4>
+                                            <h2 class="_actu_title">nos lavages</h2>
+                                            <p class="_actu_description">Depuis que Certas Energy a racheté une partie des stations-service ESSO il y a plus de 3 ans, nous avons…</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 _cnt_panel_actus">
+                                    <div class="panel _panel_actus">
+                                        <div class="panel-body">
+                                            <img src="{{ site.theme.link }}/images/_pages/_nos_actualites/actus3.jpg}}" class="_actu_img">
+                                        </div>
+                                        <div class="panel-footer">
+                                            <h4 class="_actu_date">20 avril 2018</h4>
+                                            <h2 class="_actu_title">nos lavages</h2>
+                                            <p class="_actu_description">Depuis que Certas Energy a racheté une partie des stations-service ESSO il y a plus de 3 ans, nous avons…</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+	            </section>
+
+	        </article>
+	    </div>
+	</div><!-- /content-wrapper -->
+
+</div>
+
+{% endblock %} 

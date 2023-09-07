@@ -1,0 +1,24 @@
+{
+  "name": "certas-theme",
+  "description": "certas theme to build a Timber theme",
+  "type":"wordpress-theme",
+  "minimum-stability" : "stable",
+  "authors": [
+    {
+      "email": "support@passion-web.info",
+      "name": "passion-web"
+    }  
+  ],
+  "repositories": [
+    {
+      "type": "",
+      "url": ""
+    }
+  ],
+  "require": {
+	  "timber/timber": "1.*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "5.7.16|6.*"
+  }
+}

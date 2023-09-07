@@ -1,0 +1,318 @@
+{% extends "_base_page.twig" %}
+{% block header %}
+{% endblock %}
+{% block content %}
+<div class="wrapper {{sidebar_class}}">
+    <div class="container _bg_white _pd_tp_40 _pd_bt_40" id="_reseau">
+         <!--Corona-->
+    <style type="text/css">
+        .popup{
+            position: absolute;
+            top: 17%;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background-color: transparent;
+            
+            height: 70vh;
+           
+        }
+
+        .italic{
+            font-style: italic;
+        }
+        .bg-white{
+            background-color: #ffffff;
+        }
+
+        .close{
+            position: absolute;
+            top:20px;
+            right:100px;
+        }
+
+        .container-corona{
+                 padding: 50px;
+            border: 3px solid #4e2490;
+        }
+
+        .bouton-corona{
+             z-index: 9999;
+            background: #4f2f8d;
+         border: #4f2f8d solid 1px;
+      
+    color: #fff;
+    cursor: pointer;
+    
+    border-radius: 20px;
+    color: #fff;
+    padding: 6px 18px;
+    margin: 0 5px;
+    text-transform: uppercase;
+        font-weight: normal;
+    font-size: 14px;
+    transition: 0.5s all ease;
+
+        }
+
+        .bouton-corona:hover{
+            background: #02b5ca;
+            border: #02b5ca solid 1px;
+        }
+
+
+            .titre-corona{
+                font-weight: bold;
+                color: #4f2f8d;
+            }
+
+
+    </style>
+      <script type="text/javascript">
+    function close(){
+        document.getElementById("popup").style.display = "none";
+            }
+       
+    </script>
+   
+    <!-- end of corona -->
+        <h1 class="_title_reseau font-family-pers"><span class="fw-l">
+        {% if post.get_field('titre_notre_reseau') %}
+            {{post.get_field('titre_notre_reseau')}}
+        {% endif %} 
+        </h1>
+        <div class="row _cnt_bloc">
+            <div class="col-md-4 mb-4">
+                {% set ex_url = post.get_field('lien_reseau_express') %}
+                <a href="{% if ex_url.url %}{{ex_url.url}}{% else %}#{% endif %}">
+                    <div class="_bloc">
+                        <div class="_bloc_ico">
+                                <img src="{{ site.theme.link }}/images/_icons/_pg_home/_express.png" class="nr-reseau">
+                                <img src="{{ site.theme.link }}/images/_icons/_pg_home/__express.png" class="nr-reseau-hover">
+                        </div>
+                        <div class="_bloc_info">
+                            <h3 class="_bloc_title">
+                                {% if post.get_field('reseau_express') %}
+                                	{{ post.get_field('reseau_express') }}
+                                {% endif %}
+                            </h3>
+                            <p class="_bloc_desc">
+                                {% if post.get_field('description_express') %}
+                                	{{ post.get_field('description_express') }}
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                {% set at_url = post.get_field('lien_reseau_autoroute') %}
+                <a href="{% if at_url.url %}{{at_url.url}}{% else %}#{% endif %}">
+                    <div class="_bloc">
+                        <div class="_bloc_ico">
+                                <img src="{{ site.theme.link }}/images/_icons/_pg_home/_road.png" class="nr-reseau">
+                                <img src="{{ site.theme.link }}/images/_icons/_pg_home/__road.png" class="nr-reseau-hover">
+                        </div>
+                        <div class="_bloc_info">
+                            <h3 class="_bloc_title">
+                                {% if post.get_field('reseau_autoroute') %}
+                                	{{ post.get_field('reseau_autoroute') }}
+                                {% endif %}
+                            </h3>
+                            <p class="_bloc_desc">
+                                {% if post.get_field('description_autoroute') %}
+                                	{{ post.get_field('description_autoroute') }}
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-4 mb-4">
+                {% set a_url = post.get_field('lien_reseau_acheteurs') %}
+                <a href="{% if a_url.url %}{{a_url.url}}{% else %}#{% endif %}">
+                    <div class="_bloc">
+                        <div class="_bloc_ico">
+                                <img src="{{ site.theme.link }}/images/_icons/_pg_home/_buyer.png" class="nr-reseau">
+                                <img src="{{ site.theme.link }}/images/_icons/_pg_home/__buyer.png" class="nr-reseau-hover ">
+                        </div>
+                        <div class="_bloc_info">
+                            <h3 class="_bloc_title">
+                                {% if post.get_field('reseau_acheteurs') %}
+                                    {{ post.get_field('reseau_acheteurs') }}
+                                {% endif %}
+                            </h3>
+                            <p class="_bloc_desc">
+                                {% if post.get_field('description_acheteurs') %}
+                                    {{ post.get_field('description_acheteurs') }}
+                                {% endif %}
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="col-md-12 _cnt_btn">
+            {% set b_url = post.get_field('bouton_decouvrez_notre_reseau') %}
+            <a href="{% if b_url.url %}{{b_url.url}}{% else %}#{% endif %}" class="_btn_lnk" target="{% if b_url.target %}{{b_url.target}}{% else %}_self{% endif %}">
+                    {% if post.get_field('texte_bouton_decouvrez_notre_reseau') %}
+                        {{post.get_field('texte_bouton_decouvrez_notre_reseau')}}
+                    {% endif %}
+            </a>
+            {# <a href="{{post.get_field('bouton_decouvrez_notre_reseau')}}" class="_btn_lnk">
+                {% if post.get_field('texte_bouton_decouvrez_notre_reseau') %}
+                    {{post.get_field('texte_bouton_decouvrez_notre_reseau')}}
+                {% else %}
+                    Découvrez notre réseau
+                {% endif %}
+            </a> #}
+        </div>
+    </div>
+    <div class="content-wrapper _bg_grey _pd_tp_50 _pd_bt_50">
+        <div class="container">
+            <div class="row" id="_prquoi">
+                <div class="col-md-6">
+                    <div class="ftco-animate div-img-pourquoi">
+                        {% set img_sec = post.get_field('decouvrez')["second_section_first"] %}
+                        {% if img_sec %}
+                        <img src="{{img_sec.url}}" style="width:100%">
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-md-6 _cnt_prquoi_bloc">
+                    <div class="ftco-animate">
+                        <div class="row">
+                            <div class="col-md-12 _cnt_title_prquoi">
+                                {% if post.get_field('decouvrez')['second_section_titre'] %}
+	                                <h2 class="_title_prquoi font-family-pers">
+	                                    {{post.get_field('decouvrez')['second_section_titre']}}
+	                                </h2>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-3 _prquoi_bloc">
+                                <div class="_bloc" style="background: #02b5ca">
+                                    <div class="_cnt_ico">
+                                        {% set icon_com = post.get_field('decouvrez')['icon_second_section1'] %}
+                                        {% if icon_com %}
+                                            <img src="{{icon_com.url}}" class="img-section6">
+                                        {% endif %}
+                                    </div>
+                                    <div class="_cnt_bloc_title">
+                                        <h3 class="_bloc_title">
+                                            {% if post.get_field('decouvrez')['second_section_competitive'] %}
+                                            {{post.get_field('decouvrez')['second_section_competitive']}}
+                                            {% endif %}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 _prquoi_bloc">
+                                <div class="_bloc" style="background: #4f2f8d">
+                                    <div class="_cnt_ico">
+                                        {% set icon_fia = post.get_field('decouvrez')['icon_second_section2'] %}
+                                        {% if icon_fia %}
+                                            <img src="{{icon_fia.url}}" class="img-section6">
+                                        {% endif %}
+                                    </div>
+                                    <div class="_cnt_bloc_title">
+                                        <h3 class="_bloc_title">
+                                            {% if post.get_field('decouvrez')['second_section_faibilite'] %}
+                                            {{post.get_field('decouvrez')['second_section_faibilite']}}
+                                            {% endif %}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 _prquoi_bloc">
+                                <div class="_bloc" style="background: #a29da9">
+                                    <div class="_cnt_ico">
+                                        {% set icon_pro = post.get_field('decouvrez')['icon_second_section3'] %}
+                                        {% if icon_pro %}
+                                            <img src="{{icon_pro.url}}" class="img-section6">
+                                        {% endif %}
+                                    </div>
+                                    <div class="_cnt_bloc_title">
+                                        <h3 class="_bloc_title">
+                                            {% if post.get_field('decouvrez')['second_section_propriete'] %}
+                                            {{post.get_field('decouvrez')['second_section_propriete']}}
+                                            {% endif %}
+                                        </h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 _prquoi_bloc">
+                                <div class="_bloc" style="background: #f4b03f">
+                                    <div class="_cnt_ico">
+                                        {% set icon_pro = post.get_field('decouvrez')['service_image'] %}
+                                        {% if icon_pro %}
+                                            <img src="{{icon_pro.url}}" class="img-section6">
+                                        {% endif %}
+                                    </div>
+                                    <div class="_cnt_bloc_title">
+                                        {% if post.get_field('decouvrez')['service_titre'] %}
+                                            <h3 class="_bloc_title">
+                                                {{post.get_field('decouvrez')['service_titre']}}
+                                            </h3>
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </div>
+                            {# <div class="col-md-12 _cnt_btn">
+                                {% set v_url = post.get_field('decouvrez')['bouton_notre_valeur_ajoute'] %}
+                                <a href="{% if v_url.url %}{{v_url.url}}{% else %}#{% endif %}" class="_btn_lnk" target="{% if v_url.target %}{{v_url.target}}{% else %}_self{% endif %}">
+                                        {% if post.get_field('decouvrez')['texte_bouton_notre_valeur_ajoute'] %}
+                                            {{post.get_field('decouvrez')['texte_bouton_notre_valeur_ajoute']}}
+                                        {% endif %}
+                                </a>
+                                <a href="{{post.get_field('decouvrez')['bouton_notre_valeur_ajoute']}}" class="_btn_lnk">
+                                    {% if post.get_field('decouvrez')['texte_bouton_notre_valeur_ajoute'] %}
+                                        {{post.get_field('decouvrez')['texte_bouton_notre_valeur_ajoute']}}
+                                    {% else %}
+                                        Notre valeur ajoutée
+                                    {% endif %}
+                                </a> 
+                            </div>#}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- /content-wrapper -->
+    <div class="container _bg_white pt-5 pb-5" id="_nos_actus">
+        {# {% filter shortcodes|raw %}
+    		[recent_post_carousel slides_to_show="3" slides_to_scroll="1"]
+        {% endfilter %} #}
+        <h1 class="_title_actus font-family-pers"><span class="fw-l">
+            {% if post.get_field('titre_nos_actualites') %}
+                {{post.get_field('titre_nos_actualites')}}
+            {% endif %}  
+        </h1>
+        <div class="slick_responsive row" id="slick_article">
+        	{% if posts is not empty %}
+        		{% for term in posts %}
+		            <div class="col-md-3 _cnt_panel_actus">
+		                <div class="panel _panel_actus">
+                            <a href="{{term.link}}">
+                                <div class="panel-body">
+                                    <img src="{{term.thumbnail.src}}" class="_actu_img">
+                                </div>
+                                <div class="panel-footer">
+                                    <h4 class="_actu_date">{{term.date}}</h4>
+                                    <h2 class="_actu_title">
+                                        {{ term.title|length > 70 ? term.title|slice(0, 70) ~ ' …' : term.title }}
+                                    </h2>
+                                    <p class="_actu_description">{{term.post_content|excerpt(13)}}</p>
+                                </div>
+                            </a>
+		                </div>
+		            </div>
+                 {% endfor %}
+        	{% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

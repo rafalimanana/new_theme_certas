@@ -1,0 +1,182 @@
+{% extends "_base_page.twig" %}
+{% block header %}
+<div class="wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="_navbar_brand" href="index.html">
+                <img src="{{ site.theme.link }}/images/_icons/certas.png" class="_h_logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#_nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse _h_cnt_menu" id="_nav">
+                <ul class="navbar-nav ml-auto" id="_menu">
+                    <li class="nav-item active"><a href="{{site.url}}/a-propos" class="nav-link text-uppercase">A Propos</a></li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-uppercase" id="n_station">Nos Stations</a>
+                        <ul class="nav-item submenu" id="sub_station">
+                            <li class="nav-item">
+                                <a href="{{site.url}}/nos-stations/services-en-stations" class="nav-link text-uppercase i_page">Services en stations</a>
+                                <a href="#" class="nav-link text-uppercase i_mobile"  id="child_station">Services en stations</a>
+                                <ul class="nav-item submenu"  id="lavage_station">
+                                    <li class="nav-item i_mobile">
+                                        <a href="{{site.url}}/nos-stations/services-en-stations" class="nav-link text-uppercase">Services en stations</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{site.url}}/nos-stations/services-en-stations/lavage" class="nav-link text-uppercase">Lavage</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            {# <li class="nav-item"><a href="{{site.url}}/nos-stations/carte-de-nos-stations" class="nav-link text-uppercase">Carte de nos stations</a></li> #}
+                            <li class="nav-item"><a href="{{site.url}}/nos-stations/carte-de-nos-stations-adresse" class="nav-link text-uppercase">Carte de nos stations</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{site.url}}/nos-carburants" class="nav-link text-uppercase i_page">Nos carburants</a>
+                        <a href="#" class="nav-link text-uppercase i_mobile" id="n_carburant">Nos carburants</a>
+                        <ul class="nav-item submenu" id="l_produit">
+                            <li class="nav-item i_mobile">
+                                <a href="{{site.url}}/nos-carburants" class="nav-link text-uppercase">Nos carburants</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{site.url}}/nos-carburants/produits" class="nav-link text-uppercase">Liste des produits vendus</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="services.html" class="nav-link text-uppercase">Nos Promos</a></li>
+                    <li class="nav-item">
+                        <a href="{{site.url}}/club-certas-energy" class="nav-link text-uppercase i_page">Club certas Anergy</a>
+                        <a href="#" class="nav-link text-uppercase i_mobile" id="c_energy">Club certas Anergy</a>
+                        <ul class="nav-item submenu" id="c_marche">
+                            <li class="nav-item i_mobile">
+                                <a href="{{site.url}}/club-certas-energy" class="nav-link text-uppercase">Club certas Anergy</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="{{site.url}}/club-certas-energy/comment-ca-marche" class="nav-link text-uppercase">Comment ça marche</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link text-uppercase">Actualités</a></li>
+                    <li class="nav-item"><a href="{{site.url}}/contact" class="nav-link  text-uppercase">Nous contacter</a></li>
+                    <li class="nav-item _h_cnt_btn">
+                    	<ul class="_h_lst_btn">
+
+                            {% for menu in navigation.get_items %}
+                                <li>
+                                    <a href="{{menu.link}}">
+                                        <button class="_h_btn">{{menu.title}}</button>
+                                    </a>
+                                </li>
+                            {% endfor %}
+		                    {# <li><a href="#" class="_h_btn">Partenaires</a></li>
+		                    <li><a href="#" class="_h_btn">Emplois</a></li>
+		                    <li><a href="#" class="_h_btn">Immobilier</a></li> #}
+		                </ul>
+                    </li>
+                </ul>
+            </div>
+           <div class="_h_cnt_btn">
+                <ul class="_h_lst_btn">
+
+                    {% for menu in navigation.get_items %}
+                        <li>
+                            <a href="{{menu.link}}">
+                                <button class="_h_btn">{{menu.title}}</button>
+                            </a>
+                        </li>
+                    {% endfor %}
+                    {# <li><button class="_h_btn">Partenaires</button></li>
+                    <li><button class="_h_btn">Emplois</button></li>
+                    <li><button class="_h_btn">Immobilier</button></li> #}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="_header_carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#_header_carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#_header_carousel" data-slide-to="1"></li>
+            <li data-target="#_header_carousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="hero-wrap ftco-degree-bg header-bg propos-header" data-stellar-background-ratio="0.5">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="row no-gutters slider-text justify-content-center align-items-center">
+                            <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
+                                <div class="text text-center">
+                                    <h1 class="mb-4">{{post.post_title}}</h1>
+                                    <p style="font-size: 18px;">
+                                        {% if post.get_field('description_header') %}
+                                        {{post.get_field('description_header')}}
+                                        {% else %}
+                                        	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        	tempor incididunt ut labore et dolore magna aliqua.
+                                        {% endif %}
+                                        <a href="#" class="a-prs"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-wrap ftco-degree-bg header-bg propos-header" data-stellar-background-ratio="0.5">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="row no-gutters slider-text justify-content-center align-items-center">
+                            <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
+                                <div class="text text-center">
+                                    <h1 class="mb-4">{{post.post_title}}</h1>
+                                    <p style="font-size: 18px;">
+                                        {% if post.get_field('description_header') %}
+                                        {{post.get_field('description_header')}}
+                                        {% else %}
+                                        	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        	tempor incididunt ut labore et dolore magna aliqua.
+                                        {% endif %}
+                                        <a href="#" class="a-prs"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="hero-wrap ftco-degree-bg header-bg propos-header" data-stellar-background-ratio="0.5">
+                    <div class="overlay"></div>
+                    <div class="container">
+                        <div class="row no-gutters slider-text justify-content-center align-items-center">
+                            <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
+                                <div class="text text-center">
+                                    <h1 class="mb-4">{{post.post_title}}</h1>
+                                    <p style="font-size: 18px;">
+                                        {% if post.get_field('description_header') %}
+                                        {{post.get_field('description_header')}}
+                                        {% else %}
+                                        	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        	tempor incididunt ut labore et dolore magna aliqua.
+                                        {% endif %}
+                                        <a href="#" class="a-prs"></a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Left and right controls -->
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+	{% for post in posts %}
+		{% include ["tease-"~post.post_type~".twig", "tease.twig"] %}
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,160 @@
+<div class="wrapper">
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar {# bg-dark #} ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="_navbar_brand" href="{{site.url}}">
+                <img src="{{ site.theme.link }}/images/_icons/certas.png" class="_h_logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#_nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+            <div class="collapse navbar-collapse _h_cnt_menu" id="_nav">
+                <ul class="navbar-nav ml-auto" id="_menu">
+                    {% set o = {} %}
+                    {% for key,item in topmenu.items %}
+                        {%  set o = o|merge({("t" ~ item.id): 0}) %}
+                        {% if item.children %}
+                                {% for k,child in item.children %}
+                                    {% if child.current %}
+                                        {%  set o = o|merge({("t" ~ item.id): 1}) %}
+                                    {% endif %}
+                                    {% for t in child.children %}
+                                        {% if t.current %}
+                                            {%  set o = o|merge({("t" ~ item.id): 1}) %}
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                    {% for key,item in topmenu.items %}
+                        <li class="nav-item {{ (item.current or o["t" ~ item.id] )? 'active' : '' }}">
+                            {% if item.children %}
+                                <a href="{{item.link}}" class="nav-link text-uppercase i_page">{{item.title}}</a>
+                                <a href="#" class="nav-link text-uppercase i_mobile" id="n_station{{key}}" onClick="menuP({{key}}, event)">{{item.title}}</a>
+                                <ul class="nav-item submenu i_chil" id="sub_station{{key}}">
+                                    <li class="nav-item">
+                                    <a href="{{item.link}}" class="nav-link text-uppercase i_mobile">{{item.title}}</a></li>
+                                    {% for k,child in item.children %}
+                                        <li class="nav-item {{ child.current ? 'active' : '' }}">
+                                            {% if child.current %}
+                                            {%  set o = o|merge({("t" ~ item.id): 1}) %}
+                                            {% endif %}
+                                            {% if child.children %}
+                                                <a href="{{child.link}}" class="nav-link text-uppercase i_page">{{child.title}}</a>
+                                                <a href="#" class="nav-link text-uppercase i_mobile"  id="child_station{{key}}{{k}}" onClick="childF({{key}}{{k}}, event)">{{child.title}}</a>
+                                                <ul class="nav-item submenu i_c_chil"  id="lavage_station{{key}}{{k}}">
+                                                    <li class="nav-item i_mobile">
+                                                        <a href="{{child.link}}" class="nav-link text-uppercase">{{child.title}}</a>
+                                                    </li>
+                                                    {% for t in child.children %}
+                                                        <li class="nav-item {{ t.current ? 'active' : '' }}">
+                                                            <a href="{{t.link}}" class="nav-link text-uppercase">{{t.title}}</a>
+                                                        </li>
+                                                    {% endfor %}
+                                                </ul>
+                                            {% else %}
+                                                <a href="{{child.link}}" class="nav-link text-uppercase">{{child.title}}</a>
+                                            {% endif %}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% else %}
+                                <a href="{{item.link}}" class="nav-link text-uppercase">{{item.title}}</a>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                    <li class="nav-item _h_cnt_btn">
+                        <ul class="_h_lst_btn">
+                            {% for menu_nav in navigation.get_items %}
+                                <li>
+                                    <a href="{{menu_nav.link}}">
+                                        <button class="_h_btn">{{menu_nav.title}}</button>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+           <div class="_h_cnt_btn">
+                <ul class="_h_lst_btn">
+                    {% for menu_nav in navigation.get_items %}
+                        <li>
+                            <a href="{{menu_nav.link}}">
+                                <button class="_h_btn">{{menu_nav.title}}</button>
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="_header_carousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        {% set slide_image_1 = post.get_field('slide_image_1') %}
+        {% set slide_image_2 = post.get_field('slide_image_2') %}
+        {% set slide_image_3 = post.get_field('slide_image_3') %}
+        {% set lien_slide_1 = post.get_field('lien_slide_1') %}
+        {% set lien_slide_2 = post.get_field('lien_slide_2') %}
+        {% set lien_slide_3 = post.get_field('lien_slide_3') %}
+        <ol class="carousel-indicators">
+            <li data-target="#_header_carousel" data-slide-to="0" class="active"></li>
+            {% if slide_image_2 is not empty %}
+                <li data-target="#_header_carousel" data-slide-to="1"></li>
+            {% endif %}
+            {% if slide_image_3 is not empty and slide_image_2 is empty %}
+                <li data-target="#_header_carousel" data-slide-to="1"></li>
+            {% elseif slide_image_3 is not empty %}
+                <li data-target="#_header_carousel" data-slide-to="2"></li>
+            {% endif %}
+        </ol>
+        <!-- Wrapper for slides -->
+        <div style="overflow:hidden !important;">
+        <div class="carousel-inner {% if fn('is_front_page') %}_home{% endif %}">
+            <div class="carousel-item active">
+                {% if lien_slide_1.url %}
+                    <a href="{% if lien_slide_1.url %}{{lien_slide_1.url}}{% endif %}" class="" target="{% if lien_slide_1.target %}{{lien_slide_1.target}}{% else %}_self{% endif %}">
+                        <div class="hero-wrap ftco-degree-bg header-bg-old propos-header" style="background: url({% if slide_image_1 %}{{slide_image_1.url}}{% else %}{{site.theme.link}}/images/Slider.jpg}}{% endif %});background-size: cover;background-repeat: no-repeat;" data-stellar-background-ratio="0.5">
+                            <div class="overlay"></div>
+                        </div>
+                    </a>
+                {% else %}
+                    <div class="hero-wrap ftco-degree-bg header-bg-old propos-header" style="background: url({% if slide_image_1 %}{{slide_image_1.url}}{% else %}{{site.theme.link}}/images/Slider.jpg}}{% endif %});background-size: cover;background-repeat: no-repeat;" data-stellar-background-ratio="0.5">
+                        <div class="overlay"></div>
+                    </div>
+                {% endif %}
+            </div>
+            {% if slide_image_2 is not empty %}
+                <div class="carousel-item">
+                    {% if lien_slide_2.url %}
+                        <a href="{% if lien_slide_2.url %}{{lien_slide_2.url}}{% endif %}" class="" target="{% if lien_slide_2.target %}{{lien_slide_2.target}}{% else %}_self{% endif %}">
+                            <div class="hero-wrap ftco-degree-bg header-bg-old propos-header" style="background: url({% if slide_image_2 %}{{slide_image_2.url}}{% endif %});background-size: cover;background-repeat: no-repeat;" data-stellar-background-ratio="0.5">
+                                <div class="overlay"></div>
+                            </div>
+                        </a>
+                    {% else %}
+                        <div class="hero-wrap ftco-degree-bg header-bg-old propos-header" style="background: url({% if slide_image_2 %}{{slide_image_2.url}}{% endif %});background-size: cover;background-repeat: no-repeat;" data-stellar-background-ratio="0.5">
+                            <div class="overlay"></div>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %} 
+            {% if slide_image_3 is not empty %}
+                <div class="carousel-item">
+                    {% if lien_slide_3.url %}
+                        <a href="{% if lien_slide_3.url %}{{lien_slide_3.url}}{% endif %}" class="" target="{% if lien_slide_3.target %}{{lien_slide_3.target}}{% else %}_self{% endif %}">
+                            <div class="hero-wrap ftco-degree-bg header-bg-old propos-header" style="background: url({% if slide_image_3 %}{{slide_image_3.url}}{% endif %});background-size: cover;background-repeat: no-repeat;" data-stellar-background-ratio="0.5">
+                                <div class="overlay"></div>
+                            </div>
+                        </a>
+                    {% else %}
+                        <div class="hero-wrap ftco-degree-bg header-bg-old propos-header" style="background: url({% if slide_image_3 %}{{slide_image_3.url}}{% endif %});background-size: cover;background-repeat: no-repeat;" data-stellar-background-ratio="0.5">
+                            <div class="overlay"></div>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endif %}  
+        </div>
+    </div>
+        <!-- Left and right controls -->
+    </div>
+</div>
